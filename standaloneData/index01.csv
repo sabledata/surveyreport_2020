@@ -1,2 +1,2 @@
-"Vessel","CAPTAIN","Trip Dates","Count of Sets","days","leg_one","leg_two"
-"PACIFIC VIKING","ALBERT (DEACON) MELNYCHUK","Oct  7  - Nov 21 ",87,45,16,29
+"Vessel","CAPTAIN","Trip Dates","Count of Sets","days","leg_one","leg_two","START_DATE","END_DATE"
+"PACIFIC VIKING","ALBERT (DEACON) MELNYCHUK","Oct  7  - Nov 21 ",87,46,16,29,2020-10-07,2020-11-21

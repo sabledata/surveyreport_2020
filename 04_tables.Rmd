@@ -96,9 +96,13 @@
                                                 latex_options = "hold_position")
 ```
 \clearpage
-
+\ \
+\ \
+\ \
 (ref:Table3Caption) Summary of sablefish biological data collected during the `r yr` stratified random sets by spatial and depth stratum.
-
+\ \
+\ \
+\ \
 ```{r table3, echo=FALSE}
 
     #newdata2   <-   rbind(newdata,biosumm)
@@ -128,9 +132,10 @@
 \ \
 \ \
 \ \
-
 (ref:Table4Caption) Percentage of sablefish tag recoveries by great circle distance (km) from BC release sites (1995-2018) and years at liberty. 
-
+\ \
+\ \
+\ \
 ```{r table4, echo=FALSE}
 
   distance   <- paste("select right(YearGroups,4) as YearGroup, [<10 km], [11-50 km], [51-100 km], ",

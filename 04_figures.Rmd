@@ -266,23 +266,26 @@
     tgcwg <- summarySE(strs2, measurevar=("sable_wg"),           groupvars=c("SET_YEAR","strata"),na.rm = T)
     tgcnt <- summarySE(strs2, measurevar=("sable_cnt"),          groupvars=c("SET_YEAR","strata"),na.rm = T)
 
-        tgc   <- arrange(transform(tgc,strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
-                                                                 "S4 RD3", "S4 RD2", "S4 RD1", 
-                                                                 "S3 RD3", "S3 RD2", "S3 RD1", 
-                                                                 "S2 RD3", "S2 RD2", "S2 RD1",
-                                                                 "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
+    tgc   <- arrange(transform(tgc,
+                               strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
+                                                             "S4 RD3", "S4 RD2", "S4 RD1", 
+                                                             "S3 RD3", "S3 RD2", "S3 RD1", 
+                                                             "S2 RD3", "S2 RD2", "S2 RD1",
+                                                             "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
     
-    tgcwg<-arrange(transform(tgcwg,strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
-                                                                 "S4 RD3", "S4 RD2", "S4 RD1", 
-                                                                 "S3 RD3", "S3 RD2", "S3 RD1", 
-                                                                 "S2 RD3", "S2 RD2", "S2 RD1",
-                                                                 "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
+    tgcwg<-arrange(transform(tgcwg,
+                             strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
+                                                           "S4 RD3", "S4 RD2", "S4 RD1", 
+                                                           "S3 RD3", "S3 RD2", "S3 RD1", 
+                                                           "S2 RD3", "S2 RD2", "S2 RD1",
+                                                           "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
     
-    tgcnt<-arrange(transform(tgcnt,strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
-                                                                 "S4 RD3", "S4 RD2", "S4 RD1", 
-                                                                 "S3 RD3", "S3 RD2", "S3 RD1", 
-                                                                 "S2 RD3", "S2 RD2", "S2 RD1",
-                                                                 "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
+    tgcnt<-arrange(transform(tgcnt,
+                             strata=factor(strata,levels=c("S5 RD3", "S5 RD2", "S5 RD1", 
+                                                           "S4 RD3", "S4 RD2", "S4 RD1", 
+                                                           "S3 RD3", "S3 RD2", "S3 RD1", 
+                                                           "S2 RD3", "S2 RD2", "S2 RD1",
+                                                           "S1 RD3", "S1 RD2", "S1 RD1"))),strata)
 
 
     ggplot(tgcnt,aes(x=SET_YEAR,y=sable_cnt))+
@@ -342,6 +345,48 @@
 ```   
 \clearpage
 
+(ref:figure8) Annual mean weight of sablefish per trap (kg/trap) (A);  annual mean number of sablefish per trap (#fish/trap) (B); annual mean weight of sablefish (kg) (C) by StRS survey strata over time. Horizontal line is median and blue dots are arithmetic mean.
+
+```{r figure8, fig.cap='(ref:figure8)', results='asis', out.width = "450px",out.height = "560px", fig.align="center"}
+
+  png("C:/github/surveyreport/figures/Figure8.png", width=600, height=800) # write png to file
+  library(cowplot)
+       p <- ggplot(tgc,aes(x=as.factor(SET_YEAR),y=sable_cpue)) + 
+          geom_boxplot(fill="grey90", width=0.5) +
+          stat_summary(fun.y=mean, geom="point", shape=16, size=2,col="steelblue")+
+          xlab("Year")+
+          ylab("StRS CPUE (kg/trap)")+
+          #scale_y_continuous(limits=c(0,175))+
+          theme(axis.text = element_text(size = 6)) + 
+          theme_bw()
+  
+       p1 <- ggplot(tgcnt, aes(x=as.factor(SET_YEAR), y=sable_cnt)) + 
+          geom_boxplot(fill="grey90", width=0.5) +
+          stat_summary(fun.y=mean, geom="point", shape=16, size=2,col="steelblue")+
+          xlab("Year") +
+          ylab("CPUE (#fish/trap)") +
+          #scale_y_continuous(limits=c(0,75))+
+          theme(axis.text = element_text(size = 6)) + 
+          theme_bw()
+     
+     p2 <- ggplot(tgcwg, aes(x=as.factor(SET_YEAR), y=sable_wg )) + 
+          geom_boxplot(fill="grey90", width=0.5) +
+          stat_summary(fun.y=mean, geom="point", shape=16, size=2,col="steelblue")+
+          xlab("Year") +
+          ylab("Mean weight (kg)") +
+          theme(axis.text = element_text(size = 6)) + 
+          theme_bw()
+
+    plot_grid(p, p1, p2, labels = "AUTO", nrow = 3)    
+  
+    while (!is.null(dev.list()))  dev.off()
+    img <-    paste('C:/github/surveyreport/figures/Figure8.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+
+```
+\clearpage
+
+
 ```{r figure setup, include=FALSE}
         LWSMO <- "SELECT * FROM GFBIO_SABLEBIO_VW where YEAR > 2005"
         LWSMOdat<- GetSQLData(LWSMO,"Sablefish")
@@ -359,11 +404,11 @@
         lws.rd2 <- subset(lws,SABLE_DEPTH_GROUP == "RD2")
         lws.rd3 <- subset(lws,SABLE_DEPTH_GROUP == "RD3")
 ```
-(ref:figure8) Length frequency distributions across all depth strata (100-750 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
+(ref:figure9) Length frequency distributions across all depth strata (100-750 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
 
-```{r figure8, fig.cap='(ref:figure8)', out.width = "450px",out.height = "500px",echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
+```{r figure9, fig.cap='(ref:figure9)', out.width = "450px",out.height = "500px",echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
      knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth")
-     png(paste(basepath,'figures/Figure8.png',sep=""), width = 500, height = 550) # starts writing a png to figure folder
+     png(paste(basepath,'figures/figure10.png',sep=""), width = 500, height = 550) # starts writing a png to figure folder
 
         ggplot(lws,aes(x=Fork_Length))+
           geom_density(data=subset(lws,SPECIMEN_SEX_CODE == 2),
@@ -381,15 +426,15 @@
           #ggtitle("All depth strata")
 
     while (!is.null(dev.list()))  dev.off()
-    img <-    paste(basepath,'figures/Figure8.png',sep='')   # retrieve png 
+    img <-    paste(basepath,'figures/figure9.png',sep='')   # retrieve png 
               knitr::include_graphics(img)
               
 ```
-(ref:figure9) Length frequency distributions in shallow depth strata (100-250 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
+(ref:figure10) Length frequency distributions in shallow depth strata (100-250 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
 
-```{r figure9, fig.cap='(ref:figure9)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
+```{r figure10, fig.cap='(ref:figure10)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
      knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth")
-     png(paste(basepath,'figures/Figure9.png',sep=""), width = 500, height = 550) # -- starts writing a png to figure folder
+     png(paste(basepath,'figures/figure10.png',sep=""), width = 500, height = 550) # -- starts writing a png to figure folder
      
         ggplot(lws.rd1,aes(x=Fork_Length))+
           geom_density(data=subset(lws.rd1,SPECIMEN_SEX_CODE == 2),color="gray50",fill = "gray", alpha = 0.7) +
@@ -404,15 +449,15 @@
           #ggtitle("Shallow depth strata")
         
     while (!is.null(dev.list()))  dev.off()
-    img <-    paste(basepath,'figures/Figure9.png',sep='')   # retrieve png 
+    img <-    paste(basepath,'figures/figure10.png',sep='')   # retrieve png 
               knitr::include_graphics(img)
 ```
 
-(ref:figure10)  Length frequency distributions across middle depth strata (250-450 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
+(ref:figure11)  Length frequency distributions across middle depth strata (250-450 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
 
-```{r figure10, fig.cap='(ref:figure10)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
+```{r figure11, fig.cap='(ref:figure11)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center",warning=FALSE, message=FALSE}
      knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth")
-     png(paste(basepath,'figures/Figure10.png',sep=""), width = 500, height = 550) # starts writing a png to folder
+     png(paste(basepath,'figures/figure11.png',sep=""), width = 500, height = 550) # starts writing a png to folder
      
         ggplot(lws.rd2,aes(x=Fork_Length))+
           geom_density(data=subset(lws.rd2,SPECIMEN_SEX_CODE == 2),
@@ -429,15 +474,15 @@
           #ggtitle("Middle depth strata")
 
     while (!is.null(dev.list()))  dev.off()
-    img <-    paste(basepath,'figures/Figure10.png',sep='')   # retrieve png 
+    img <-    paste(basepath,'figures/figure11.png',sep='')   # retrieve png 
               knitr::include_graphics(img)
 ```
-(ref:figure11) Length frequency distributions across deep depth strata (450-750 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
+(ref:figure12) Length frequency distributions across deep depth strata (450-750 fathoms) for male (blue) and female (gray) sablefish over time. The red dashed line indicates the 55 cm size limit.
 
 
-```{r figure11, fig.cap='(ref:figure11)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center", warning=FALSE, message=FALSE}
+```{r figure12, fig.cap='(ref:figure12)', out.width = "450px",out.height = "500px", echo=FALSE, fig.align = "center", warning=FALSE, message=FALSE}
      knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth")
-     png(paste(basepath,'figures/Figure11.png',sep=""), width = 500, height = 550) # starts writing a png to figure folder
+     png(paste(basepath,'figures/figure12.png',sep=""), width = 500, height = 550) # starts writing a png to figure folder
      
         ggplot(lws.rd3,aes(x=Fork_Length)) +
           geom_density(data=subset(lws.rd3,SPECIMEN_SEX_CODE == 2),
@@ -455,21 +500,21 @@
           # ggtitle("Deep depth strata")
 
     while (!is.null(dev.list()))  dev.off()
-    img <- paste(basepath,'figures/Figure11.png',sep='')   # retrieve png 
+    img <- paste(basepath,'figures/figure12.png',sep='')   # retrieve png 
            knitr::include_graphics(img)
 ```
-(ref:figure12) Average length and ratios of male and female sablefish by year. Counts by sex are labelled on top of the plotted lines, male:female ratio by year labelled across lower portion of plot.
+(ref:figure13) Average length and ratios of male and female sablefish by year. Counts by sex are labelled on top of the plotted lines, male:female ratio by year labelled across lower portion of plot.
 
-```{r figure12, fig.cap='(ref:figure12)',results='asis', out.width = "450px",out.height = "276px", fig.align="center"}
+```{r figure13, fig.cap='(ref:figure13)',results='asis', out.width = "450px",out.height = "276px", fig.align="center"}
 
-     png(paste(basepath,'figures/figure12.png',sep=''), width = 700, height = 430) # -- starts writing a png to figure folder
+     png(paste(basepath,'figures/figure13.png',sep=''), width = 700, height = 430) # -- starts writing a png to figure folder
 
      #  Sablefish.dbo.rocRReport_Survey_LenAvg pulls length data from table GFBIO_SABLEBIO_VW from 
      #  procedure:  Build_BIO_Sablefish_Tables
      lenstats  <- "exec procRReport_Survey_LenAvg"
      dat       <- GetSQLData(lenstats,"Sablefish")                                                  # read from SQL Server
-     write.table(dat, file = paste(path,"figure12.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
-     dat       <- read.csv(paste(path,'figure12.csv',sep=''),header=T) # read from csv
+     write.table(dat, file = paste(path,"figure13.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+     dat       <- read.csv(paste(path,'figure13.csv',sep=''),header=T) # read from csv
      
      
      fdat      <- dat[dat$sex==2,]    
@@ -508,23 +553,23 @@
        text(x, y, txt, cex=1.5)
      
      while (!is.null(dev.list()))  dev.off()  
-     img <- paste(basepath,'figures/Figure12.png',sep='')
+     img <- paste(basepath,'figures/figure13.png',sep='')
             knitr::include_graphics(img)
 ``` 
 
-(ref:figure13) Sablefish fork length (L in cm) vs weight (W in kg) for females (A) and males (B) for the `r yr` survey.
+(ref:figure14) Sablefish fork length (L in cm) vs weight (W in kg) for females (A) and males (B) for the `r yr` survey.
 
-```{r figure13, fig.cap='(ref:figure13)',results='asis', out.width = "450px", out.height = "264px", fig.align="center"}
+```{r figure14, fig.cap='(ref:figure14)',results='asis', out.width = "450px", out.height = "264px", fig.align="center"}
 
     # Sablefish.dbo.procR_Survey_Sablefish_LenWt_shiny queries table GFBIO_SABLEBIO_VW for survey length data	
-    png("C:/github/surveyreport2020/figures/figure13.png", width = 700, height = 412) # -- starts writing a png to figure folder
+    png("C:/github/surveyreport2020/figures/figure14.png", width = 700, height = 412) # -- starts writing a png to figure folder
     par(mfcol=c(1,2), mar=c(4,4,1,1), oma=c(2,2,3,1), cex=1.0)  # -- mar(bottom, left, top, and right)
     par(xpd=NA)  # for placement of A,B,C,D
 
     lenWT     <- "exec procR_Survey_Sablefish_LenWt_shiny"
     lenWTdat1 <-  GetSQLData(lenWT,"Sablefish")                                                       # read from SQL Server
-    write.table(lenWTdat1, file = paste(path,"figure13.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
-    lenWTdat1 <- read.csv(paste(path,'figure13.csv',sep=''),header=T) # read from csv
+    write.table(lenWTdat1, file = paste(path,"figure14.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
+    lenWTdat1 <- read.csv(paste(path,'figure14.csv',sep=''),header=T) # read from csv
     lenWTdat  <- lenWTdat1[lenWTdat1$YEAR==yr,]
 
     for (i in c(2,1)) {
@@ -568,15 +613,15 @@
 
    while (!is.null(dev.list()))  dev.off() 
    
-      img <-    paste(basepath,'figures/Figure13.png',sep='')
+      img <-    paste(basepath,'figures/figure14.png',sep='')
           knitr::include_graphics(img)
           
 ```
-(ref:figure14) The percentage of sub-legal sablefish (<55 cm fork length) sampled by area and depth strata since the year 201. Sub-legal specimen count above 50% sampled shown in blue.
+(ref:figure15) The percentage of sub-legal sablefish (<55 cm fork length) sampled by area and depth strata since the year 201. Sub-legal specimen count above 50% sampled shown in blue.
 
-```{r figure14, fig.cap='(ref:figure14)',results='asis', out.width = "515px",out.height = "401px", fig.align="center"}
+```{r figure15, fig.cap='(ref:figure15)',results='asis', out.width = "515px",out.height = "401px", fig.align="center"}
 
-  png(paste(basepath,'figures/figure14.png',sep=''), width = 800, height = 624) 
+  png(paste(basepath,'figures/figure15.png',sep=''), width = 800, height = 624) 
   sqlpolar  <-  paste( " select YEAR, SABLE_AREA_GROUP, SABLE_DEPTH_GROUP, ROUND(countSub / total * 100, 1) as subL, ",
                        " ROUND(countLeg / total * 100, 1) AS Leg, combo, combo + cast(YEAR as varchar) as combo2, ",
                        "(cast(right(sable_area_group,1) as int) + ", 
@@ -613,11 +658,11 @@
 
  polar        <- GetSQLData(sqlpolar ,"Sablefish")     # read from SQL Server
  polarsummary <- GetSQLData(polarsumm ,"Sablefish")   # view the results to be able to type into the summary
- write.table(polar,        file = paste(path,"figure14a.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
- write.table(polarsummary, file = paste(path,"figure14b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+ write.table(polar,        file = paste(path,"figure15a.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+ write.table(polarsummary, file = paste(path,"figure15b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
  
- polar        <-  read.csv(paste(path,'figure14a.csv', sep=''),header=T)        # read from csv
- polarsummary <-  read.csv(paste(path,'figure14b.csv', sep=''),header=T)
+ polar        <-  read.csv(paste(path,'figure15a.csv', sep=''),header=T)        # read from csv
+ polarsummary <-  read.csv(paste(path,'figure15b.csv', sep=''),header=T)
  polar$cat    <-  ifelse(polar$subL>=50,">50%","<50%")  # identify sublegal counts below and above 50 %
  
  linea<-25.0
@@ -653,16 +698,16 @@
  
 
   while (!is.null(dev.list()))  dev.off()  
-    img <-   paste(basepath,'figures/figure14.png',sep='')   # retrieve png from figures folder
+    img <-   paste(basepath,'figures/figure15.png',sep='')   # retrieve png from figures folder
              knitr::include_graphics(img)
 ```
 \clearpage
 
 \clearpage
-(ref:figure15) Tag recovery rate one year after release for tagged sablefish released on annual surveys in the past 10 years.
+(ref:figure16) Tag recovery rate one year after release for tagged sablefish released on annual surveys in the past 10 years.
 
-```{r figure15, fig.cap='(ref:figure15)',results='asis', out.width = "480px", out.height = "419px", fig.align="center"}
-   png(paste(basepath,'figures/figure15.png',sep=''), width = 600, height = 524)  # starts writing a png to figure folder
+```{r figure16, fig.cap='(ref:figure16)',results='asis', out.width = "480px", out.height = "419px", fig.align="center"}
+   png(paste(basepath,'figures/figure16.png',sep=''), width = 600, height = 524)  # starts writing a png to figure folder
 
    tagPlotdata  <-  " select  dbo.q_Fish_Tag_Release_Simple.rel_year, ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) AS rec_year, 
                       COUNT(dbo.q_Fish_Tag_Release_Simple.TAG_ID) AS count, dbo.WEB_TAG_REVIEW.Total_released, 
@@ -679,8 +724,8 @@
                       having(dbo.q_Fish_Tag_Release_Simple.rel_year > 1990) AND (ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) <> 0)
                       order by dbo.q_Fish_Tag_Release_Simple.rel_year, rec_year"
     tagPlot  <-  GetSQLData(tagPlotdata,"FishTag")
-    write.table(tagPlot, file = paste(path,'figure15.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
-    dat      <-  read.csv(paste(path,'figure15.csv',sep=''),header=T) # read from csv
+    write.table(tagPlot, file = paste(path,'figure16.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+    dat      <-  read.csv(paste(path,'figure16.csv',sep=''),header=T) # read from csv
     tagPlot  <-  tagPlot[tagPlot$year_out>=0,]   # query out the zeros
     tagPlot  <-  tagPlot[tagPlot$rel_year>=2010,]
     
@@ -700,24 +745,24 @@
     abline(h=c(0,2,4,6,8,10,12), lty=2, col="darkgrey")
     
     while (!is.null(dev.list()))  dev.off()  
-    img <-   paste(basepath,'figures/figure15.png',sep='')   # retrieve png from figures folder
+    img <-   paste(basepath,'figures/figure16.png',sep='')   # retrieve png from figures folder
              knitr::include_graphics(img)
     
 ```
 
-(ref:figure16) Bubble plot for female (A) and male (B) sablefish ages by survey year from StRS sets that have been aged.  The sizes of the circles are proportional to the number of fish with given ages. Fish age 35 and older are included in one bubble. The total number(n) of fish aged are listed across the top of each panel. The ages with the highest ratios are posted to the right of each bubble.
+(ref:figure17) Bubble plot for female (A) and male (B) sablefish ages by survey year from StRS sets that have been aged.  The sizes of the circles are proportional to the number of fish with given ages. Fish age 35 and older are included in one bubble. The total number(n) of fish aged are listed across the top of each panel. The ages with the highest ratios are posted to the right of each bubble.
 
-```{r figure16, fig.cap='(ref:figure16)',results='asis', out.width = "500px",out.height = "577px", fig.align="center"}
+```{r figure17, fig.cap='(ref:figure17)',results='asis', out.width = "500px",out.height = "577px", fig.align="center"}
    # dt  <-  ("exec procRReport_Survey_proportions_at_age")  run this procedure to create table first.
    # sql server procedure:  procRReport_Survey_proportions_at_age which pulls age data from 
    # GFBIOSQL.dbo.b21_samples and b22_specimens
 
-   png(paste(basepath,'figures/figure16.png',sep=''), width = 800, height = 924)  # -- starts writing a png to figure folder
+   png(paste(basepath,'figures/figure17.png',sep=''), width = 800, height = 924)  # -- starts writing a png to figure folder
 
    dt   <-  paste("select * from Report_Survey_GFBIO_Age_MF_Prop where SetType='StRS' and Year<=", yr, sep="")
    dat  <-  GetSQLData(dt,"Sablefish")                                                            # read from SQL Server
-   write.table(dat, file = paste(path,'figure16.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
-   dat  <-  read.csv(paste(path,'figure16.csv',sep=''),header=T) # read from csv
+   write.table(dat, file = paste(path,'figure17.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   dat  <-  read.csv(paste(path,'figure17.csv',sep=''),header=T) # read from csv
 
    par(mfrow=c(2,1),cex=1.1)     # -- two vertical plots
    par(xpd=NA)
@@ -772,21 +817,21 @@
         text(x, y, txt, cex=1.5)
    
     while (!is.null(dev.list()))  dev.off()  
-    img <-   paste(basepath,'figures/figure16.png',sep='')   # -- retrieve png from figures folder
+    img <-   paste(basepath,'figures/figure17.png',sep='')   # -- retrieve png from figures folder
              knitr::include_graphics(img)
 ```
 \clearpage
 
-(ref:figure17) Coplot of average depth (m) vs average temperature ($^\circ$C) for a given 1-degree latitude range (blue bands) for `r yr`.  The number of fishing sets deployed with a SBE 39 recorder are represented by n.
+(ref:figure18) Coplot of average depth (m) vs average temperature ($^\circ$C) for a given 1-degree latitude range (blue bands) for `r yr`.  The number of fishing sets deployed with a SBE 39 recorder are represented by n.
 
-```{r figure17, fig.cap='(ref:figure17)',results='asis', out.width = "500px",out.height = "335px", fig.align="center"}
+```{r figure18, fig.cap='(ref:figure18)',results='asis', out.width = "500px",out.height = "335px", fig.align="center"}
 
-      png(paste(basepath,'figures/figure17.png',sep=''), width=920, height=424) # write png to file
+      png(paste(basepath,'figures/figure18.png',sep=''), width=920, height=424) # write png to file
       # table SEABIRD_ReportCoplot created in the Sablefish.dbo.Build_Seabird_tables procedure
       sbecp     <- paste("select * from SEABIRD_ReportCoplot where Year in(",yr,")",sep="")
       ctddat    <- GetSQLData(sbecp,"Sablefish")   # read from SQL Server
-      write.table(ctddat, file = paste(path,"figure17.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
-      ctddat    <- read.csv(paste(path,'figure17.csv',sep=''),header=T)  # read from csv
+      write.table(ctddat, file = paste(path,"figure18.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
+      ctddat    <- read.csv(paste(path,'figure18.csv',sep=''),header=T)  # read from csv
 
       par(mar=c(1,1,1,1.4),cex=1.5,cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)   # par(mar=c(bottom,left,top,right) 
       yrdat     <-  ctddat[ctddat$Year==yr,]
@@ -819,29 +864,29 @@
 
       require('magick')   # in order to stack images
       uno <- image_read(paste(basepath,'figures/CoPlotTopMain.png', sep='')) # Read external images
-      one <- image_read(paste(basepath,'figures/figure17.png', sep=''))
+      one <- image_read(paste(basepath,'figures/figure18.png', sep=''))
       imgs = c(uno, one)
      
       # concatenate pngs left-to-right (use 'stack=T' to do it top-to-bottom)
       side_by_side = image_append(imgs, stack=T)
-      image_write(side_by_side, path = paste(basepath,'figures/figure17.png',sep=''), format = "png")  # save png
+      image_write(side_by_side, path = paste(basepath,'figures/figure18.png',sep=''), format = "png")  # save png
 
-      img <-   paste(basepath,'figures/figure17.png',sep='')   # retrieve png 
+      img <-   paste(basepath,'figures/figure18.png',sep='')   # retrieve png 
                knitr::include_graphics(img)
 
 ```
 \clearpage
 
-(ref:figure18) Average temperatures as reported from the Sea-bird SBE 39 loggers at 1-degree latitude intervals and three depth intervals: shallow: 100-250 fathoms (183 to 457 meters), mid:  250-450 fathoms (458-823 meters) and deep:  450-750 fathoms (824-1372 meters). 
+(ref:figure19) Average temperatures as reported from the Sea-bird SBE 39 loggers at 1-degree latitude intervals and three depth intervals: shallow: 100-250 fathoms (183 to 457 meters), mid:  250-450 fathoms (458-823 meters) and deep:  450-750 fathoms (824-1372 meters). 
 
-```{r figure18, fig.cap='(ref:figure18)', results='asis', out.width = "400px",out.height = "666px", fig.align = "center"}
-      # table SEABIRD_ReportLinePlot created in the Sablefish.dbo.Build_Seabird_tables procedure
+```{r , fig.cap='(ref:figure19)', results='asis', out.width = "400px",out.height = "666px", fig.align = "center"}
+figure19      # table SEABIRD_ReportLinePlot created in the Sablefish.dbo.Build_Seabird_tables procedure
     
-       png(paste(basepath,'figures/figure18.png',sep=''), width=600, height=1000) # write png to file
+       png(paste(basepath,'figures/figure19.png',sep=''), width=600, height=1000) # write png to file
        ctddt  <-  "select * from SEABIRD_ReportLinePlot"
        ctd    <-  GetSQLData(ctddt,"Sablefish")   # read from SQL Server
-       write.table(ctd, file = paste(path,"figure17.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
-       ctd    <-  read.csv(paste(path,'figure17.csv',sep=''),header=T)  # read from csv
+       write.table(ctd, file = paste(path,"figure18.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+       ctd    <-  read.csv(paste(path,'figure18.csv',sep=''),header=T)  # read from csv
        
        ctd2         <-  arrange(transform(ctd,strata = factor(depth,levels=rev(unique(ctd$depth)))), depth)
        ctgc         <-  summarySE(ctd2, measurevar="avgtemp", groupvars=c("Year","depth"), na.rm = T)
@@ -862,7 +907,7 @@
                theme_bw(base_size = 18)
        
        while (!is.null(dev.list()))  dev.off()
-       img <-   paste(basepath,'figures/figure18.png',sep='')   # retrieve png 
+       img <-   paste(basepath,'figures/figure19.png',sep='')   # retrieve png 
              knitr::include_graphics(img)
 
 ```
