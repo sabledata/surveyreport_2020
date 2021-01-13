@@ -1,5 +1,5 @@
 # Tables
-(ref:Table1Caption) Spatial strata allocation and completed strata counts for the `r yr` sablefish research and assessment survey.
+(ref:Table1Caption) Spatial strata allocation and completed strata counts (blue) for the `r yr` sablefish research and assessment survey.
 \ \
 \ \
 
@@ -15,8 +15,8 @@
                            "from dbo.GFBIO_RESEARCH_TRIPS ",
                            "group by Year, DEPTH_STRATUM, SPATIAL_STRATUM ",
                            "having (Year = ", yr, " )", sep="")
-       #surv.strata <- GetSQLData(act.strata,"Sablefish")
-       #write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+       surv.strata <- GetSQLData(act.strata,"Sablefish")
+       write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
        surv.strata <-  read.csv(paste(path,'table1.csv',sep=''), header=T)
 
        RD1      <- c(6,6,8,6,6,32)
@@ -46,7 +46,7 @@
               row_spec(5, hline_after = T) %>%
               #column_spec(1, width  = "6.6cm") %>%
               column_spec(2, width  = "0.5cm") %>%
-              column_spec(3, width  = "0.5cm", color="gray") %>%
+              column_spec(3, width  = "0.5cm", color="blue") %>%
               column_spec(4, width  = "0.5cm") %>%
               column_spec(5, width  = "0.5cm", color="blue") %>% 
               column_spec(6, width  = "0.5cm") %>% 
@@ -62,7 +62,6 @@
 \ \
 \ \
 \ \
-
 (ref:Table2Caption) Summary of species captured during the `r yr` survey StRS sets conducted by the `r boat`. No value in the weight column indicates that the catch was not weighed. No value in both weight and count indicates trace weights of less than 1 kg recorded.
 \ \
 \ \
@@ -195,5 +194,6 @@
 
 ```
 \clearpage
+
 
 

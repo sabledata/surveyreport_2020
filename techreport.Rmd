@@ -94,8 +94,8 @@ message("year = ", rmarkdown::metadata$year)
 #browser()
 
 yr       <-  2020
-basepath <- 'c:/github/surveyreport2020/'
-path     <- 'c:/github/surveyreport2020/standaloneData/'
+basepath <- 'c:/github/surveyreport_2020/'
+path     <- 'c:/github/surveyreport_2020/standaloneData/'
 
 library(RODBC)
 library(knitr)
@@ -326,8 +326,8 @@ Of the 91 original blocks for the StRS portion of the survey, ten were replaced 
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
 
   dtStRS   <-   " select  * from dbo.GENERIC_GFBIO_TRAPS order by year"  # -- must update view GENERIC_GFBIO_TRAPS
-  datStRS  <-   GetSQLData(dtStRS,"Sablefish")                          # read from SQL Server
-  write.table(datStRS, file = paste(path,"results01.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+  #datStRS  <-   GetSQLData(dtStRS,"Sablefish")                          # read from SQL Server
+  #write.table(datStRS, file = paste(path,"results01.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
   datStRS  <-  read.csv(paste(path,'results01.csv',sep=''), header=T)  # read from csv
   odbcCloseAll()
 
@@ -387,8 +387,8 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
                          "having (SABLE_SET_TYPE = N'StRS') and ",
                          "(SPECIES_CODE <> N'455') and (Year = ",yr,") ",
                          "order by catchkg DESC", sep="") 
-   topStRSsp    <- GetSQLData(topStRS,"Sablefish") 
-   write.table(topStRSsp, file = paste(path,"results02.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #topStRSsp    <- GetSQLData(topStRS,"Sablefish") 
+   #write.table(topStRSsp, file = paste(path,"results02.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    topStRSsp  <-  read.csv(paste(path, 'results02.csv',sep=''), header=T) 
    
    topStRSsp1   <- tolower(as.character(topStRSsp[1,1]))                     # -- StRS top 5 species names
@@ -422,8 +422,8 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
                                 "Fish, Rockfish, Flatfish, Invertebrate, Mammal, Bird, SABLE_SET_TYPE, Year, TRIP_ID,  ",
                                 "case when Fish = Rockfish or Fish = Flatfish then 0 ELSE Fish end, SPECIES_CODE  ",
                                 "having (SABLE_SET_TYPE = N'StRS') and (Year = ",yr,")) AS RC", sep="")
-   strsSpCom    <- GetSQLData(spc,"Sablefish")
-   write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #strsSpCom    <- GetSQLData(spc,"Sablefish")
+   #write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    strsSpCom   <-  read.csv(paste(path,'results03.csv',sep=''),header=T) 
    
    roundfishS   <- strsSpCom[1,1]
@@ -456,16 +456,16 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
                          "sd.TRIP_ID = rt.TRIP_ID AND  sd.[SET] = rt.SET_NUMBER " ,
                          "where (sd.Year =", yr,") group by rt.SABLE_SET_TYPE",sep="")
 
-    countStRS   <- GetSQLData(catchStRS,"Sablefish")
-    write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    #countStRS   <- GetSQLData(catchStRS,"Sablefish")
+    #write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     countStRS   <-  read.csv(paste(path,'results04.csv',sep=''),header=T) 
     
     # -- Sablefish.dbo.procReport_Survey_LenMF pulls length data from table GFBIO_SABLEBIO_VW 
     # -- from procedure Build_BIO_Sablefish_Tables for the histogram of lengths
     
     lendat     <-   "exec procReport_Survey_LenMF"
-    lendata    <-   GetSQLData(lendat,"Sablefish")
-    write.table(lendata, file = paste(path,"results05.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    #lendata    <-   GetSQLData(lendat,"Sablefish")
+    #write.table(lendata, file = paste(path,"results05.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     lendata   <-    read.csv(paste(path,'results05.csv',sep=''),header=T) 
     
     # late addition for the average lengths per year in text
@@ -779,7 +779,7 @@ The stock assessment survey and data report is the result of the collaborative e
 <!--chapter:end:03_results.Rmd-->
 
 # Tables
-(ref:Table1Caption) Spatial strata allocation and completed strata counts for the `r yr` sablefish research and assessment survey.
+(ref:Table1Caption) Spatial strata allocation and completed strata counts (blue) for the `r yr` sablefish research and assessment survey.
 \ \
 \ \
 
@@ -795,8 +795,8 @@ The stock assessment survey and data report is the result of the collaborative e
                            "from dbo.GFBIO_RESEARCH_TRIPS ",
                            "group by Year, DEPTH_STRATUM, SPATIAL_STRATUM ",
                            "having (Year = ", yr, " )", sep="")
-       #surv.strata <- GetSQLData(act.strata,"Sablefish")
-       #write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+       surv.strata <- GetSQLData(act.strata,"Sablefish")
+       write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
        surv.strata <-  read.csv(paste(path,'table1.csv',sep=''), header=T)
 
        RD1      <- c(6,6,8,6,6,32)
@@ -826,7 +826,7 @@ The stock assessment survey and data report is the result of the collaborative e
               row_spec(5, hline_after = T) %>%
               #column_spec(1, width  = "6.6cm") %>%
               column_spec(2, width  = "0.5cm") %>%
-              column_spec(3, width  = "0.5cm", color="gray") %>%
+              column_spec(3, width  = "0.5cm", color="blue") %>%
               column_spec(4, width  = "0.5cm") %>%
               column_spec(5, width  = "0.5cm", color="blue") %>% 
               column_spec(6, width  = "0.5cm") %>% 
@@ -842,7 +842,6 @@ The stock assessment survey and data report is the result of the collaborative e
 \ \
 \ \
 \ \
-
 (ref:Table2Caption) Summary of species captured during the `r yr` survey StRS sets conducted by the `r boat`. No value in the weight column indicates that the catch was not weighed. No value in both weight and count indicates trace weights of less than 1 kg recorded.
 \ \
 \ \
@@ -975,6 +974,7 @@ The stock assessment survey and data report is the result of the collaborative e
 
 ```
 \clearpage
+
 
 
 

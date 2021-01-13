@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,13 +996,13 @@ LaTeX Info: Redefining \selectfont on input line 100.
 Package hyperref Info: Option `pageanchor' set `false' on input line 105.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 105.
-<csas-style/images/e_dfo_c.png, id=124, 1215.54124pt x 88.33pt>
+<csas-style/images/e_dfo_c.png, id=64, 1215.54124pt x 88.33pt>
 File: csas-style/images/e_dfo_c.png Graphic file (type png)
 <use csas-style/images/e_dfo_c.png>
 Package pdftex.def Info: csas-style/images/e_dfo_c.png  used on input line 105.
 
 (pdftex.def)             Requested size: 274.0785pt x 19.91692pt.
-<csas-style/images/canada_c.png, id=125, 3014.26125pt x 719.68875pt>
+<csas-style/images/canada_c.png, id=65, 3014.26125pt x 719.68875pt>
 File: csas-style/images/canada_c.png Graphic file (type png)
 <use csas-style/images/canada_c.png>
 Package pdftex.def Info: csas-style/images/canada_c.png  used on input line 105
@@ -1216,7 +1216,7 @@ Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
  []
 
 
-! LaTeX Error: Undefined color `gray'.
+! LaTeX Error: Undefined color `grey'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1226,10 +1226,10 @@ l.210 ...ta} & \textcolor{black}{RD1} & \textcolor
                                                   {black}{RD1 2020} & \textc...
  
 Here is how much of TeX's memory you used:
- 17514 strings out of 482938
- 309941 string characters out of 5958759
+ 17468 strings out of 482938
+ 309046 string characters out of 5958759
  620993 words of memory out of 5000000
- 32214 multiletter control sequences out of 15000+600000
+ 32184 multiletter control sequences out of 15000+600000
  600751 words of font info for 140 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,77p,1017b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
