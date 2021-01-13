@@ -86,7 +86,7 @@
     
     kableExtra::kable(cleandataSP,
                       booktabs = TRUE,linesep = "",
-                      format = "latex",  caption = "(ref:Table3Caption)") %>%
+                      format = "latex",  caption = "(ref:Table2Caption)") %>%
                       row_spec(0,    bold = T) %>%
                       row_spec(10,  hline_after = T) %>%
                       row_spec(23,  hline_after = T) %>%

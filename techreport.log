@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,69 +1198,74 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 206.
 
-Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
- []|[]\T1/phv/m/n/10 (-20) RD1[]|
+Overfull \hbox (5.77351pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/b/n/10 RD1[]|
  []
 
 
-Overfull \hbox (5.09352pt too wide) in paragraph at lines 210--210
- []|[][]\T1/phv/m/n/10 (-20) RD1
+Overfull \hbox (5.49352pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/b/n/10 RD1
  []
 
 
-Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
- \T1/phv/m/n/10 (-20) 2020[]|
+Overfull \hbox (8.01338pt too wide) in paragraph at lines 210--210
+ \T1/phv/b/n/10 2020[]|
  []
 
 
-Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
- []|[]\T1/phv/m/n/10 (-20) RD2[]|
+Overfull \hbox (5.77351pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/b/n/10 RD2[]|
  []
 
 
-Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
- []|[][]\T1/phv/m/n/10 (-20) RD2
+Overfull \hbox (5.77351pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/b/n/10 RD2
  []
 
 
-Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
- \T1/phv/m/n/10 (-20) 2020[]|
+Overfull \hbox (8.01338pt too wide) in paragraph at lines 210--210
+ \T1/phv/b/n/10 2020[]|
  []
 
 
-Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
- []|[]\T1/phv/m/n/10 (-20) RD3[]|
+Overfull \hbox (5.77351pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/b/n/10 RD3[]|
  []
 
 
-Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
- []|[][]\T1/phv/m/n/10 (-20) RD3
+Overfull \hbox (5.77351pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/b/n/10 RD3
  []
 
 
-Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
- \T1/phv/m/n/10 (-20) 2020[]|
+Overfull \hbox (8.01338pt too wide) in paragraph at lines 210--210
+ \T1/phv/b/n/10 2020[]|
  []
 
 
-Overfull \hbox (0.66832pt too wide) in paragraph at lines 210--210
- []|[]\T1/phv/m/n/10 (-20) Total[]|
+Overfull \hbox (3.17297pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/b/n/10 Total[]|
  []
 
 
-Overfull \hbox (6.3588pt too wide) in paragraph at lines 210--211
- []|[][]\T1/phv/m/n/10 (-20) Total
+Overfull \hbox (8.86345pt too wide) in paragraph at lines 210--211
+ []|[][]\T1/phv/b/n/10 Total
  []
 
 
-Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--211
- \T1/phv/m/n/10 (-20) 2020[]|
+Overfull \hbox (8.01338pt too wide) in paragraph at lines 210--211
+ \T1/phv/b/n/10 2020[]|
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 230--230
 []\T1/phv/m/n/12 (+20) Table 2. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
 ol-lected dur-ing the 2020 strat-i-fied
+ []
+
+
+Overfull \hbox (1.80923pt too wide) in paragraph at lines 232--282
+[][] 
  []
 
 
@@ -1307,11 +1312,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 17515 strings out of 482938
- 309485 string characters out of 5958759
- 633993 words of memory out of 5000000
- 32204 multiletter control sequences out of 15000+600000
- 610917 words of font info for 156 fonts, out of 8000000 for 9000
+ 17516 strings out of 482938
+ 309505 string characters out of 5958759
+ 634993 words of memory out of 5000000
+ 32205 multiletter control sequences out of 15000+600000
+ 613584 words of font info for 157 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,77p,1017b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
@@ -1326,10 +1331,10 @@ s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
 TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
 ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (15 pages, 170824 bytes).
+Output written on techreport.pdf (15 pages, 170837 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  190 compressed objects within 2 object streams
  45 named destinations out of 1000 (max. 500000)
- 40075 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40587 words of extra memory for PDF output out of 42996 (max. 10000000)
 
