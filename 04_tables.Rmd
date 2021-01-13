@@ -1,0 +1,199 @@
+# Tables
+(ref:Table1Caption) Spatial strata allocation and completed strata counts for the `r yr` sablefish research and assessment survey.
+\ \
+\ \
+
+```{r Table1, echo=FALSE}
+
+       Strata      <- c("S1 (South West Coast Vancouver Island or SWCVI)",
+                        "S2 (North West Coast Vancouver Island or NWCVI)",
+                        "S3 (Queen Charlotte Sound or QCS)",
+                        "S4 (South West Coast Haida Gwaii or SWCHG)",
+                        "S5 (North West Coast Haida Gwaii or NWCHG)",
+                        "Total ")
+       act.strata  <- paste("select Year, DEPTH_STRATUM, SPATIAL_STRATUM, COUNT([SET]) AS sets ",
+                           "from dbo.GFBIO_RESEARCH_TRIPS ",
+                           "group by Year, DEPTH_STRATUM, SPATIAL_STRATUM ",
+                           "having (Year = ", yr, " )", sep="")
+       #surv.strata <- GetSQLData(act.strata,"Sablefish")
+       #write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+       surv.strata <-  read.csv(paste(path,'table1.csv',sep=''), header=T)
+
+       RD1      <- c(6,6,8,6,6,32)
+       RD1fish  <- surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD1"]
+       RD1fish[6]  <- sum(surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD1"])
+       RD2fish  <- surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD2"]
+       RD2fish[6]  <- sum(surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD2"])
+       RD3fish  <- surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD3"]
+       RD3fish[6]  <- sum(surv.strata$sets[surv.strata$DEPTH_STRATUM =="RD3"])     
+       RD2      <- c(8,7,6,6,7,34)
+       RD3      <- c(5,5,5,5,5,25)
+       Total    <- c(19,18,19,17,18,91)
+       Totfish  <- c(RD1fish[1]+RD2fish[1]+RD3fish[1], RD1fish[2]+RD2fish[2]+RD3fish[2],
+                     RD1fish[3]+RD2fish[3]+RD3fish[3], RD1fish[4]+RD2fish[4]+RD3fish[4],
+                     RD1fish[5]+RD2fish[5]+RD3fish[5], RD1fish[6]+RD2fish[6]+RD3fish[6]) # addition
+       dataf    <- data.frame(Strata, RD1, RD1fish, RD2, RD2fish,RD3, RD3fish, Total, Totfish) 
+       yrRD1    <- paste("RD1 ",yr,sep="")
+       yrRD2    <- paste("RD2 ",yr,sep="")
+       yrRD3    <- paste("RD3 ",yr,sep="")
+       yrTot    <- paste("Total ",yr,sep="")
+       
+       colnames(dataf) <- c("Spatia Strata", "RD1",yrRD1, "RD2",yrRD2,"RD3",yrRD3,"Total",yrTot)
+   
+       kableExtra::kable(dataf, booktabs = TRUE,linesep = "",
+                   format = "latex",
+                   caption = "(ref:Table1Caption)") %>%
+              row_spec(5, hline_after = T) %>%
+              #column_spec(1, width  = "6.6cm") %>%
+              column_spec(2, width  = "0.5cm") %>%
+              column_spec(3, width  = "0.5cm", color="gray") %>%
+              column_spec(4, width  = "0.5cm") %>%
+              column_spec(5, width  = "0.5cm", color="blue") %>% 
+              column_spec(6, width  = "0.5cm") %>% 
+              column_spec(7, width  = "0.5cm", color="blue") %>%          
+              column_spec(8, width  = "0.7cm") %>%
+              column_spec(9, width  = "0.5cm", color="blue") %>% 
+              row_spec(0, color="black") %>%
+              add_header_above(c(" "= 1, "Depth Strata" = 6, " " = 2)) %>%
+       kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position")
+  
+  
+```
+\ \
+\ \
+\ \
+
+(ref:Table2Caption) Summary of species captured during the `r yr` survey StRS sets conducted by the `r boat`. No value in the weight column indicates that the catch was not weighed. No value in both weight and count indicates trace weights of less than 1 kg recorded.
+\ \
+\ \
+\ \
+
+```{r table2,  echo=FALSE}
+
+    options(knitr.kable.NA = '')
+    dtSP   <- paste("exec procRReport_SpeciesSummary ",yr," ,'StRS'",sep="")
+    #datSP  <- GetSQLData(dtSP,"Sablefish")
+    #write.table(datSP, file = paste(path,"Table2.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    datSP  <-  read.csv(paste(path,'table2.csv',sep=''), header=T)
+       
+    dat1SP <- datSP[,c(-1)] 
+    dat1SP <- dat1SP[,c(-3)]
+    dat1SP <- dat1SP[,c(-2)]
+    dat1SP <- dat1SP[,c(-6)]  # trim columns
+    cleandataSP<-dat1SP
+    cleandataSP$Summary_sp <- cleanf(cleandataSP$Summary_sp)  #  remove duplicates function
+    colnames(cleandataSP)  <- c( "Category", "Common Name", "Scientific Name" , "Count", "Weight(kg)")
+    
+    kableExtra::kable(cleandataSP,
+                      booktabs = TRUE,linesep = "",
+                      format = "latex",  caption = "(ref:Table3Caption)") %>%
+                      row_spec(10,  hline_after = T) %>%
+                      row_spec(23,  hline_after = T) %>%
+                      row_spec(26,  hline_after = T) %>%
+                      kableExtra::kable_styling(font_size = 8, position = "left",
+                                                latex_options = "hold_position")
+```
+\clearpage
+
+(ref:Table3Caption) Summary of sablefish biological data collected during the `r yr` stratified random sets by spatial and depth stratum.
+
+```{r table3, echo=FALSE}
+
+    #newdata2   <-   rbind(newdata,biosumm)
+    newdata2    <-   newdata  # created in results section
+
+    kableExtra::kable(newdata2, row.names = FALSE,
+                booktabs = TRUE,   linesep = "",
+                format = "latex",  caption = "(ref:Table3Caption)") %>% 
+    add_header_above(c("Depth Strata/Locality"= 2,
+                        "Proportion" = 2, 
+                        "Mean Fork Length (mm)" = 3)) %>%
+      
+    kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
+                row_spec(0,    bold = T) %>%
+                row_spec(3,    hline_after = T) %>%
+                row_spec(4,    bold = T, hline_after = T) %>%
+                row_spec(7,    hline_after = T) %>% 
+                row_spec(8,    bold = T, hline_after = T) %>%      
+                row_spec(11,   hline_after = T) %>%
+                row_spec(12,   bold = T, hline_after = T) %>%      
+                row_spec(15,   hline_after = T)   %>% 
+                row_spec(16,   bold = T, hline_after = T) %>%   
+                row_spec(19,   hline_after = T)   %>% 
+                row_spec(20,   bold = T)
+      
+```
+\ \
+\ \
+\ \
+
+(ref:Table4Caption) Percentage of sablefish tag recoveries by great circle distance (km) from BC release sites (1995-2018) and years at liberty. 
+
+```{r table4, echo=FALSE}
+
+  distance   <- paste("select right(YearGroups,4) as YearGroup, [<10 km], [11-50 km], [51-100 km], ",
+                      "[101-250 km] + [251-500 km] AS [101-500 km],  ",
+                      "[501-1000 km] + [>1000 km] AS [>500 km] ",
+                      "from (select YearGroups, ",
+                      "MIN(case [Distance Group] when '1.  <10 km' THEN CountTags END) AS [<10 km], ", 
+                      "MIN(case [Distance Group] WHEN '2.  11-50 km' THEN CountTags END) AS [11-50 km],  ",
+                      "MIN(case [Distance Group] WHEN '3.  51-100 km' THEN CountTags END) AS [51-100 km],  ",
+                      "MIN(case [Distance Group] WHEN '4.  101-250 km' THEN CountTags END) AS [101-250 km],  ",
+                      "MIN(case [Distance Group] WHEN '5.  251-500 km' THEN CountTags END) AS [251-500 km],  ",
+                      "MIN(case [Distance Group] WHEN '6.  501-1000 km' THEN CountTags END) AS [501-1000 km],  ",
+                      "MIN(case [Distance Group] WHEN '7.  >1000 km' THEN CountTags END) AS [>1000 km] ",
+                      "from dbo.Distance_travelled_groups ",
+                      "group by YearGroups) AS report ",
+                      "where (NOT (YearGroups IS NULL)) and (NOT (YearGroups = 'Grp0.  0'))", sep="")
+  #tag.dist   <- GetSQLData(distance,"FishTag")
+  #write.table(tag.dist, file = paste(path,"Table4.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+  tag.dist   <-  read.csv(paste(path,'table4.csv',sep=''), header=T)
+  tag.dist$YearGroup <-   as.character(tag.dist$YearGroup)
+  tag.dist$rec.sum   <-   rowSums(tag.dist[,2:6], na.rm=TRUE)
+  
+  row.add    <-  c('Total Count', sum(tag.dist$X.10.km),     sum(tag.dist$X11.50.km),  sum(tag.dist$X51.100.km),
+                            sum(tag.dist$X101.500.km), sum(tag.dist$X.500.km) ,  sum(tag.dist$rec.sum) )
+  tag.dist2  <-  rbind(tag.dist,row.add)
+  
+
+  tag.dist2[1,1]  <-'1'
+  tag.dist2[1,2]  <- round(as.numeric(tag.dist2[1,2])/sum(tag.dist$X.10.km) *100.0,1)
+  tag.dist2[2,2]  <- round(as.numeric(tag.dist2[2,2])/sum(tag.dist$X.10.km) *100.0,1)
+  tag.dist2[3,2]  <- round(as.numeric(tag.dist2[3,2])/sum(tag.dist$X.10.km) *100.0,1)  
+  tag.dist2[4,2]  <- round(as.numeric(tag.dist2[4,2])/sum(tag.dist$X.10.km) *100.0,1) 
+
+  tag.dist2[1,3]  <- round(as.numeric(tag.dist2[1,3])/sum(tag.dist$X11.50.km) *100.0,1)
+  tag.dist2[2,3]  <- round(as.numeric(tag.dist2[2,3])/sum(tag.dist$X11.50.km) *100.0,1)
+  tag.dist2[3,3]  <- round(as.numeric(tag.dist2[3,3])/sum(tag.dist$X11.50.km) *100.0,1)  
+  tag.dist2[4,3]  <- round(as.numeric(tag.dist2[4,3])/sum(tag.dist$X11.50.km) *100.0,1) 
+  
+  tag.dist2[1,4]  <- round(as.numeric(tag.dist2[1,4])/sum(tag.dist$X51.100.km) *100.0,1)
+  tag.dist2[2,4]  <- round(as.numeric(tag.dist2[2,4])/sum(tag.dist$X51.100.km) *100.0,1)
+  tag.dist2[3,4]  <- round(as.numeric(tag.dist2[3,4])/sum(tag.dist$X51.100.km) *100.0,1)  
+  tag.dist2[4,4]  <- round(as.numeric(tag.dist2[4,4])/sum(tag.dist$X51.100.km) *100.0,1)  
+  
+  tag.dist2[1,5]  <- round(as.numeric(tag.dist2[1,5])/sum(tag.dist$X101.500.km) *100.0,1)
+  tag.dist2[2,5]  <- round(as.numeric(tag.dist2[2,5])/sum(tag.dist$X101.500.km) *100.0,1)
+  tag.dist2[3,5]  <- round(as.numeric(tag.dist2[3,5])/sum(tag.dist$X101.500.km) *100.0,1)  
+  tag.dist2[4,5]  <- round(as.numeric(tag.dist2[4,5])/sum(tag.dist$X101.500.km) *100.0,1) 
+  
+  tag.dist2[1,6]  <- round(as.numeric(tag.dist2[1,6])/sum(tag.dist$X.500.km) *100.0,1)
+  tag.dist2[2,6]  <- round(as.numeric(tag.dist2[2,6])/sum(tag.dist$X.500.km) *100.0,1)
+  tag.dist2[3,6]  <- round(as.numeric(tag.dist2[3,6])/sum(tag.dist$X.500.km) *100.0,1)  
+  tag.dist2[4,6]  <- round(as.numeric(tag.dist2[4,6])/sum(tag.dist$X.500.km) *100.0,1)   
+  
+  names(tag.dist2) <- c('Years at Liberty','>10','11-50','51-100','101-500','>500','Recovery Count')
+  
+  kableExtra::kable(tag.dist2, row.names = FALSE,
+                    booktabs = TRUE,   linesep = "",
+                    format = "latex",  caption = "(ref:Table4Caption)")  %>% 
+    add_header_above(c(" "= 1, "Great Circle Distance (km) from Release Location" = 5, " " = 1),bold=T)  %>%
+    kableExtra::kable_styling(font_size = 10, position = "left", latex_options = "hold_position")  %>%
+    row_spec(0,   bold = T) %>%
+    row_spec(4,   hline_after = T) %>%
+    row_spec(0,   bold = T)
+
+```
+\clearpage
+
+

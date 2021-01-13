@@ -1,0 +1,358 @@
+%%%%% Set up %%%%%
+
+% Set document style and font size
+\documentclass[12pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+% File path to resources (style file etc)
+\newcommand{\locRepo}{csas-style}
+
+% Style file for DFO Technical Reports
+\usepackage{\locRepo/tech-report}
+
+% header-includes from R markdown entry
+\usepackage{pdflscape}
+
+%%%%% Variables %%%%%
+
+% New definitions: Title, year, report number, authors
+% Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty"
+\newcommand{\trTitle}{Summary of the annual 2020 sablefish (\emph{Anoplopoma fimbria}) trap survey, October 7 - November 23, 2020}
+\newcommand{\trYear}{2021}
+\newcommand{\trReportNum}{nnn}
+% Optional
+\newcommand{\trAuthFootA}{Email: \href{mailto:Lisa.Lacko@dfo-mpo.gc.ca}{\nolinkurl{Lisa.Lacko@dfo-mpo.gc.ca}} \textbar{} telephone: (250) 756-7385}
+\newcommand{\trAuthsLong}{Lisa C. Lacko, Schon M. Acheson and Brendan M. Connors}
+\newcommand{\trAuthsBack}{Lacko, L.C. and Acheson, S.M. and Connors, B.M.}
+
+% New definition: Address
+\newcommand{\trAddy}{Pacific Biological Station\\
+Fisheries and Oceans Canada, 3190 Hammond Bay Road\\
+Nanaimo, British Columbia, V9T 6N7, Canada\\}
+
+% Abstract
+\newcommand{\trAbstract}{This document describes sampling activities and summarizes results from the 2020 British Columbia Sablefish research and assessment survey. It is intended to provide a historical reference for researchers and industry. This annual survey utilized the same sampling strategy as earlier years at stratified random (StRS) sites within depth-stratified areas.
+
+Biological sampling for sablefish included collection of length, weight, sex, maturity and age structures. Sablefish were randomly sampled from every third trap on all sets, up to a maximum sample size of 60 sablefish. Biological samples (length, weight, sex, maturity, otoliths and genetic samples) were taken for rougheye/blackspotted rockfish species from catch in all traps. The tag and release study has been conducted annually since 1991 and was continued in 2020. Sablefish were selected randomly for tag and release from every third trap up to a maximum of 125 fish.
+
+In total, 48,092 sablefish were caught in 2020, of which 3,691 were used for biological samples and 8,200 were tagged and released. Of those released, 78 were recaptured tagged fish. One recaptured fish was retained for sampling and the remaining 77 were fitted with a new tag and released back into the water.
+
+Catch per unit effort (CPUE) is an important product from this survey as it is used to infer population trends. In most recent years, survey data from stratified random sets show increasing trends in CPUE in both mean weight and numbers of fish per trap. CPUE in the mainlaind inlets have varied in a predictable manner over time with peak CPUE occuring every 5-8 years and increasing to record levels in 2019. At the StRS sites, the average weight of sablefish in 2020 have showed \ldots. insert trends here\ldots{}}
+
+% Resume (i.e., French abstract)
+\newcommand{\trResume}{Voici le résumé. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+
+\newcommand{\trISBN}{}
+
+%%%%% Start %%%%%
+
+% Start the document
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+%%%% Front matter %%%%%
+
+% Add the first few pages
+\frontmatter
+
+%%%%% Drafts %%%%%
+
+%\linenumbers  % Line numbers
+%\onehalfspacing  % Extra space between lines
+\renewcommand{\headrulewidth}{0.5pt}  % Header line
+\renewcommand{\footrulewidth}{0.5pt}  % footer line
+%\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}  % Header text
+
+%%%%% Main document %%%%%
+\hypertarget{results-and-discussion}{%
+\section{Results and Discussion}\label{results-and-discussion}}
+
+\hypertarget{fishing}{%
+\subsection{FISHING}\label{fishing}}
+
+The 2020 survey was 46 days long and divided into two legs of 16 and 29 days. A total of 27 fishing days were recorded due to mechanical issues (one day) on the first leg and inclement weather (13 days) on the second leg.
+
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected with no valid substitutes, for a total of 87 blocks fished (Table~\ref{tab:table1}). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a GHNMCA protected area and one generated an error.
+
+\hypertarget{catch-per-unit-effort-cpue}{%
+\subsection{CATCH PER UNIT EFFORT (CPUE)}\label{catch-per-unit-effort-cpue}}
+
+The sablefish survey of 2020 have documented recent changes in the sablefish population structure.
+
+\hypertarget{stratified-random-set-cpue}{%
+\subsubsection{Stratified Random Set CPUE}\label{stratified-random-set-cpue}}
+
+Across all years, the highest annual CPUE (kg/trap) typically occured in the middle depths (450-850 m). In recent years, an increase in CPUE started in 2015 and a consistent rise in CPUE began in 2017 (Figure~\ref{fig:figure4}). This increase was observed in nearly all depth strata (RD\textsubscript{1} to RD\textsubscript{2}) and area strata (SD\textsubscript{1} to SD\textsubscript{5}) (Figure~\ref{fig:figure5}). The observed catch by weight pattern was accompanied by an increase in the number of fish per trap. However, the large estimated numbers of fish were highly variable (+-95\% CI) (Figure~\ref{fig:figure6}). The observed mean weights indicated a three year declining trend beginning in 2017 in half of the area-depth strata. Little or no trend was seen in the remaining strata (Figure~\ref{fig:figure7}).
+
+\hypertarget{catch-composition}{%
+\subsection{CATCH COMPOSITION}\label{catch-composition}}
+
+A total of forty-two taxonomic groups were represented in the catches in StRS sets in 2020 (Table~\ref{tab:table3}). These included ten roundfish species, seven rockfish species, four flatfish species and twenty invertebrate species. Other than sablefish, the most common species, by weight, were pacific halibut (\emph{Hippoglossus stenolepis}), Lingcod (\emph{Ophiodon elongatus}), spiny dogfish (\emph{Squalus acanthias}), yelloweye rockfish (\emph{Sebastes ruberrimus}) and redbanded rockfish (\emph{Sebastes babcocki}).
+
+\hypertarget{sablefish-sampling}{%
+\subsection{SABLEFISH SAMPLING}\label{sablefish-sampling}}
+
+A detailed breakdown of the fate of the catch in each trap for the 2020 survey is listed in Appendix~\ref{app:fourth-appendix}.
+
+During the 2020 StRS, a total of NA sablefish were caught. Of that total, NA were tagged and released and NA were retained for biological sampling. Of the tagged fish, NA were previously tagged fish that were re-released with a new tag. Another NA previously tagged fish were retained for sampling (Appendix~\ref{app:seventh-appendix}).
+
+Out of the 48,092 sablefish captured during the 2020 traditional survey (inlet standardized sets), 8,277 were tagged and released, 3,691 were used for biological sampling and 77 were previously tagged fish re-released with a new tag (Appendix~\ref{app:seventh-appendix}).
+
+Overall, the StRS sets had a higher proportion of females than males over the spatial strata S\textsubscript{1}, S\textsubscript{2}, S\textsubscript{3}, S\textsubscript{4} and S\textsubscript{5} with the exception of S\textasciitilde5 where the sex ratio was equal (Table~\ref{tab:table5}). More females than males were seen in the shallow depth stratum within the spatial strata S\textsubscript{1}, S\textsubscript{2}, S\textsubscript{3}, S\textsubscript{4} and S\textsubscript{5}. In the mid depth stratum, there were more males than females in S\textsubscript{1}, S\textsubscript{2} and S\textsubscript{5}. The deepest depth stratum saw more females in spatial strata S\textsubscript{1}, S\textsubscript{2}, S\textsubscript{3} and S\textsubscript{4}.
+
+Significant differences in length distributions between female and male sablefish are exhibited in the data collected from the StRS portion of the 2003 - 2020 surveys. The mean fork length (\(\bar{x}\)) for females was x cm and the mean fork length (\(\bar{x}\)) for males was x cm (Figure~\ref{fig:figure10}a).
+
+In 2020, the average mean fork length for the 1,925 females was 60 cm and the average mean fork length for the 1,676 males was 55 cm. The mean length of both females and males reached their lowest mean size since 2003 (Figure~\ref{fig:figure10}b).
+
+On average, female sablefish grow faster and reach far greater size (Figure~\ref{fig:figure13}a,b) compared to males (Figure~\ref{fig:figure13}c,d).
+
+\hypertarget{sablefish-sub-legal-encounters}{%
+\subsection{SABLEFISH SUB-LEGAL ENCOUNTERS}\label{sablefish-sub-legal-encounters}}
+
+There have been distinct distribution patterns across strata of sub-legal sablefish (\textless55 cm fork length), following the highly anomalous warm ocean conditions of the ``The Blob'' (Bond et al. \protect\hyperlink{ref-Bond2015}{2015}). More than half of the sub-legal specimens were captured in the southern strata (S\textsubscript{1}) mid-depth waters (RD\textsubscript{2}) in 2014 and shallow waters (RD\textsubscript{1}) in 2015. The sub-legal specimen count was above 50\% in both 2017 and 2018 in the northern strata of S\textsubscript{4} and S\textsubscript{5} mid-depth waters (RD\textsubscript{2}). In 2019, the sub-legal specimens dominated in all StRS survey strata (S\textsubscript{1} to S\textsubscript{5}) mid-depth waters (RD\textsubscript{2}). In 2020, the\ldots.. (Figure~\ref{fig:figure14}).
+
+\hypertarget{other-fish-sampling}{%
+\subsection{OTHER FISH SAMPLING}\label{other-fish-sampling}}
+
+Length, sex, maturity, otoliths and DNA samples were collected for the rougheye/blackspotted rockfish complex. (Appendix~\ref{app:sixth-appendix}).
+
+\hypertarget{recovered-tagged-sablefish}{%
+\subsection{RECOVERED TAGGED SABLEFISH}\label{recovered-tagged-sablefish}}
+
+During the 2020 sablefish survey, NA previously tagged fish were re-released live with a new tag. DFO has been tagging, releasing and recovering sablefish since 1991. The highest recovery rate is within the first year of release (Figure~\ref{fig:figure15}. Recent release-recovery data (1991-2018) are consistent with Beamish and McFarlane (1988) where about 40-50\% of Sablefish are still recovered within 50 km of the release site (Table x).
+
+\hypertarget{sablefish-ages}{%
+\subsection{SABLEFISH AGES}\label{sablefish-ages}}
+
+The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively. Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds. A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure~\ref{fig:figure16}a).
+
+The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds. In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and x. (Figure~\ref{fig:figure16}b).
+
+Historic data from all samples lists the oldest female sablefish at 92 years of age collected in 2003 where as the oldest male sablefish with the age of 96 years old was documented for the year 2018.
+
+\hypertarget{oceanographic-temperatures-and-depths}{%
+\subsection{OCEANOGRAPHIC TEMPERATURES AND DEPTHS}\label{oceanographic-temperatures-and-depths}}
+
+Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure~\ref{fig:figure17}. The 2020 survey data exhibit a general trend of decreasing temperature with depth.
+
+SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was 4.8 \(^\circ\)C (2019) within the 53\(^\circ\)- 54\(^\circ\) latitude band. The highest average temperature was 7.3 \(^\circ\)C (2015) in the southern 50\(^\circ\) - 51\(^\circ\) latitude band. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was 4 \(^\circ\)C (2018) within the 53\(^\circ\)-54 \(^\circ\) latitude band. The highest average temperature was 5.2 \(^\circ\)C (2006) in the southern 48\(^\circ\)- 49\(^\circ\) latitude band. In the deepest waters, the lowest average temperature of 2.4 \(^\circ\)C (2016) was found in the 54\(^\circ\)- 55\(^\circ\) latitude band and the highest average temperature was 3.9\(^\circ\)C (2013) in the southern 49\(^\circ\)-50\(^\circ\) latitude band (Figure~\ref{fig:figure18}).
+
+\hypertarget{acknowledgements}{%
+\subsection{ACKNOWLEDGEMENTS}\label{acknowledgements}}
+
+The stock assessment survey and data report is the result of the collaborative efforts of many individuals. Wild Canadian Sablefish has provided coordination and support of the annual Sablefish survey since 1994. The scientific staff that conducted the 2020 sablefish research charter included NA of Archipelago Marine Research Ltd (AMR). A special thanks to the skipper and crew of the F/V Pacific Viking, whose efforts made the survey successful. In 2020, the crew consisted of NA.
+
+\clearpage
+
+\hypertarget{tables}{%
+\section{Tables}\label{tables}}
+
+
+
+\begin{table}[!h]
+
+\caption{\label{tab:Table1}Spatial strata allocation and completed strata counts for the 2020 sablefish research and assessment survey. ~\\
+\hspace*{0.333em}\\}
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{l>{\raggedleft\arraybackslash}p{0.5cm}>{\raggedleft\arraybackslash\leavevmode\color{gray}}p{0.5cm}>{\raggedleft\arraybackslash}p{0.5cm}>{\raggedleft\arraybackslash\leavevmode\color{blue}}p{0.5cm}>{\raggedleft\arraybackslash}p{0.5cm}>{\raggedleft\arraybackslash\leavevmode\color{blue}}p{0.5cm}>{\raggedleft\arraybackslash}p{0.7cm}>{\raggedleft\arraybackslash\leavevmode\color{blue}}p{0.5cm}}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{6}{c}{Depth Strata} & \multicolumn{2}{c}{ } \\
+\cmidrule(l{3pt}r{3pt}){2-7}
+\textcolor{black}{Spatia Strata} & \textcolor{black}{RD1} & \textcolor{black}{RD1 2020} & \textcolor{black}{RD2} & \textcolor{black}{RD2 2020} & \textcolor{black}{RD3} & \textcolor{black}{RD3 2020} & \textcolor{black}{Total} & \textcolor{black}{Total 2020}\\
+\midrule
+S1 (South West Coast Vancouver Island or SWCVI) & 6 & 6 & 8 & 8 & 5 & 5 & 19 & 19\\
+S2 (North West Coast Vancouver Island or NWCVI) & 6 & 6 & 7 & 7 & 5 & 5 & 18 & 18\\
+S3 (Queen Charlotte Sound or QCS) & 8 & 7 & 6 & 6 & 5 & 4 & 19 & 17\\
+S4 (South West Coast Haida Gwaii or SWCHG) & 6 & 4 & 6 & 6 & 5 & 5 & 17 & 15\\
+S5 (North West Coast Haida Gwaii or NWCHG) & 6 & 6 & 7 & 7 & 5 & 5 & 18 & 18\\
+\hline
+Total & 32 & 29 & 34 & 34 & 25 & 24 & 91 & 87\\
+\bottomrule
+\end{tabular}
+\end{table}
+~\\
+\hspace*{0.333em}\\
+\hspace*{0.333em}\\
+
+
+
+
+\begin{table}[!h]
+
+\caption{\label{tab:table2}Summary of sablefish biological data collected during the 2020 stratified random sets by spatial and depth stratum.}
+\fontsize{8}{10}\selectfont
+\begin{tabular}[t]{lllrr}
+\toprule
+Category & Common Name & Scientific Name & Count & Weight(kg)\\
+\midrule
+Roundfish Species & Sablefish & ANOPLOPOMA FIMBRIA &  & 92169\\
+ & Lingcod & OPHIODON ELONGATUS &  & 1522\\
+ & Spiny dogfish & SQUALUS ACANTHIAS &  & 1122\\
+ & Pectoral rattail & ALBATROSSIA PECTORALIS &  & 219\\
+ & Pacific grenadier & CORYPHAENOIDES ACROLEPIS &  & 201\\
+ & Pacific cod & GADUS MACROCEPHALUS &  & 6\\
+ & Pacific flatnose & ANTIMORA MICROLEPIS &  & 2\\
+ & Walleye pollock & THERAGRA CHALCOGRAMMA &  & 1\\
+ & Pink snailfish & PARALIPARIS ROSACEUS &  & 1\\
+ & Pacific viperfish & CHAULIODUS MACOUNI & 1 & \\
+\hline
+Rockfish Species & Yelloweye rockfish & SEBASTES RUBERRIMUS &  & 303\\
+ & Redbanded rockfish & SEBASTES BABCOCKI &  & 288\\
+ & Rougheye/blackspotted rockfish complex & SEBASTES ALEUTIANUS &  & 222\\
+ & Shortraker rockfish & SEBASTES BOREALIS &  & 65\\
+ & Shortspine thornyhead & SEBASTOLOBUS ALASCANUS &  & 55\\
+ & Rosethorn rockfish & SEBASTES HELVOMACULATUS &  & 4\\
+ & Longspine thornyhead & SEBASTOLOBUS ALTIVELIS & 2 & \\
+Flatfish Species & Pacific halibut & HIPPOGLOSSUS STENOLEPIS &  & 1554\\
+ & Arrowtooth flounder & ATHERESTHES STOMIAS &  & 287\\
+ & Dover sole & MICROSTOMUS PACIFICUS &  & 11\\
+ & Petrale sole & EOPSETTA JORDANI &  & 2\\
+Invertebrate Species & Grooved Tanner Crab & CHIONOECETES TANNERI &  & 117\\
+ & Brown box crab & LOPHOLITHODES FORAMINATUS &  & 6\\
+\hline
+ & Oregontriton & FUSITRITON OREGONENSIS &  & 6\\
+ &  & ALLOCENTROTUS FRAGILIS &  & 3\\
+ &  & PARALOMIS MULTISPINA &  & 3\\
+\hline
+ & Red Queen Crab & LITHODES COUESI &  & 3\\
+ & Jellyfish & SCYPHOZOA &  & 2\\
+ & Octopus & OCTOPUS &  & 2\\
+ & Fish-eating star & STYLASTERIAS FORRERI &  & 1\\
+ & Prawn & PANDALUS PLATYCEROS &  & 1\\
+ & Sea whip & OSTEOCELLA SEPTENTRIONALIS & 1 & \\
+ & Golden king crab & LITHODES AEQUISPINA & 1 & \\
+ & Papillose sea cucumber & SYNALLACTES CHALLENGERI & 1 & \\
+ & Ophiuroidea & OPHIUROIDEA & 1 & \\
+ &  & PYROSOMA & 1 & \\
+ &  & SOLASTER & 1 & \\
+ &  & TARSASTER ALASCANUS & 1 & \\
+ &  & HETEROZONIAS ALTERNATUS & 1 & \\
+ &  & MEDIASTER TENELLUS & 1 & \\
+ &  & MYXODERMA SACCULATUM & 1 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+
+\begin{table}[!h]
+
+\caption{\label{tab:table3}Summary of sablefish biological data collected during the 2020 stratified random sets by spatial and depth stratum.}
+\fontsize{9}{11}\selectfont
+\begin{tabular}[t]{llrrrrr}
+\toprule
+\multicolumn{2}{c}{Depth Strata/Locality} & \multicolumn{2}{c}{Proportion} & \multicolumn{3}{c}{Mean Fork Length (mm)} \\
+\cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-4} \cmidrule(l{3pt}r{3pt}){5-7}
+\textbf{Spatial} & \textbf{Depth} & \textbf{Males} & \textbf{Females} & \textbf{Males} & \textbf{Females} & \textbf{Tagged}\\
+\midrule
+S1 & RD1 & 0.34 & 0.66 & 544 & 589 & 563\\
+ & RD2 & 0.64 & 0.36 & 516 & 552 & 528\\
+ & RD3 & 0.32 & 0.68 & 549 & 612 & 601\\
+\hline
+\textbf{} & \textbf{} & \textbf{0.43} & \textbf{0.57} & \textbf{536} & \textbf{584} & \textbf{564}\\
+\hline
+S2 & RD1 & 0.28 & 0.72 & 576 & 611 & 595\\
+ & RD2 & 0.63 & 0.37 & 547 & 606 & 562\\
+ & RD3 & 0.44 & 0.56 & 559 & 639 & 604\\
+\hline
+\textbf{} & \textbf{} & \textbf{0.45} & \textbf{0.55} & \textbf{561} & \textbf{619} & \textbf{587}\\
+\hline
+S3 & RD1 & 0.33 & 0.67 & 577 & 627 & 607\\
+ & RD2 & 0.50 & 0.50 & 548 & 588 & 569\\
+ & RD3 & 0.45 & 0.55 & 584 & 662 & 603\\
+\hline
+\textbf{} & \textbf{} & \textbf{0.43} & \textbf{0.57} & \textbf{570} & \textbf{626} & \textbf{593}\\
+\hline
+S4 & RD1 & 0.21 & 0.79 & 607 & 634 & 623\\
+ & RD2 & 0.50 & 0.50 & 529 & 562 & 552\\
+ & RD3 & 0.46 & 0.54 & 570 & 646 & 615\\
+\hline
+\textbf{} & \textbf{} & \textbf{0.39} & \textbf{0.61} & \textbf{569} & \textbf{614} & \textbf{597}\\
+\hline
+S5 & RD1 & 0.21 & 0.79 & 562 & 617 & 587\\
+ & RD2 & 0.58 & 0.42 & 541 & 583 & 553\\
+ & RD3 & 0.63 & 0.37 & 573 & 627 & 581\\
+\hline
+\textbf{} & \textbf{} & \textbf{0.47} & \textbf{0.53} & \textbf{559} & \textbf{609} & \textbf{574}\\
+\bottomrule
+\end{tabular}
+\end{table}
+~\\
+\hspace*{0.333em}\\
+\hspace*{0.333em}\\
+
+
+\begin{table}[!h]
+
+\caption{\label{tab:table4}Percentage of sablefish tag recoveries by great circle distance (km) from BC release sites (1995-2018) and years at liberty.}
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{lllllll}
+\toprule
+\multicolumn{1}{c}{\textbf{ }} & \multicolumn{5}{c}{\textbf{Great Circle Distance (km) from Release Location}} & \multicolumn{1}{c}{\textbf{ }} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{\textbf{Years at Liberty}} & \textbf{\textbf{>10}} & \textbf{\textbf{11-50}} & \textbf{\textbf{51-100}} & \textbf{\textbf{101-500}} & \textbf{\textbf{>500}} & \textbf{\textbf{Recovery Count}}\\
+\midrule
+1 & 45.6 & 44.7 & 43.6 & 33.4 & 22 & 24241\\
+2-5 & 42.2 & 42.4 & 43.6 & 53.6 & 54.5 & 29987\\
+6-10 & 9.4 & 9.7 & 10 & 10.5 & 17.7 & 6805\\
+11+ & 2.8 & 3.2 & 2.8 & 2.5 & 5.8 & 1958\\
+\hline
+Total Count & 16780 & 12219 & 5566 & 21451 & 6975 & 62991\\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Bond2015}{}%
+Bond, N.A., Cronin, M.F., Freeland, H., and Mantua, N. 2015. Causes and impacts of the 2014 warm anomaly in the NE Pacific. Geophysical Research Letters 42(9): 3414--3420.
+\end{document}
