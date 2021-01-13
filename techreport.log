@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1258,13 +1258,25 @@ Overfull \hbox (8.01338pt too wide) in paragraph at lines 210--211
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--230
-[]\T1/phv/m/n/12 (+20) Table 2. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
-ol-lected dur-ing the 2020 strat-i-fied
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+[]\T1/phv/m/n/12 (+20) Table 2. |[]Sum-mary of species cap-tured dur-ing the 20
+20 sur-vey StRS sets con-ducted
  []
 
 
-Overfull \hbox (1.80923pt too wide) in paragraph at lines 232--282
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+\T1/phv/m/n/12 (+20) by the Pa-cific Viking. No value in the weight col-umn in-
+di-cates that the catch was not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+\T1/phv/m/n/12 (+20) weighed. No value in both weight and count in-di-cates tra
+ce weights of less than 1 kg
+ []
+
+
+Overfull \hbox (1.80923pt too wide) in paragraph at lines 234--284
 [][] 
  []
 
@@ -1275,19 +1287,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 \clearpage
+l.285 \clearpage
                  [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
 []\T1/phv/m/n/12 (+20) Table 3. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
 ol-lected dur-ing the 2020 strat-i-fied
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 290.
+(Font)              <9> on input line 292.
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 []\T1/phv/m/n/12 (+20) Table 4. |[]Per-cent-age of sable-fish tag re-cov-er-ies
  by great cir-cle dis-tance (km) from BC
  []
@@ -1299,17 +1311,17 @@ AED: lastpage setting LastPage
 [8
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
 (./techreport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
 Package rerunfilecheck Info: File `techreport.out' has not changed.
 (rerunfilecheck)             Checksum: 75BF61E14A895FC94084341569FE2618;1026.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
  ) 
 Here is how much of TeX's memory you used:
  17516 strings out of 482938
@@ -1331,7 +1343,7 @@ s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
 TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
 ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (15 pages, 170837 bytes).
+Output written on techreport.pdf (15 pages, 170963 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  190 compressed objects within 2 object streams

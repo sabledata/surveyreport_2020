@@ -80,8 +80,8 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
    #write.table(topStRSsp, file = paste(path,"results02.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    topStRSsp  <-  read.csv(paste(path, 'results02.csv',sep=''), header=T) 
    
-   topStRSsp1   <- tolower(as.character(topStRSsp[1,1]))                     # -- StRS top 5 species names
-   topStRSsc1   <- firstup(tolower(as.character(topStRSsp[1,2])))    # -- StRS top 5 species science names
+   topStRSsp1   <- as.character(topStRSsp[1,1])                     # -- StRS top 5 species names
+   topStRSsc1   <- firstup(tolower(as.character(topStRSsp[1,2])))   # -- StRS top 5 species science names
    
    topStRSsp2   <- as.character(topStRSsp[2,1])                       
    topStRSsc2   <- firstup(tolower(as.character(topStRSsp[2,2])))   
@@ -104,15 +104,18 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
                                 "dbo.fnIntegerToWords(SUM(Mammal))       as tMammal, ",
                                 "dbo.fnIntegerToWords(SUM(Bird))         as tBird,   ",
                                 "dbo.fnIntegerToWords(SUM(counter))      as total    ",
-                                "from (select case when Fish = Rockfish or Fish = Flatfish then 0 ELSE Fish end AS Roundfish, ",
+                                "from (select case when Fish = Rockfish or Fish = Flatfish ", 
+                                "then 0 ELSE Fish end AS Roundfish, ",
                                 "Fish, Rockfish, Flatfish, Invertebrate, Mammal, Bird, ",
-                                "SABLE_SET_TYPE, TRIP_ID, 1 AS counter, Year, SPECIES_CODE from dbo.GFBIO_RESEARCH_CATCH ",
+                                "SABLE_SET_TYPE, TRIP_ID, 1 AS counter, Year, ",
+                                "SPECIES_CODE from dbo.GFBIO_RESEARCH_CATCH ",
                                 "group by ",
-                                "Fish, Rockfish, Flatfish, Invertebrate, Mammal, Bird, SABLE_SET_TYPE, Year, TRIP_ID,  ",
+                                "Fish, Rockfish, Flatfish, Invertebrate, Mammal, Bird, ",
+                                "SABLE_SET_TYPE, Year, TRIP_ID,  ",
                                 "case when Fish = Rockfish or Fish = Flatfish then 0 ELSE Fish end, SPECIES_CODE  ",
                                 "having (SABLE_SET_TYPE = N'StRS') and (Year = ",yr,")) AS RC", sep="")
-   #strsSpCom    <- GetSQLData(spc,"Sablefish")
-   #write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   strsSpCom    <- GetSQLData(spc,"Sablefish")
+   write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    strsSpCom   <-  read.csv(paste(path,'results03.csv',sep=''),header=T) 
    
    roundfishS   <- strsSpCom[1,1]
@@ -129,7 +132,7 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
 
 ## CATCH COMPOSITION
 
-A total of `r totalS[1]` taxonomic groups were represented in the catches in StRS sets in `r yr` (Table \@ref(tab:table3)).  These included `r roundfishS[1]` roundfish species, `r rockfishS[1]` rockfish species, `r flatfishS[1]`  flatfish species and `r invertS[1]` invertebrate species. Other than sablefish, the most common species, by weight,  were  `r topStRSsp1[1]` (*`r topStRSsc1`*), `r topStRSsp2` (*`r topStRSsc2`*), `r topStRSsp3` (*`r topStRSsc3`*),   `r topStRSsp4` (*`r topStRSsc4`*) and  `r topStRSsp5` (*`r topStRSsc5`*).   
+A total of `r totalS[1]` taxonomic groups were represented in the catches in StRS sets in `r yr` (Table \@ref(tab:table2)).  These included `r roundfishS[1]` roundfish species, `r rockfishS[1]` rockfish species, `r flatfishS[1]`  flatfish species and `r invertS[1]` invertebrate species. Other than sablefish, the most common species, by weight,  were  `r topStRSsp1[1]` (*`r topStRSsc1`*), `r topStRSsp2` (*`r topStRSsc2`*), `r topStRSsp3` (*`r topStRSsc3`*),   `r topStRSsp4` (*`r topStRSsc4`*) and  `r topStRSsp5` (*`r topStRSsc5`*).   
 
 ```{r SamplingWords, echo=FALSE}
     # inline text query Sablefish.dbo.GFBIO_RESEARCH_SAMPLE_DETAILS for the counts of Sablefish from StRS sets
