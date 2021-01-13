@@ -823,8 +823,8 @@ The stock assessment survey and data report is the result of the collaborative e
        kableExtra::kable(dataf, booktabs = TRUE,linesep = "",
                    format = "latex",
                    caption = "(ref:Table1Caption)") %>%
+              row_spec(0,    bold = T) %>%
               row_spec(5, hline_after = T) %>%
-              #column_spec(1, width  = "6.6cm") %>%
               column_spec(2, width  = "0.5cm") %>%
               column_spec(3, width  = "0.5cm", color="blue") %>%
               column_spec(4, width  = "0.5cm") %>%
@@ -834,7 +834,8 @@ The stock assessment survey and data report is the result of the collaborative e
               column_spec(8, width  = "0.7cm") %>%
               column_spec(9, width  = "0.5cm", color="blue") %>% 
               row_spec(0, color="black") %>%
-              add_header_above(c(" "= 1, "Depth Strata" = 6, " " = 2)) %>%
+              row_spec(6, bold=T) %>%
+              add_header_above(c(" "= 1, "Depth Strata" = 6, " " = 2), bold=T) %>%
        kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position")
   
   
@@ -866,6 +867,7 @@ The stock assessment survey and data report is the result of the collaborative e
     kableExtra::kable(cleandataSP,
                       booktabs = TRUE,linesep = "",
                       format = "latex",  caption = "(ref:Table3Caption)") %>%
+                      row_spec(0,    bold = T) %>%
                       row_spec(10,  hline_after = T) %>%
                       row_spec(23,  hline_after = T) %>%
                       row_spec(26,  hline_after = T) %>%
@@ -886,7 +888,7 @@ The stock assessment survey and data report is the result of the collaborative e
                 format = "latex",  caption = "(ref:Table3Caption)") %>% 
     add_header_above(c("Depth Strata/Locality"= 2,
                         "Proportion" = 2, 
-                        "Mean Fork Length (mm)" = 3)) %>%
+                        "Mean Fork Length (mm)" = 3),bold=T) %>%
       
     kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
                 row_spec(0,    bold = T) %>%
@@ -970,7 +972,7 @@ The stock assessment survey and data report is the result of the collaborative e
     kableExtra::kable_styling(font_size = 10, position = "left", latex_options = "hold_position")  %>%
     row_spec(0,   bold = T) %>%
     row_spec(4,   hline_after = T) %>%
-    row_spec(0,   bold = T)
+    row_spec(5,   bold = T)
 
 ```
 \clearpage

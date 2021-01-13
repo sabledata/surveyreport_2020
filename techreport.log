@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,13 +996,13 @@ LaTeX Info: Redefining \selectfont on input line 100.
 Package hyperref Info: Option `pageanchor' set `false' on input line 105.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 105.
-<csas-style/images/e_dfo_c.png, id=64, 1215.54124pt x 88.33pt>
+<csas-style/images/e_dfo_c.png, id=68, 1215.54124pt x 88.33pt>
 File: csas-style/images/e_dfo_c.png Graphic file (type png)
 <use csas-style/images/e_dfo_c.png>
 Package pdftex.def Info: csas-style/images/e_dfo_c.png  used on input line 105.
 
 (pdftex.def)             Requested size: 274.0785pt x 19.91692pt.
-<csas-style/images/canada_c.png, id=65, 3014.26125pt x 719.68875pt>
+<csas-style/images/canada_c.png, id=69, 3014.26125pt x 719.68875pt>
 File: csas-style/images/canada_c.png Graphic file (type png)
 <use csas-style/images/canada_c.png>
 Package pdftex.def Info: csas-style/images/canada_c.png  used on input line 105
@@ -1049,38 +1049,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-LaTeX Warning: Reference `LastPage' on page ii undefined on input line 105.
-
 [2
 
-] (./techreport.toc)
-\tf@toc=\write5
-\openout5 = `techreport.toc'.
-
-[3
-
-]
-
-LaTeX Warning: Reference `LastPage' on page iv undefined on input line 105.
-
-[4
-
-]
-
-LaTeX Warning: Reference `LastPage' on page v undefined on input line 105.
-
-[5
-
-]
-
-LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 124.
-
-
-LaTeX Warning: Reference `fig:figure4' on page 1 undefined on input line 134.
-
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-34.
+] (./techreport.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+.
 (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1089,27 +1062,44 @@ cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-34.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+.
 (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-134.
+5.
 (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-134.
+5.
 (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 134.
+(Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 134.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 134.
+(Font)              <6> on input line 5.
+)
+\tf@toc=\write5
+\openout5 = `techreport.toc'.
+
+[3
+
+] [4
+
+] [5
+
+]
+
+LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `fig:figure4' on page 1 undefined on input line 134.
+
 
 LaTeX Warning: Reference `fig:figure5' on page 1 undefined on input line 134.
 
@@ -1118,9 +1108,6 @@ LaTeX Warning: Reference `fig:figure6' on page 1 undefined on input line 134.
 
 
 LaTeX Warning: Reference `fig:figure7' on page 1 undefined on input line 134.
-
-
-LaTeX Warning: Reference `tab:table3' on page 1 undefined on input line 139.
 
 
 LaTeX Warning: Reference `app:fourth-appendix' on page 1 undefined on input lin
@@ -1201,7 +1188,7 @@ l.194 \clearpage
                  [4]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
 []\T1/phv/m/n/12 (+20) Table 1. |[][]Spa-tial strata al-lo-ca-tion and com-plet
-ed strata counts for the 2020 sable-fish
+ed strata counts (blue) for the 2020
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1216,21 +1203,133 @@ Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
  []
 
 
-! LaTeX Error: Undefined color `grey'.
+Overfull \hbox (5.09352pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/m/n/10 (-20) RD1
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 ...ta} & \textcolor{black}{RD1} & \textcolor
-                                                  {black}{RD1 2020} & \textc...
- 
+
+Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
+ \T1/phv/m/n/10 (-20) 2020[]|
+ []
+
+
+Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/m/n/10 (-20) RD2[]|
+ []
+
+
+Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/m/n/10 (-20) RD2
+ []
+
+
+Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
+ \T1/phv/m/n/10 (-20) 2020[]|
+ []
+
+
+Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/m/n/10 (-20) RD3[]|
+ []
+
+
+Overfull \hbox (5.37352pt too wide) in paragraph at lines 210--210
+ []|[][]\T1/phv/m/n/10 (-20) RD3
+ []
+
+
+Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--210
+ \T1/phv/m/n/10 (-20) 2020[]|
+ []
+
+
+Overfull \hbox (0.66832pt too wide) in paragraph at lines 210--210
+ []|[]\T1/phv/m/n/10 (-20) Total[]|
+ []
+
+
+Overfull \hbox (6.3588pt too wide) in paragraph at lines 210--211
+ []|[][]\T1/phv/m/n/10 (-20) Total
+ []
+
+
+Overfull \hbox (7.56856pt too wide) in paragraph at lines 210--211
+ \T1/phv/m/n/10 (-20) 2020[]|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]\T1/phv/m/n/12 (+20) Table 2. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
+ol-lected dur-ing the 2020 strat-i-fied
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 \clearpage
+                 [5
+
+] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+[]\T1/phv/m/n/12 (+20) Table 3. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
+ol-lected dur-ing the 2020 strat-i-fied
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 290.
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]\T1/phv/m/n/12 (+20) Table 4. |[]Per-cent-age of sable-fish tag re-cov-er-ies
+ by great cir-cle dis-tance (km) from BC
+ []
+
+[7
+
+] 
+AED: lastpage setting LastPage
+[8
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+(./techreport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
+Package rerunfilecheck Info: File `techreport.out' has not changed.
+(rerunfilecheck)             Checksum: 75BF61E14A895FC94084341569FE2618;1026.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
+ ) 
 Here is how much of TeX's memory you used:
- 17468 strings out of 482938
- 309046 string characters out of 5958759
- 620993 words of memory out of 5000000
- 32184 multiletter control sequences out of 15000+600000
- 600751 words of font info for 140 fonts, out of 8000000 for 9000
+ 17515 strings out of 482938
+ 309485 string characters out of 5958759
+ 633993 words of memory out of 5000000
+ 32204 multiletter control sequences out of 15000+600000
+ 610917 words of font info for 156 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,77p,1017b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
+lm-mathit.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
+ps/lm/lm-rm.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
+vips/base/8r.enc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type
+1/public/lm/lmmi10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
+/fonts/type1/public/lm/lmsy8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf
+-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData/Roaming/Tiny
+TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
+aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
+ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on techreport.pdf (15 pages, 170824 bytes).
+PDF statistics:
+ 220 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 40075 words of extra memory for PDF output out of 42996 (max. 10000000)
+
