@@ -89,8 +89,9 @@
                       format = "latex",  caption = "(ref:Table2Caption)") %>%
                       row_spec(0,    bold = T) %>%
                       row_spec(10,  hline_after = T) %>%
-                      row_spec(23,  hline_after = T) %>%
-                      row_spec(26,  hline_after = T) %>%
+                      row_spec(17,  hline_after = T) %>%
+                      row_spec(21,  hline_after = T) %>%
+                      row_spec(25,  hline_after = T) %>%
                       kableExtra::kable_styling(font_size = 8, position = "left",
                                                 latex_options = "hold_position")
 ```

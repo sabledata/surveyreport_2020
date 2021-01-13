@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 11:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1324,11 +1324,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
  ) 
 Here is how much of TeX's memory you used:
- 17516 strings out of 482938
- 309505 string characters out of 5958759
+ 17507 strings out of 482938
+ 309421 string characters out of 5958759
  634993 words of memory out of 5000000
  32205 multiletter control sequences out of 15000+600000
- 613584 words of font info for 157 fonts, out of 8000000 for 9000
+ 613083 words of font info for 151 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,77p,1017b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
@@ -1343,7 +1343,7 @@ s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
 TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
 ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (15 pages, 170963 bytes).
+Output written on techreport.pdf (15 pages, 170932 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  190 compressed objects within 2 object streams
