@@ -7,29 +7,14 @@ After that, all subsequent sections will be turned into appendices. -->
 
 \clearpage
 
-# LIST OF TRADITIONAL LOCALITIES. {#app:first-appendix}
+# LIST OF SABLEFISH RESEARCH AND ASSESSMENT SURVEYS. {#app:first-appendix}
 
-List of localities visited in the traditional component of the sablefish research and assessment surveys from 1988 through 2019. Standardized sets (light blue boxes and half boxes) were conducted in offshore indexing localities from 1988 to 2010.  Sablefish were tagged and released (dark blue half boxes) from standardized sets at offshore indexing localities beginning in 1991 and ending in 2007.  In 1995, offshore tagging localities where only traditional tagging sets (red boxes) occurred were added in 1995 and discontinued in 2008.  Mainland Inlet localities where standardized sets (green boxes) were conducted began in 1994 and continued through to 2019. Starting in 2002 (dark green), five standard fishing areas were chosen to ensure the consistency with the positions of sets conducted in previous years.
-
-
-```{r appendixA,out.width = "478px", out.height = "470px", fig.align="left"}
-
-      if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixSurveyHistory.png',sep="")
-      knitr::include_graphics(img) 
-      
-```
-\clearpage
-
-
-# LIST OF SABLEFISH RESEARCH AND ASSESSMENT SURVEYS. {#app:second-appendix}
-
-```{r appendixB, results="asis"}
+```{r appendixA, results="asis"}
 
    dtBW   <- paste('exec dbo.procRKnitr_SurveyTrips ', yr ,sep='')
    trip   <- GetSQLData(dtBW,"Sablefish")
-   write.table(trip, file = paste(path,'appendixB.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
-   trip   <-  read.csv(paste(path,'appendixB.csv',sep=''),header=T)
+   write.table(trip, file = paste(path,'appendixA.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+   trip   <-  read.csv(paste(path,'appendixA.csv',sep=''),header=T)
    
    colnames(trip) <- c("Year", "Dates",  "Vessel", "Captain", "Set Count", "GFBIO Id")
    kableExtra::kable(trip,
@@ -44,12 +29,12 @@ List of localities visited in the traditional component of the sablefish researc
 
 \clearpage
 
-# DATA FORMS 2020 SABLEFISH SURVEY. {#app:third-appendix}
+# DATA FORMS 2020 SABLEFISH SURVEY. {#app:second-appendix}
 
-```{r appendixC,out.width = "480px", out.height = "406px", fig.align="left"}
+```{r appendixB,out.width = "480px", out.height = "406px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_BridgeLogIns3.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_BridgeLogIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -57,10 +42,10 @@ Figure C.1. Example of a completed bridge log data form with directions from the
 
 \clearpage
 
-```{r appendixC2,out.width = "500px", out.height = "452px", fig.align="left"}
+```{r AppendixB2,out.width = "500px", out.height = "452px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_SetLogIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_SetLogIns.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -68,20 +53,20 @@ Figure C.2.  Example of a completed set log data form with directions from the 2
 
 \clearpage
 
-```{r appendixC3,out.width = "500px", out.height = "476px", fig.align="left"}
+```{r AppendixB3,out.width = "500px", out.height = "476px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_CatchLogIns.png',sep='')
+      img <-  paste(basepath,'figures/AppendixB_CatchLogIns.png',sep='')
       knitr::include_graphics(img) 
       
 ```
 Figure C.3.  Example of a completed catch log data form with directions from the 2020 survey instruction manual.
 \clearpage
 
-```{r appendixC4,out.width = "500px", out.height = "426px", fig.align="left"}
+```{r AppendixB4,out.width = "500px", out.height = "426px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_CatchLogTabIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_CatchLogTabIns.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -89,10 +74,10 @@ Figure C.4.  Example of a tabular catch log data entry form transposed from the 
 
 \clearpage
 
-```{r appendixC5,out.width = "480px", out.height = "588px", fig.align="left"}
+```{r AppendixB5,out.width = "480px", out.height = "588px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_LSWMOIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_LSWMOIns.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -100,10 +85,10 @@ Figure C.5.  Example of a completed Sablefish biological sampling form and direc
 
 \clearpage
 
-```{r appendixC6,out.width = "500px", out.height = "501px", fig.align="left"}
+```{r AppendixB6,out.width = "500px", out.height = "501px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixC_TaggingSheetIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_TaggingSheetIns.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -112,18 +97,18 @@ Figure C.6.  Example of a completed tagging form with directions from the 2020 s
 
 \clearpage
 
-# SET DETAILS `r yr`. {#app:fourth-appendix}
+# SET DETAILS `r yr`. {#app:third-appendix}
 Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets are listed by stratum/inlet name, set type, depth stratum, start date, end of gear deployment time and duration in minutes. The depth strata for type 3 tagging sets include RD~1~ (100-250 fathoms), RD~2~ (250-450 fathoms) and RD~3~ (450-750 fathoms). The position data includes the major area and start and end latitude and longitude in degrees decimal minutes. The bottom depths (in meters) of the fishing set are shown with the mean bottom depth calculated from recordings at one minute intervals between the start and end of the set. The number of traps fished for each set excludes open traps, while holed or fouled traps have been included.  Sets that successfully deployed a Seabird SBE temperature and pressure recorder, a Hobo accelerometer or a Concerto CTD are indicated with an 'x'.
 
 
-```{r appendixD, results="asis"}
+```{r appendixC, results="asis"}
    library(kableExtra)
    yr <- 2020
    options(knitr.kable.NA = '')  # get rid of NAs
    srvyset <-  paste('dbo.procRReport_Survey_SetDetails ',yr,',1,',setcnt, sep='')
    ssdat   <-  GetSQLData(srvyset,"Sablefish")
-   write.table(ssdat, file = paste(path,'appendixC.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
-   ssdat   <-  read.csv(paste(path,'appendixC.csv',sep=''),header=T)
+   write.table(ssdat, file = paste(path,'AppendixC.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+   ssdat   <-  read.csv(paste(path,'AppendixC.csv',sep=''),header=T)
    
    latcnt  <-  length(ssdat[, 9])
                for (i in 1:latcnt)
@@ -185,12 +170,12 @@ Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets
 \clearpage
 
 
-# SUMMARY OF BASKET USE BY TRAP `r yr`.{#app:fifth-appendix} 
+# SUMMARY OF BASKET USE BY TRAP `r yr`.{#app:fourth-appendix} 
 
 Summary of the basket use by trap number for StRS sets during the `r yr` sablefish survey. The fate of the sablefish catch for each set and trap is indicated using the following abbreviations:
 D = Discarded after weighing (processed as commercial catch), A = Sampled for LSMWO, T = Tagged and released, SD = Sublegal discarded, F= Frames, NULL = No sablefish catch/Trap missing. 
 
-```{r appendixE, echo=FALSE}
+```{r appendixD, echo=FALSE}
    # Sablefish.dbo.procRReport_Survey_TrapUse procedure pulls data from table dbo.GFBIO_TRAPS_USE created by procedure 
    # Sablefish.dbo.Build_BIO_Sablefish_Tables
    options(knitr.kable.NA = '')
@@ -248,11 +233,11 @@ D = Discarded after weighing (processed as commercial catch), A = Sampled for LS
 
 \clearpage
 
-# SUMMARY OF SABLEFISH BIOLOGICAL DATA `r yr`. {#app:sixth-appendix} 
+# SUMMARY OF SABLEFISH BIOLOGICAL DATA `r yr`. {#app:fifth-appendix} 
 Biological data collected for sablefish by set, catch weight in kilograms and numbers of fish.  Details include a tally of specimens recovered, tagged and sampled.  Mean fork lengths for tagged sablefish and sampled male and female sablefish are listed.  
 
 
-```{r appendixF, echo=FALSE}
+```{r appendixE, echo=FALSE}
    #  sql query for inline text
    #  Sablefish.dbo.procReport_Survey_SampleDetails pulls data from table GFBIO_RESEARCH_SAMPLE_DETAILS built by     
    #  procedure Sablefish.dbo.Build_BIO_Sablefish_Tables 
@@ -313,7 +298,7 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
 # SUMMARY OF BIOLOGICAL DATA FOR ROUGHEYE/BLACKSPOTTED ROCKFISH COMPLEX. {#app:seventh-appendix} 
 Biological data collected for rougheye/blackspotted rockfish complex.  Each set is listed with counts of specimens sampled, calculations of mean fork lengths and number of species visually identified as either a RE = rougheye rockfish, BS = blackspotted rockfish or a hybrid.
 
-```{r appendixG, echo=FALSE}
+```{r appendixF, echo=FALSE}
    yr=2020
    othersamples <-  paste( "select species_name, [SET], [Len Sample Count], [weight_count], [Sex Sample Count], ",
                            "[Maturity Sample Count], [Otolith Sample Count], [DNA Sample Count], ",
