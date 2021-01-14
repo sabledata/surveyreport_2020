@@ -56,7 +56,7 @@ Figure C.2.  Example of a completed set log data form with directions from the 2
 ```{r AppendixB3,out.width = "500px", out.height = "476px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_CatchLogIns.png',sep='')
+      img <-  paste(basepath,'figures/AppendixB_CatchLogIns3.png',sep='')
       knitr::include_graphics(img) 
       
 ```
@@ -66,7 +66,7 @@ Figure C.3.  Example of a completed catch log data form with directions from the
 ```{r AppendixB4,out.width = "500px", out.height = "426px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_CatchLogTabIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_CatchLogTabIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -77,7 +77,7 @@ Figure C.4.  Example of a tabular catch log data entry form transposed from the 
 ```{r AppendixB5,out.width = "480px", out.height = "588px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_LSWMOIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_LSWMOIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -88,7 +88,7 @@ Figure C.5.  Example of a completed Sablefish biological sampling form and direc
 ```{r AppendixB6,out.width = "500px", out.height = "501px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_TaggingSheetIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_TaggingSheetIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
