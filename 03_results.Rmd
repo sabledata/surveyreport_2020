@@ -391,7 +391,7 @@ During the `r yr` sablefish survey, `r countStRS[2,3] + countStRS[1,3]` previous
 
 ## SABLEFISH AGES
 
-The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure \@ref(fig:figure17)a).
+The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure \@ref(fig:figure17)a).  
 
 The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and x. (Figure \@ref(fig:figure17)b).
 
@@ -445,7 +445,7 @@ Historic data from all samples lists the oldest female sablefish at `r oldFem` y
 
 
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
-Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure17).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth. 
+Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure19).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth. 
 
 SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(lavtmin,1)` $^\circ$C (`r lavtyr`) within the `r lavtband1`$^\circ$- `r lavtband2`$^\circ$ latitude band.  The highest average temperature was `r round(lavtmax,1)` $^\circ$C (`r lavtyrmx`) in the southern `r lavtband1mx`$^\circ$ - `r lavtband2mx`$^\circ$ latitude band. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(mavt,1)` $^\circ$C (`r mavtyr`) within the `r mavtband1`$^\circ$-`r mavtband2` $^\circ$ latitude band.  The highest average temperature was `r round(mavtmx,1)` $^\circ$C (`r mavtyrmx`) in the southern `r mavtband1mx`$^\circ$- `r mavtband2mx`$^\circ$ latitude band.  In the deepest waters, the lowest average temperature of `r round(davt,1)` $^\circ$C  (`r davtyr`) was found in the `r davtband1`$^\circ$- `r davtband2`$^\circ$ latitude band and the highest average temperature was `r round(davtmx,1)`$^\circ$C (`r davtyrmx`) in the southern `r davtband1mx`$^\circ$-`r davtband2mx`$^\circ$ latitude band (Figure \@ref(fig:figure18)).
 

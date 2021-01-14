@@ -42,10 +42,10 @@ Figure C.1. Example of a completed bridge log data form with directions from the
 
 \clearpage
 
-```{r AppendixB2,out.width = "500px", out.height = "452px", fig.align="left"}
+```{r AppendixB2,out.width = "500px", out.height = "420px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_SetLogIns.png',sep="")
+      img <-  paste(basepath,'figures/AppendixB_SetLogIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```

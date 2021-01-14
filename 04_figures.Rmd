@@ -559,7 +559,7 @@
 
 (ref:figure14) Sablefish fork length (L in cm) vs weight (W in kg) for females (A) and males (B) for the `r yr` survey.
 
-```{r figure14, fig.cap='(ref:figure14)',results='asis', out.width = "450px", out.height = "264px", fig.align="center"}
+```{r figure14, fig.cap='(ref:figure14)',results='asis', out.width = "480px", out.height = "282px", fig.align="center"}
 
     # Sablefish.dbo.procR_Survey_Sablefish_LenWt_shiny queries table GFBIO_SABLEBIO_VW for survey length data	
     png(paste(basepath,'figures/figure14.png',sep=''), width = 700, height = 412) # -- starts writing a png to figure folder
@@ -588,7 +588,7 @@
            pch=16, col="black", cex=0.5,
            xlab="     Fork length (cm)", ylab="   Round weight (kg)", 
            main=paste(lbls[i]), xlim=c(20,100), ylim=c(0,12))      
-           lines(0:xlim[2], Wt, col="darkgrey", lwd=2) 
+           lines(0:xlim[2], Wt, col="steelblue", lwd=2) 
            
       mw     <- format(round(mean(lenWTdat$weight[lenWTdat$sex==i],na.rm=T),1),nsmall=1)
       par(usr=c(0,1,0,1))
@@ -778,7 +778,7 @@
 
    # -- plot bubbles for females
    plot(dat$Year, dat$Age, type="n",xlab=" Year", ylab="", main="Females", ylim=c(0,42), xlim=c(minyr,maxyr),xaxt="n")
-   axis(1, seq(2003,2019,1))            
+   axis(1, seq(2003,2018,1))            
    symbols(dat$Year, dat$Age, circles=pi*(dat$Female_Proportion),inches=0.3, add=T,col="light grey")
 
    for (femaleyr in involve){
@@ -801,7 +801,7 @@
     
        # -- plot bubbles for males
    plot(dat$Year, dat$Age, type="n", xlab=" Year", ylab="",main="Males", ylim=c(0,42), xlim=c(minyr,maxyr),xaxt="n")
-   axis(1, seq(2003,2019,1))      
+   axis(1, seq(2003,2018,1))      
    symbols(dat$Year, dat$Age, circles=pi*(dat$Male_Proportion),inches=0.3, add=T, col="light grey")
 
    for (maleyr in involve){
