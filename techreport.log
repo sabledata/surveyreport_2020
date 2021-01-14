@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  13 JAN 2021 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  14 JAN 2021 07:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1233,7 +1233,7 @@ ce weights of less than 1 kg
  []
 
 
-Overfull \hbox (1.80923pt too wide) in paragraph at lines 234--285
+Overfull \hbox (1.80923pt too wide) in paragraph at lines 234--284
 [][] 
  []
 
@@ -1244,19 +1244,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 \clearpage
+l.285 \clearpage
                  [5
 
 ] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
+Underfull \hbox (badness 10000) in paragraph at lines 297--297
 []\T1/phv/m/n/12 (+20) Table 3. |[]Sum-mary of sable-fish bi-o-log-i-cal data c
 ol-lected dur-ing the 2020 strat-i-fied
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 300.
+(Font)              <9> on input line 299.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 []\T1/phv/m/n/12 (+20) Table 4. |[]Per-cent-age of sable-fish tag re-cov-er-ies
  by great cir-cle dis-tance (km) from BC
  []
@@ -1264,38 +1264,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--348
 [7
 
 ]
-<c:/github/surveyreport_2020/figures/Figure1.png, id=205, 307.1475pt x 397.485p
+<c:/github/surveyreport_2020/figures/Figure1.png, id=204, 307.1475pt x 397.485p
 t>
 File: c:/github/surveyreport_2020/figures/Figure1.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure1.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure1.png  used 
-on input line 373.
+on input line 372.
 (pdftex.def)             Requested size: 411.539pt x 532.615pt.
 File: c:/github/surveyreport_2020/figures/Figure1.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure1.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure1.png  used 
-on input line 373.
+on input line 372.
 (pdftex.def)             Requested size: 411.539pt x 532.615pt.
 File: c:/github/surveyreport_2020/figures/Figure1.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure1.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure1.png  used 
-on input line 373.
+on input line 372.
 (pdftex.def)             Requested size: 411.539pt x 532.615pt.
 File: c:/github/surveyreport_2020/figures/Figure1.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure1.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure1.png  used 
-on input line 373.
+on input line 372.
 (pdftex.def)             Requested size: 411.539pt x 532.615pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 377.
+(Font)              <12> on input line 376.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 []\T1/phv/m/n/12 (+20) Figure 1. |Lo-ca-tion of the bound-aries of the five spa
 -tial ar-eas (S$[]$-S$[]$) of the 2020
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 \T1/phv/m/n/12 (+20) strat-i-fied ran-dom sur-vey de-sign. The three depths str
 ata (RD$[]$-RD$[]$) are colour-coded
  []
@@ -1303,164 +1303,164 @@ ata (RD$[]$-RD$[]$) are colour-coded
 [8
 
  <c:/github/surveyreport_2020/figures/Figure1.png>]
-<c:/github/surveyreport_2020/figures/Figure2.png, id=215, 861.9703pt x 684.3065
+<c:/github/surveyreport_2020/figures/Figure2.png, id=214, 861.9703pt x 684.3065
 6pt>
 File: c:/github/surveyreport_2020/figures/Figure2.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure2.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure2.png  used 
-on input line 384.
-(pdftex.def)             Requested size: 501.88971pt x 398.49565pt.
+on input line 383.
+(pdftex.def)             Requested size: 481.81886pt x 382.43637pt.
 File: c:/github/surveyreport_2020/figures/Figure2.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure2.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure2.png  used 
-on input line 384.
-(pdftex.def)             Requested size: 501.88971pt x 398.49565pt.
+on input line 383.
+(pdftex.def)             Requested size: 481.81886pt x 382.43637pt.
 File: c:/github/surveyreport_2020/figures/Figure2.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure2.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure2.png  used 
-on input line 384.
-(pdftex.def)             Requested size: 501.88971pt x 398.49565pt.
+on input line 383.
+(pdftex.def)             Requested size: 481.81886pt x 382.43637pt.
 File: c:/github/surveyreport_2020/figures/Figure2.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure2.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure2.png  used 
-on input line 384.
-(pdftex.def)             Requested size: 501.88971pt x 398.49565pt.
+on input line 383.
+(pdftex.def)             Requested size: 481.81886pt x 382.43637pt.
 
-Overfull \hbox (32.13469pt too wide) in paragraph at lines 384--385
+Overfull \hbox (12.06384pt too wide) in paragraph at lines 383--384
 []| [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 [9
 
  <c:/github/surveyreport_2020/figures/Figure2.png>]
-<c:/github/surveyreport_2020/figures/Figure3.png, id=223, 603.0028pt x 994.4653
+<c:/github/surveyreport_2020/figures/Figure3.png, id=222, 603.0028pt x 994.4653
 2pt>
 File: c:/github/surveyreport_2020/figures/Figure3.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure3.png  used 
-on input line 393.
+on input line 392.
 (pdftex.def)             Requested size: 381.42116pt x 628.35255pt.
 File: c:/github/surveyreport_2020/figures/Figure3.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure3.png  used 
-on input line 393.
+on input line 392.
 (pdftex.def)             Requested size: 381.42116pt x 628.35255pt.
 File: c:/github/surveyreport_2020/figures/Figure3.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure3.png  used 
-on input line 393.
+on input line 392.
 (pdftex.def)             Requested size: 381.42116pt x 628.35255pt.
 File: c:/github/surveyreport_2020/figures/Figure3.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure3.png  used 
-on input line 393.
+on input line 392.
 (pdftex.def)             Requested size: 381.42116pt x 628.35255pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
 []\T1/phv/m/n/12 (+20) Figure 3. |Trap el-e-ments (A). Trap gear el-e-ments con
 -sist-ing of 25 baited traps snapped
  []
 
 
-LaTeX Warning: Float too large for page by 16.92253pt on input line 398.
+LaTeX Warning: Float too large for page by 16.92253pt on input line 397.
 
 [10 <c:/github/surveyreport_2020/figures/Figure3.png>]
-<c:/github/surveyreport_2020/figures/Figure4.png, id=231, 476.78125pt x 686.565
+<c:/github/surveyreport_2020/figures/Figure4.png, id=230, 476.78125pt x 686.565
 pt>
 File: c:/github/surveyreport_2020/figures/Figure4.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure4.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure4.png  used 
-on input line 404.
+on input line 403.
 (pdftex.def)             Requested size: 401.50146pt x 578.19827pt.
 File: c:/github/surveyreport_2020/figures/Figure4.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure4.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure4.png  used 
-on input line 404.
+on input line 403.
 (pdftex.def)             Requested size: 401.50146pt x 578.19827pt.
 File: c:/github/surveyreport_2020/figures/Figure4.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure4.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure4.png  used 
-on input line 404.
+on input line 403.
 (pdftex.def)             Requested size: 401.50146pt x 578.19827pt.
 File: c:/github/surveyreport_2020/figures/Figure4.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure4.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure4.png  used 
-on input line 404.
+on input line 403.
 (pdftex.def)             Requested size: 401.50146pt x 578.19827pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--408
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
 []\T1/phv/m/n/12 (+20) Figure 4. |Sable-fish catch per unit ef-fort (CPUE) by d
 epth and year for StRS sets.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--408
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
 \T1/phv/m/n/12 (+20) Dashed lines de-lin-eate depth strata (shallow(RD$[]$) = 1
 00-450m, mid(RD$[]$) = 450-850m,
  []
 
 [11 <c:/github/surveyreport_2020/figures/Figure4.png>]
-<c:/github/surveyreport_2020/figures/Figure5.png, id=238, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure5.png, id=237, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure5.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure5.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure5.png  used 
-on input line 415.
+on input line 414.
 (pdftex.def)             Requested size: 451.71394pt x 578.18427pt.
 File: c:/github/surveyreport_2020/figures/Figure5.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure5.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure5.png  used 
-on input line 415.
+on input line 414.
 (pdftex.def)             Requested size: 451.71394pt x 578.18427pt.
 File: c:/github/surveyreport_2020/figures/Figure5.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure5.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure5.png  used 
-on input line 415.
+on input line 414.
 (pdftex.def)             Requested size: 451.71394pt x 578.18427pt.
 File: c:/github/surveyreport_2020/figures/Figure5.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure5.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure5.png  used 
-on input line 415.
+on input line 414.
 (pdftex.def)             Requested size: 451.71394pt x 578.18427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 []\T1/phv/m/n/12 (+20) Figure 5. |Av-er-age Sable-fish catch per unit ef-fort (
 CPUE; mean +/- 95% CIs) by sur-vey
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 \T1/phv/m/n/12 (+20) strata since 2003. Pan-els run deep to shal-low (left to r
 ight) and north to south (top to
  []
 
 [12 <c:/github/surveyreport_2020/figures/Figure5.png>]
-<c:/github/surveyreport_2020/figures/Figure6.png, id=246, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure6.png, id=245, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure6.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure6.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure6.png  used 
-on input line 424.
+on input line 423.
 (pdftex.def)             Requested size: 421.5951pt x 540.03331pt.
 File: c:/github/surveyreport_2020/figures/Figure6.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure6.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure6.png  used 
-on input line 424.
+on input line 423.
 (pdftex.def)             Requested size: 421.5951pt x 540.03331pt.
 File: c:/github/surveyreport_2020/figures/Figure6.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure6.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure6.png  used 
-on input line 424.
+on input line 423.
 (pdftex.def)             Requested size: 421.5951pt x 540.03331pt.
 File: c:/github/surveyreport_2020/figures/Figure6.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure6.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure6.png  used 
-on input line 424.
+on input line 423.
 (pdftex.def)             Requested size: 421.5951pt x 540.03331pt.
 [13
 
@@ -1468,300 +1468,301 @@ on input line 424.
 
 
  <c:/github/surveyreport_2020/figures/Figure6.png>]
-<c:/github/surveyreport_2020/figures/Figure7.png, id=253, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure7.png, id=252, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure7.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure7.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure7.png  used 
-on input line 433.
+on input line 432.
 (pdftex.def)             Requested size: 433.62pt x 555.9279pt.
 File: c:/github/surveyreport_2020/figures/Figure7.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure7.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure7.png  used 
-on input line 433.
+on input line 432.
 (pdftex.def)             Requested size: 433.62pt x 555.9279pt.
 File: c:/github/surveyreport_2020/figures/Figure7.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure7.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure7.png  used 
-on input line 433.
+on input line 432.
 (pdftex.def)             Requested size: 433.62pt x 555.9279pt.
 File: c:/github/surveyreport_2020/figures/Figure7.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure7.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure7.png  used 
-on input line 433.
+on input line 432.
 (pdftex.def)             Requested size: 433.62pt x 555.9279pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--435
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 []\T1/phv/m/n/12 (+20) Figure 7. |Av-er-age weight of sable-fish (mean +/- 95% 
 CIs) by sur-vey strata over time.
  []
 
 [14 <c:/github/surveyreport_2020/figures/Figure7.png>]
-<c:/github/surveyreport_2020/figures/Figure8.png, id=260, 602.25pt x 803.0pt>
+<c:/github/surveyreport_2020/figures/Figure8.png, id=259, 602.25pt x 803.0pt>
 File: c:/github/surveyreport_2020/figures/Figure8.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure8.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure8.png  used 
-on input line 442.
+on input line 441.
 (pdftex.def)             Requested size: 451.70476pt x 562.13293pt.
 File: c:/github/surveyreport_2020/figures/Figure8.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure8.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure8.png  used 
-on input line 442.
+on input line 441.
 (pdftex.def)             Requested size: 451.70476pt x 562.13293pt.
 File: c:/github/surveyreport_2020/figures/Figure8.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure8.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure8.png  used 
-on input line 442.
+on input line 441.
 (pdftex.def)             Requested size: 451.70476pt x 562.13293pt.
 File: c:/github/surveyreport_2020/figures/Figure8.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure8.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure8.png  used 
-on input line 442.
+on input line 441.
 (pdftex.def)             Requested size: 451.70476pt x 562.13293pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
 []\T1/phv/m/n/12 (+20) Figure 8. |An-nual mean weight of sable-fish per trap (k
 g/trap) (A); an-nual mean num-ber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
 \T1/phv/m/n/12 (+20) of sable-fish per trap (#fish/trap) (B); an-nual mean weig
 ht of sable-fish (kg) (C) by StRS
  []
 
 [15 <c:/github/surveyreport_2020/figures/Figure8.png>]
-<c:/github/surveyreport_2020/figures/figure9.png, id=268, 501.875pt x 552.0625p
+<c:/github/surveyreport_2020/figures/figure9.png, id=267, 501.875pt x 552.0625p
 t>
 File: c:/github/surveyreport_2020/figures/figure9.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure9.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure9.png  used 
-on input line 453.
+on input line 452.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure9.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure9.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure9.png  used 
-on input line 453.
+on input line 452.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure9.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure9.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure9.png  used 
-on input line 453.
+on input line 452.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure9.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure9.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure9.png  used 
-on input line 453.
+on input line 452.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
 []\T1/phv/m/n/12 (+20) Figure 9. |Length fre-quency dis-tri-bu-tions across all
  depth strata (100-750 fath-oms) for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
 \T1/phv/m/n/12 (+20) male (blue) and fe-male (gray) sable-fish over time. The r
 ed dashed line in-di-cates the 55
  []
 
-<c:/github/surveyreport_2020/figures/figure10.png, id=270, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure10.png, id=269, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure10.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure10.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure10.png  used
- on input line 462.
+ on input line 461.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure10.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure10.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure10.png  used
- on input line 462.
+ on input line 461.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure10.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure10.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure10.png  used
- on input line 462.
+ on input line 461.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure10.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure10.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure10.png  used
- on input line 462.
+ on input line 461.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+Underfull \hbox (badness 10000) in paragraph at lines 465--465
 []\T1/phv/m/n/12 (+20) Figure 10. |Length fre-quency dis-tri-bu-tions in shal-l
 ow depth strata (100-250 fath-oms) for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+Underfull \hbox (badness 10000) in paragraph at lines 465--465
 \T1/phv/m/n/12 (+20) male (blue) and fe-male (gray) sable-fish over time. The r
 ed dashed line in-di-cates the 55
  []
 
-<c:/github/surveyreport_2020/figures/figure11.png, id=272, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure11.png, id=271, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure11.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure11.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure11.png  used
- on input line 471.
+ on input line 470.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure11.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure11.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure11.png  used
- on input line 471.
+ on input line 470.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure11.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure11.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure11.png  used
- on input line 471.
+ on input line 470.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure11.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure11.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure11.png  used
- on input line 471.
+ on input line 470.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
 []\T1/phv/m/n/12 (+17) Figure 11. |Length fre-quency dis-tri-bu-tions across mi
 d-dle depth strata (250-450 fath-oms)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
 \T1/phv/m/n/12 (+20) for male (blue) and fe-male (gray) sable-fish over time. T
 he red dashed line in-di-cates the
  []
 
-<c:/github/surveyreport_2020/figures/figure12.png, id=274, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure12.png, id=273, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure12.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure12.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure12.png  used
- on input line 480.
+ on input line 479.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure12.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure12.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure12.png  used
- on input line 480.
+ on input line 479.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure12.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure12.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure12.png  used
- on input line 480.
+ on input line 479.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 File: c:/github/surveyreport_2020/figures/figure12.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure12.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure12.png  used
- on input line 480.
+ on input line 479.
 (pdftex.def)             Requested size: 451.71394pt x 501.89749pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--484
+Underfull \hbox (badness 10000) in paragraph at lines 483--483
 []\T1/phv/m/n/12 (+20) Figure 12. |Length fre-quency dis-tri-bu-tions across de
 ep depth strata (450-750 fath-oms)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--484
+Underfull \hbox (badness 10000) in paragraph at lines 483--483
 \T1/phv/m/n/12 (+20) for male (blue) and fe-male (gray) sable-fish over time. T
 he red dashed line in-di-cates the
  []
 
-<c:/github/surveyreport_2020/figures/figure13.png, id=276, 702.625pt x 431.6125
+<c:/github/surveyreport_2020/figures/figure13.png, id=275, 702.625pt x 431.6125
 pt>
 File: c:/github/surveyreport_2020/figures/figure13.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure13.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure13.png  used
- on input line 489.
+ on input line 488.
 (pdftex.def)             Requested size: 451.70476pt x 277.0411pt.
 File: c:/github/surveyreport_2020/figures/figure13.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure13.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure13.png  used
- on input line 489.
+ on input line 488.
 (pdftex.def)             Requested size: 451.70476pt x 277.0411pt.
 File: c:/github/surveyreport_2020/figures/figure13.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure13.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure13.png  used
- on input line 489.
+ on input line 488.
 (pdftex.def)             Requested size: 451.70476pt x 277.0411pt.
 File: c:/github/surveyreport_2020/figures/figure13.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure13.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure13.png  used
- on input line 489.
+ on input line 488.
 (pdftex.def)             Requested size: 451.70476pt x 277.0411pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--493
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
 []\T1/phv/m/n/12 (+20) Figure 13. |Av-er-age length and ra-tios of male and fe-
 male sable-fish by year. Counts by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--493
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
 \T1/phv/m/n/12 (+20) sex are la-belled on top of the plot-ted lines, male:femal
 e ra-tio by year la-belled across
  []
 
-<c:/github/surveyreport_2020/figures/figure14.png, id=278, 803.0pt x 626.34pt>
+<c:/github/surveyreport_2020/figures/figure14.png, id=277, 702.625pt x 413.545p
+t>
 File: c:/github/surveyreport_2020/figures/figure14.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure14.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure14.png  used
- on input line 498.
-(pdftex.def)             Requested size: 451.69864pt x 265.0011pt.
+ on input line 497.
+(pdftex.def)             Requested size: 451.70476pt x 264.99602pt.
 File: c:/github/surveyreport_2020/figures/figure14.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure14.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure14.png  used
- on input line 498.
-(pdftex.def)             Requested size: 451.69864pt x 265.0011pt.
+ on input line 497.
+(pdftex.def)             Requested size: 451.70476pt x 264.99602pt.
 File: c:/github/surveyreport_2020/figures/figure14.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure14.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure14.png  used
- on input line 498.
-(pdftex.def)             Requested size: 451.69864pt x 265.0011pt.
+ on input line 497.
+(pdftex.def)             Requested size: 451.70476pt x 264.99602pt.
 File: c:/github/surveyreport_2020/figures/figure14.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure14.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure14.png  used
- on input line 498.
-(pdftex.def)             Requested size: 451.69864pt x 265.0011pt.
+ on input line 497.
+(pdftex.def)             Requested size: 451.70476pt x 264.99602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--502
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
 []\T1/phv/m/n/12 (+20) Figure 14. |Sable-fish fork length (L in cm) vs weight (
 W in kg) for fe-males (A) and males
  []
 
-<c:/github/surveyreport_2020/figures/figure15.png, id=280, 803.0pt x 626.34pt>
+<c:/github/surveyreport_2020/figures/figure15.png, id=279, 803.0pt x 626.34pt>
 File: c:/github/surveyreport_2020/figures/figure15.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure15.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure15.png  used
- on input line 507.
+ on input line 506.
 (pdftex.def)             Requested size: 516.9692pt x 402.51917pt.
 File: c:/github/surveyreport_2020/figures/figure15.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure15.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure15.png  used
- on input line 507.
+ on input line 506.
 (pdftex.def)             Requested size: 516.9692pt x 402.51917pt.
 File: c:/github/surveyreport_2020/figures/figure15.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure15.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure15.png  used
- on input line 507.
+ on input line 506.
 (pdftex.def)             Requested size: 516.9692pt x 402.51917pt.
 File: c:/github/surveyreport_2020/figures/figure15.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure15.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure15.png  used
- on input line 507.
+ on input line 506.
 (pdftex.def)             Requested size: 516.9692pt x 402.51917pt.
 
-Overfull \hbox (47.21417pt too wide) in paragraph at lines 507--508
+Overfull \hbox (47.21417pt too wide) in paragraph at lines 506--507
  []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--511
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
 []\T1/phv/m/n/12 (+20) Figure 15. |The per-cent-age of sub-legal sable-fish (<5
 5 cm fork length) sam-pled by area
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--511
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
 \T1/phv/m/n/12 (+20) and depth strata since the year 201. Sub-legal spec-i-men 
 count above 50% sam-pled
  []
@@ -1775,92 +1776,92 @@ _2020/figures/Figure10.png>] [18 <c:/github/surveyreport_2020/figures/Figure11.
 png>] [19 <c:/github/surveyreport_2020/figures/Figure12.png>] [20 <c:/github/su
 rveyreport_2020/figures/figure13.png> <c:/github/surveyreport_2020/figures/Figu
 re14.png>] [21 <c:/github/surveyreport_2020/figures/figure15.png>]
-<c:/github/surveyreport_2020/figures/figure16.png, id=318, 602.25pt x 525.965pt
+<c:/github/surveyreport_2020/figures/figure16.png, id=317, 602.25pt x 525.965pt
 >
 File: c:/github/surveyreport_2020/figures/figure16.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure16.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure16.png  used
- on input line 520.
-(pdftex.def)             Requested size: 481.81903pt x 420.58797pt.
+ on input line 519.
+(pdftex.def)             Requested size: 481.81903pt x 381.43924pt.
 File: c:/github/surveyreport_2020/figures/figure16.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure16.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure16.png  used
- on input line 520.
-(pdftex.def)             Requested size: 481.81903pt x 420.58797pt.
+ on input line 519.
+(pdftex.def)             Requested size: 481.81903pt x 381.43924pt.
 File: c:/github/surveyreport_2020/figures/figure16.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure16.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure16.png  used
- on input line 520.
-(pdftex.def)             Requested size: 481.81903pt x 420.58797pt.
+ on input line 519.
+(pdftex.def)             Requested size: 481.81903pt x 381.43924pt.
 File: c:/github/surveyreport_2020/figures/figure16.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure16.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure16.png  used
- on input line 520.
-(pdftex.def)             Requested size: 481.81903pt x 420.58797pt.
+ on input line 519.
+(pdftex.def)             Requested size: 481.81903pt x 381.43924pt.
 
-Overfull \hbox (12.06401pt too wide) in paragraph at lines 520--521
+Overfull \hbox (12.06401pt too wide) in paragraph at lines 519--520
  []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--524
+Underfull \hbox (badness 10000) in paragraph at lines 523--523
 []\T1/phv/m/n/12 (+20) Figure 16. |Tag re-cov-ery rate one year af-ter re-lease
  for tagged sable-fish re-leased on
  []
 
-<c:/github/surveyreport_2020/figures/figure17.png, id=320, 803.0pt x 927.465pt>
+<c:/github/surveyreport_2020/figures/figure17.png, id=319, 803.0pt x 927.465pt>
 
 File: c:/github/surveyreport_2020/figures/figure17.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure17.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure17.png  used
- on input line 529.
+ on input line 528.
 (pdftex.def)             Requested size: 501.88602pt x 579.16888pt.
 File: c:/github/surveyreport_2020/figures/figure17.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure17.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure17.png  used
- on input line 529.
+ on input line 528.
 (pdftex.def)             Requested size: 501.88602pt x 579.16888pt.
 File: c:/github/surveyreport_2020/figures/figure17.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure17.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure17.png  used
- on input line 529.
+ on input line 528.
 (pdftex.def)             Requested size: 501.88602pt x 579.16888pt.
 File: c:/github/surveyreport_2020/figures/figure17.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure17.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure17.png  used
- on input line 529.
+ on input line 528.
 (pdftex.def)             Requested size: 501.88602pt x 579.16888pt.
 
-Overfull \hbox (32.131pt too wide) in paragraph at lines 529--530
+Overfull \hbox (32.131pt too wide) in paragraph at lines 528--529
  []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--533
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
 []\T1/phv/m/n/12 (+20) Figure 17. |Bub-ble plot for fe-male (A) and male (B) sa
 ble-fish ages by sur-vey year from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--533
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
 \T1/phv/m/n/12 (+20) StRS sets that have been aged. The sizes of the cir-cles a
 re pro-por-tional to the num-ber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--533
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
 \T1/phv/m/n/12 (+20) of fish with given ages. Fish age 35 and older are in-clud
 ed in one bub-ble. The to-tal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--533
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
 \T1/phv/m/n/12 (+20) num-ber(n) of fish aged are listed across the top of each 
 panel. The ages with the
  []
 
 
-LaTeX Warning: Float too large for page by 11.23886pt on input line 534.
+LaTeX Warning: Float too large for page by 11.23886pt on input line 533.
 
 [22
 
@@ -1872,30 +1873,30 @@ t_2020/figures/figure17.png>]
 File: c:/github/surveyreport_2020/figures/figure18.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure18.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure18.png  used
- on input line 540.
+ on input line 539.
 (pdftex.def)             Requested size: 501.89664pt x 336.2703pt.
 File: c:/github/surveyreport_2020/figures/figure18.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure18.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure18.png  used
- on input line 540.
+ on input line 539.
 (pdftex.def)             Requested size: 501.89664pt x 336.2703pt.
 File: c:/github/surveyreport_2020/figures/figure18.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure18.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure18.png  used
- on input line 540.
+ on input line 539.
 (pdftex.def)             Requested size: 501.89664pt x 336.2703pt.
 File: c:/github/surveyreport_2020/figures/figure18.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure18.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure18.png  used
- on input line 540.
+ on input line 539.
 (pdftex.def)             Requested size: 501.89664pt x 336.2703pt.
 
-Overfull \hbox (32.14162pt too wide) in paragraph at lines 540--541
+Overfull \hbox (32.14162pt too wide) in paragraph at lines 539--540
  []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--544
+Underfull \hbox (badness 10000) in paragraph at lines 543--543
 []\T1/phv/m/n/12 (+20) Figure 18. |Coplot of av-er-age depth (m) vs av-er-age t
 em-per-a-ture ($[]$C) for a given 1-
  []
@@ -1907,74 +1908,86 @@ em-per-a-ture ($[]$C) for a given 1-
 File: c:/github/surveyreport_2020/figures/figure19.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure19.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure19.png  used
- on input line 551.
-(pdftex.def)             Requested size: 401.52045pt x 668.54831pt.
+ on input line 550.
+(pdftex.def)             Requested size: 401.52045pt x 602.29753pt.
 File: c:/github/surveyreport_2020/figures/figure19.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure19.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure19.png  used
- on input line 551.
-(pdftex.def)             Requested size: 401.52045pt x 668.54831pt.
+ on input line 550.
+(pdftex.def)             Requested size: 401.52045pt x 602.29753pt.
 File: c:/github/surveyreport_2020/figures/figure19.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure19.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure19.png  used
- on input line 551.
-(pdftex.def)             Requested size: 401.52045pt x 668.54831pt.
+ on input line 550.
+(pdftex.def)             Requested size: 401.52045pt x 602.29753pt.
 File: c:/github/surveyreport_2020/figures/figure19.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure19.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure19.png  used
- on input line 551.
-(pdftex.def)             Requested size: 401.52045pt x 668.54831pt.
+ on input line 550.
+(pdftex.def)             Requested size: 401.52045pt x 602.29753pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
 []\T1/phv/m/n/12 (+20) Figure 19. |Av-er-age tem-per-a-tures as re-ported from 
 the Sea-bird SBE 39 log-gers at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
 \T1/phv/m/n/12 (+20) 1-degree lat-i-tude in-ter-vals and three depth in-ter-val
 s: shal-low: 100-250 fath-oms (183
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
 \T1/phv/m/n/12 (+20) to 457 me-ters), mid: 250-450 fath-oms (458-823 me-ters) a
 nd deep: 450-750 fath-oms
  []
 
 
-LaTeX Warning: Float too large for page by 86.11829pt on input line 556.
+LaTeX Warning: Float too large for page by 19.86751pt on input line 555.
 
-[25 <c:/github/surveyreport_2020/figures/figure19.png>]
-Underfull \vbox (badness 10000) detected at line 593
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table A.1 on input line 620.
-
+[25 <c:/github/surveyreport_2020/figures/figure19.png>] 
+AED: lastpage setting LastPage
 [26
 
 
-
 ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 561.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 561.
+(./techreport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 561.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 561.
+Package rerunfilecheck Info: File `techreport.out' has not changed.
+(rerunfilecheck)             Checksum: 1741E37D86ED993E78CF5B0D042A527C;1069.
 
-! LaTeX Error: File `c:/github/surveyreport_2020/figures/AppendixB_BridgeLogIns
-3' not found.
+LaTeX Warning: There were undefined references.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.627 ...figures/AppendixB_BridgeLogIns3}}{Figure}
-                                                   \end{flushleft} 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 561.
+ ) 
 Here is how much of TeX's memory you used:
- 17767 strings out of 482938
- 318439 string characters out of 5958759
- 635887 words of memory out of 5000000
- 32374 multiletter control sequences out of 15000+600000
+ 17738 strings out of 482938
+ 317240 string characters out of 5958759
+ 636170 words of memory out of 5000000
+ 32359 multiletter control sequences out of 15000+600000
  617679 words of font info for 165 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,77p,1017b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
+lm-mathit.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
+ps/lm/lm-rm.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
+vips/base/8r.enc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type
+1/public/lm/lmmi10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
+/fonts/type1/public/lm/lmsy8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf
+-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData/Roaming/Tiny
+TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
+aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
+ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on techreport.pdf (33 pages, 2724632 bytes).
+PDF statistics:
+ 400 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 43250 words of extra memory for PDF output out of 51595 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!

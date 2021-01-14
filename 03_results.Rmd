@@ -114,8 +114,8 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
                                 "SABLE_SET_TYPE, Year, TRIP_ID,  ",
                                 "case when Fish = Rockfish or Fish = Flatfish then 0 ELSE Fish end, SPECIES_CODE  ",
                                 "having (SABLE_SET_TYPE = N'StRS') and (Year = ",yr,")) AS RC", sep="")
-   strsSpCom    <- GetSQLData(spc,"Sablefish")
-   write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #strsSpCom    <- GetSQLData(spc,"Sablefish")
+   #write.table(strsSpCom, file = paste(path,"results03.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    strsSpCom   <-  read.csv(paste(path,'results03.csv',sep=''),header=T) 
    
    roundfishS   <- strsSpCom[1,1]
@@ -391,9 +391,9 @@ During the `r yr` sablefish survey, `r countStRS[2,3] + countStRS[1,3]` previous
 
 ## SABLEFISH AGES
 
-The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure \@ref(fig:figure16)a).
+The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure \@ref(fig:figure17)a).
 
-The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and x. (Figure \@ref(fig:figure16)b).
+The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and x. (Figure \@ref(fig:figure17)b).
 
 Historic data from all samples lists the oldest female sablefish at `r oldFem` years of age collected in `r oldFemYr` where as the oldest male sablefish with the age of `r oldMale` years old was documented for the year `r oldMaleYr`.
 

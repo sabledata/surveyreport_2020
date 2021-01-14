@@ -10,7 +10,7 @@
 
 (ref:figure2) Start locations of survey sets (red markers) conducted in `r yr` for the stratified random survey areas S~1~ through S~5~.
 
-```{r figure2, fig.cap='(ref:figure2)', echo=FALSE, out.width = "500px", out.height = "397px", fig.align="left", warning=FALSE}
+```{r figure2, fig.cap='(ref:figure2)', echo=FALSE, out.width = "480px", out.height = "381px", fig.align="left", warning=FALSE}
       img <- paste(basepath,'figures/Figure2.png'  ,sep="")
       knitr::include_graphics(img)
 ```
@@ -163,8 +163,8 @@
                      "dbo.SurveyBlock_countWeight ON fecCPUE.SABLE_AREA_GROUP = dbo.SurveyBlock_countWeight.areaStrName AND   ",      
                      "fecCPUE.DepthStrataID = dbo.SurveyBlock_countWeight.depthStrName", sep="")
 
-    raw_survey_data<- GetSQLData(landmrk,"Sablefish")
-    write.table(raw_survey_data, file = paste(path,"figure456.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+    #raw_survey_data<- GetSQLData(landmrk,"Sablefish")
+    #write.table(raw_survey_data, file = paste(path,"figure456.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
     raw_survey_data <- read.csv(paste(path,'/figure456.csv',sep=''),header=T)
     
     # load survey data 
@@ -389,8 +389,8 @@
 
 ```{r figure setup, include=FALSE}
         LWSMO <- "SELECT * FROM GFBIO_SABLEBIO_VW where YEAR > 2005"
-        LWSMOdat<- GetSQLData(LWSMO,"Sablefish")
-        write.table(LWSMOdat, file = paste(path,"figure891011.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+        #LWSMOdat<- GetSQLData(LWSMO,"Sablefish")
+        #write.table(LWSMOdat, file = paste(path,"figure891011.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
 
         LWSMOdat <- read.csv(paste(path,'figure891011.csv',sep=''), header=T)
         lws <- subset(LWSMOdat,SABLE_SET_TYPE=="StRS" & YEAR > 2005)
@@ -512,8 +512,8 @@
      #  Sablefish.dbo.rocRReport_Survey_LenAvg pulls length data from table GFBIO_SABLEBIO_VW from 
      #  procedure:  Build_BIO_Sablefish_Tables
      lenstats  <- "exec procRReport_Survey_LenAvg"
-     dat       <- GetSQLData(lenstats,"Sablefish")                                                  # read from SQL Server
-     write.table(dat, file = paste(path,"figure13.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+     #dat       <- GetSQLData(lenstats,"Sablefish")                                                  # read from SQL Server
+     #write.table(dat, file = paste(path,"figure13.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
      dat       <- read.csv(paste(path,'figure13.csv',sep=''),header=T) # read from csv
      
      
@@ -562,13 +562,13 @@
 ```{r figure14, fig.cap='(ref:figure14)',results='asis', out.width = "450px", out.height = "264px", fig.align="center"}
 
     # Sablefish.dbo.procR_Survey_Sablefish_LenWt_shiny queries table GFBIO_SABLEBIO_VW for survey length data	
-    png("C:/github/surveyreport2020/figures/figure14.png", width = 700, height = 412) # -- starts writing a png to figure folder
+    png(paste(basepath,'figures/figure14.png',sep=''), width = 700, height = 412) # -- starts writing a png to figure folder
     par(mfcol=c(1,2), mar=c(4,4,1,1), oma=c(2,2,3,1), cex=1.0)  # -- mar(bottom, left, top, and right)
     par(xpd=NA)  # for placement of A,B,C,D
 
     lenWT     <- "exec procR_Survey_Sablefish_LenWt_shiny"
-    lenWTdat1 <-  GetSQLData(lenWT,"Sablefish")                                                       # read from SQL Server
-    write.table(lenWTdat1, file = paste(path,"figure14.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
+    #lenWTdat1 <-  GetSQLData(lenWT,"Sablefish")                                                       # read from SQL Server
+    #write.table(lenWTdat1, file = paste(path,"figure14.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
     lenWTdat1 <- read.csv(paste(path,'figure14.csv',sep=''),header=T) # read from csv
     lenWTdat  <- lenWTdat1[lenWTdat1$YEAR==yr,]
 
@@ -656,10 +656,10 @@
                         " group by YEAR, SABLE_AREA_GROUP, SABLE_DEPTH_GROUP ",
                         " order by YEAR, SABLE_AREA_GROUP, SABLE_DEPTH_GROUP")
 
- polar        <- GetSQLData(sqlpolar ,"Sablefish")     # read from SQL Server
- polarsummary <- GetSQLData(polarsumm ,"Sablefish")   # view the results to be able to type into the summary
- write.table(polar,        file = paste(path,"figure15a.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
- write.table(polarsummary, file = paste(path,"figure15b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+ #polar        <- GetSQLData(sqlpolar ,"Sablefish")     # read from SQL Server
+ #polarsummary <- GetSQLData(polarsumm ,"Sablefish")   # view the results to be able to type into the summary
+ #write.table(polar,        file = paste(path,"figure15a.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+ #write.table(polarsummary, file = paste(path,"figure15b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
  
  polar        <-  read.csv(paste(path,'figure15a.csv', sep=''),header=T)        # read from csv
  polarsummary <-  read.csv(paste(path,'figure15b.csv', sep=''),header=T)
@@ -706,26 +706,30 @@
 \clearpage
 (ref:figure16) Tag recovery rate one year after release for tagged sablefish released on annual surveys in the past 10 years.
 
-```{r figure16, fig.cap='(ref:figure16)',results='asis', out.width = "480px", out.height = "419px", fig.align="center"}
-   png(paste(basepath,'figures/figure16.png',sep=''), width = 600, height = 524)  # starts writing a png to figure folder
+```{r figure16, fig.cap='(ref:figure16)',results='asis', out.width = "480px", out.height = "344px", fig.align="center"}
+   png(paste(basepath,'figures/figure16.png',sep=''), width = 600, height = 430)  # starts writing a png to figure folder
 
-   tagPlotdata  <-  " select  dbo.q_Fish_Tag_Release_Simple.rel_year, ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) AS rec_year, 
-                      COUNT(dbo.q_Fish_Tag_Release_Simple.TAG_ID) AS count, dbo.WEB_TAG_REVIEW.Total_released, 
-                      COUNT(dbo.q_Fish_Tag_Recovery_Simple.TAG_ID) * 1.0 / dbo.WEB_TAG_REVIEW.Total_released * 1.0 * 100.0 AS rate, 
-                      dbo.q_Fish_Tag_Recovery_Simple.rec_year - dbo.q_Fish_Tag_Release_Simple.rel_year AS year_out
-                      from  dbo.q_Fish_Tag_Recovery_Simple INNER JOIN
-                      dbo.q_Fish_Tag_Release_Simple 
-                      ON dbo.q_Fish_Tag_Recovery_Simple.TAG_NUMBER = dbo.q_Fish_Tag_Release_Simple.TAG_NUMBER AND 
-                      dbo.q_Fish_Tag_Recovery_Simple.EVENT_NUMBER = dbo.q_Fish_Tag_Release_Simple.EVENT_NUMBER INNER JOIN
-                      dbo.WEB_TAG_REVIEW 
-                      ON dbo.q_Fish_Tag_Release_Simple.rel_year = dbo.WEB_TAG_REVIEW.[Release year]
-                      group by dbo.q_Fish_Tag_Release_Simple.rel_year, ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0), dbo.WEB_TAG_REVIEW.Total_released, 
-                      dbo.q_Fish_Tag_Recovery_Simple.rec_year - dbo.q_Fish_Tag_Release_Simple.rel_year
-                      having(dbo.q_Fish_Tag_Release_Simple.rel_year > 1990) AND (ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) <> 0)
-                      order by dbo.q_Fish_Tag_Release_Simple.rel_year, rec_year"
-    tagPlot  <-  GetSQLData(tagPlotdata,"FishTag")
-    write.table(tagPlot, file = paste(path,'figure16.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
-    dat      <-  read.csv(paste(path,'figure16.csv',sep=''),header=T) # read from csv
+   tagPlotdata<- paste(" select  dbo.q_Fish_Tag_Release_Simple.rel_year, ",
+                       " ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) AS rec_year, ",
+                       "count(dbo.q_Fish_Tag_Release_Simple.TAG_ID) AS count, dbo.WEB_TAG_REVIEW.Total_released, ",
+                       "count(dbo.q_Fish_Tag_Recovery_Simple.TAG_ID) * 1.0 /",
+                       "dbo.WEB_TAG_REVIEW.Total_released * 1.0 * 100.0 AS rate,  ",
+                       "dbo.q_Fish_Tag_Recovery_Simple.rec_year - dbo.q_Fish_Tag_Release_Simple.rel_year AS year_out ",
+                       "from  dbo.q_Fish_Tag_Recovery_Simple INNER JOIN ",
+                       "dbo.q_Fish_Tag_Release_Simple  ",
+                       "ON dbo.q_Fish_Tag_Recovery_Simple.TAG_NUMBER = dbo.q_Fish_Tag_Release_Simple.TAG_NUMBER  ",
+                       "and dbo.q_Fish_Tag_Recovery_Simple.EVENT_NUMBER = dbo.q_Fish_Tag_Release_Simple.EVENT_NUMBER  ",
+                       "INNER JOIN dbo.WEB_TAG_REVIEW  ",
+                       "on dbo.q_Fish_Tag_Release_Simple.rel_year = dbo.WEB_TAG_REVIEW.[Release year] ",
+                       "group by dbo.q_Fish_Tag_Release_Simple.rel_year,  ",
+                       "ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0), dbo.WEB_TAG_REVIEW.Total_released,  ",
+                       "dbo.q_Fish_Tag_Recovery_Simple.rec_year - dbo.q_Fish_Tag_Release_Simple.rel_year ",
+                       "having(dbo.q_Fish_Tag_Release_Simple.rel_year > 1990) AND  ",
+                       "(ISNULL(dbo.q_Fish_Tag_Recovery_Simple.rec_year, 0) <> 0) ",
+                       "order by dbo.q_Fish_Tag_Release_Simple.rel_year, rec_year", sep="")
+    #tagPlot  <-  GetSQLData(tagPlotdata,"FishTag")
+    #write.table(tagPlot, file = paste(path,'figure16.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+    tagPlot  <-  read.csv(paste(path,'figure16.csv',sep=''),header=T) # read from csv
     tagPlot  <-  tagPlot[tagPlot$year_out>=0,]   # query out the zeros
     tagPlot  <-  tagPlot[tagPlot$rel_year>=2010,]
     
@@ -760,8 +764,8 @@
    png(paste(basepath,'figures/figure17.png',sep=''), width = 800, height = 924)  # -- starts writing a png to figure folder
 
    dt   <-  paste("select * from Report_Survey_GFBIO_Age_MF_Prop where SetType='StRS' and Year<=", yr, sep="")
-   dat  <-  GetSQLData(dt,"Sablefish")                                                            # read from SQL Server
-   write.table(dat, file = paste(path,'figure17.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #dat  <-  GetSQLData(dt,"Sablefish")                                                            # read from SQL Server
+   #write.table(dat, file = paste(path,'figure17.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    dat  <-  read.csv(paste(path,'figure17.csv',sep=''),header=T) # read from csv
 
    par(mfrow=c(2,1),cex=1.1)     # -- two vertical plots
@@ -829,8 +833,8 @@
       png(paste(basepath,'figures/figure18.png',sep=''), width=920, height=424) # write png to file
       # table SEABIRD_ReportCoplot created in the Sablefish.dbo.Build_Seabird_tables procedure
       sbecp     <- paste("select * from SEABIRD_ReportCoplot where Year in(",yr,")",sep="")
-      ctddat    <- GetSQLData(sbecp,"Sablefish")   # read from SQL Server
-      write.table(ctddat, file = paste(path,"figure18.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
+      #ctddat    <- GetSQLData(sbecp,"Sablefish")   # read from SQL Server
+      #write.table(ctddat, file = paste(path,"figure18.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
       ctddat    <- read.csv(paste(path,'figure18.csv',sep=''),header=T)  # read from csv
 
       par(mar=c(1,1,1,1.4),cex=1.5,cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)   # par(mar=c(bottom,left,top,right) 
@@ -879,13 +883,13 @@
 
 (ref:figure19) Average temperatures as reported from the Sea-bird SBE 39 loggers at 1-degree latitude intervals and three depth intervals: shallow: 100-250 fathoms (183 to 457 meters), mid:  250-450 fathoms (458-823 meters) and deep:  450-750 fathoms (824-1372 meters). 
 
-```{r figure19, fig.cap='(ref:figure19)', results='asis', out.width = "400px",out.height = "666px", fig.align = "center"}
+```{r figure19, fig.cap='(ref:figure19)', results='asis', out.width = "400px",out.height = "600px", fig.align = "center"}
       # table SEABIRD_ReportLinePlot created in the Sablefish.dbo.Build_Seabird_tables procedure
     
        png(paste(basepath,'figures/figure19.png',sep=''), width=600, height=800) # write png to file
        ctddt  <-  "select * from SEABIRD_ReportLinePlot"
-       ctd    <-  GetSQLData(ctddt,"Sablefish")   # read from SQL Server
-       write.table(ctd, file = paste(path,"figure19.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+       #ctd    <-  GetSQLData(ctddt,"Sablefish")   # read from SQL Server
+       #write.table(ctd, file = paste(path,"figure19.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
        ctd    <-  read.csv(paste(path,'figure19.csv',sep=''),header=T)  # read from csv
        
        ctd2         <-  arrange(transform(ctd,strata = factor(depth,levels=rev(unique(ctd$depth)))), depth)
