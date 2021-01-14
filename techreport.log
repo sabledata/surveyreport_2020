@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  14 JAN 2021 08:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  14 JAN 2021 08:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,7 +1261,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--347
 [7
 
 ]
-<c:/github/surveyreport_2020/figures/Figure1.png, id=246, 307.1475pt x 397.485p
+<c:/github/surveyreport_2020/figures/Figure1.png, id=247, 307.1475pt x 397.485p
 t>
 File: c:/github/surveyreport_2020/figures/Figure1.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure1.png>
@@ -1300,7 +1300,7 @@ ata (RD$[]$-RD$[]$) are colour-coded
 [8
 
  <c:/github/surveyreport_2020/figures/Figure1.png>]
-<c:/github/surveyreport_2020/figures/Figure2.png, id=256, 861.9703pt x 684.3065
+<c:/github/surveyreport_2020/figures/Figure2.png, id=257, 861.9703pt x 684.3065
 6pt>
 File: c:/github/surveyreport_2020/figures/Figure2.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure2.png>
@@ -1335,7 +1335,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--384
 [9
 
  <c:/github/surveyreport_2020/figures/Figure2.png>]
-<c:/github/surveyreport_2020/figures/Figure3.png, id=264, 603.0028pt x 994.4653
+<c:/github/surveyreport_2020/figures/Figure3.png, id=265, 603.0028pt x 994.4653
 2pt>
 File: c:/github/surveyreport_2020/figures/Figure3.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure3.png>
@@ -1367,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 396--396
 LaTeX Warning: Float too large for page by 16.92253pt on input line 397.
 
 [10 <c:/github/surveyreport_2020/figures/Figure3.png>]
-<c:/github/surveyreport_2020/figures/Figure4.png, id=272, 476.78125pt x 686.565
+<c:/github/surveyreport_2020/figures/Figure4.png, id=273, 476.78125pt x 686.565
 pt>
 File: c:/github/surveyreport_2020/figures/Figure4.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure4.png>
@@ -1402,7 +1402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--407
  []
 
 [11 <c:/github/surveyreport_2020/figures/Figure4.png>]
-<c:/github/surveyreport_2020/figures/Figure5.png, id=280, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure5.png, id=281, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure5.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure5.png>
@@ -1437,7 +1437,7 @@ ight) and north to south (top to
  []
 
 [12 <c:/github/surveyreport_2020/figures/Figure5.png>]
-<c:/github/surveyreport_2020/figures/Figure6.png, id=287, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure6.png, id=288, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure6.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure6.png>
@@ -1465,7 +1465,7 @@ on input line 423.
 
 
  <c:/github/surveyreport_2020/figures/Figure6.png>]
-<c:/github/surveyreport_2020/figures/Figure7.png, id=295, 501.875pt x 643.40375
+<c:/github/surveyreport_2020/figures/Figure7.png, id=296, 501.875pt x 643.40375
 pt>
 File: c:/github/surveyreport_2020/figures/Figure7.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure7.png>
@@ -1494,7 +1494,7 @@ CIs) by sur-vey strata over time.
  []
 
 [14 <c:/github/surveyreport_2020/figures/Figure7.png>]
-<c:/github/surveyreport_2020/figures/Figure8.png, id=302, 602.25pt x 803.0pt>
+<c:/github/surveyreport_2020/figures/Figure8.png, id=303, 602.25pt x 803.0pt>
 File: c:/github/surveyreport_2020/figures/Figure8.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/Figure8.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/Figure8.png  used 
@@ -1528,7 +1528,7 @@ ht of sable-fish (kg) (C) by StRS
  []
 
 [15 <c:/github/surveyreport_2020/figures/Figure8.png>]
-<c:/github/surveyreport_2020/figures/figure9.png, id=310, 501.875pt x 552.0625p
+<c:/github/surveyreport_2020/figures/figure9.png, id=311, 501.875pt x 552.0625p
 t>
 File: c:/github/surveyreport_2020/figures/figure9.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure9.png>
@@ -1562,7 +1562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--456
 ed dashed line in-di-cates the 55
  []
 
-<c:/github/surveyreport_2020/figures/figure10.png, id=312, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure10.png, id=313, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure10.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure10.png>
@@ -1596,7 +1596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--465
 ed dashed line in-di-cates the 55
  []
 
-<c:/github/surveyreport_2020/figures/figure11.png, id=314, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure11.png, id=315, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure11.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure11.png>
@@ -1630,7 +1630,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--474
 he red dashed line in-di-cates the
  []
 
-<c:/github/surveyreport_2020/figures/figure12.png, id=316, 501.875pt x 552.0625
+<c:/github/surveyreport_2020/figures/figure12.png, id=317, 501.875pt x 552.0625
 pt>
 File: c:/github/surveyreport_2020/figures/figure12.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure12.png>
@@ -1664,7 +1664,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 483--483
 he red dashed line in-di-cates the
  []
 
-<c:/github/surveyreport_2020/figures/figure13.png, id=318, 702.625pt x 431.6125
+<c:/github/surveyreport_2020/figures/figure13.png, id=319, 702.625pt x 431.6125
 pt>
 File: c:/github/surveyreport_2020/figures/figure13.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure13.png>
@@ -1698,7 +1698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 492--492
 e ra-tio by year la-belled across
  []
 
-<c:/github/surveyreport_2020/figures/figure14.png, id=320, 702.625pt x 413.545p
+<c:/github/surveyreport_2020/figures/figure14.png, id=321, 702.625pt x 413.545p
 t>
 File: c:/github/surveyreport_2020/figures/figure14.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure14.png>
@@ -1731,7 +1731,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 501--501
 W in kg) for fe-males (A) and males
  []
 
-<c:/github/surveyreport_2020/figures/figure15.png, id=322, 803.0pt x 626.34pt>
+<c:/github/surveyreport_2020/figures/figure15.png, id=323, 803.0pt x 626.34pt>
 File: c:/github/surveyreport_2020/figures/figure15.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure15.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure15.png  used
@@ -1778,7 +1778,7 @@ _2020/figures/Figure10.png>] [18 <c:/github/surveyreport_2020/figures/Figure11.
 png>] [19 <c:/github/surveyreport_2020/figures/Figure12.png>] [20 <c:/github/su
 rveyreport_2020/figures/figure13.png>] [21 <c:/github/surveyreport_2020/figures
 /Figure14.png>] [22 <c:/github/surveyreport_2020/figures/figure15.png>]
-<c:/github/surveyreport_2020/figures/figure16.png, id=363, 602.25pt x 431.6125p
+<c:/github/surveyreport_2020/figures/figure16.png, id=364, 602.25pt x 431.6125p
 t>
 File: c:/github/surveyreport_2020/figures/figure16.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure16.png>
@@ -1811,7 +1811,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 523--523
  for tagged sable-fish re-leased on
  []
 
-<c:/github/surveyreport_2020/figures/figure17.png, id=365, 803.0pt x 927.465pt>
+<c:/github/surveyreport_2020/figures/figure17.png, id=366, 803.0pt x 927.465pt>
 
 File: c:/github/surveyreport_2020/figures/figure17.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure17.png>
@@ -1870,7 +1870,7 @@ LaTeX Warning: Float too large for page by 11.23886pt on input line 533.
 
  <c:/github/surveyreport_2020/figures/figure16.png>] [24 <c:/github/surveyrepor
 t_2020/figures/figure17.png>]
-<c:/github/surveyreport_2020/figures/figure18.png, id=379, 694.09312pt x 465.23
+<c:/github/surveyreport_2020/figures/figure18.png, id=380, 694.09312pt x 465.23
 813pt>
 File: c:/github/surveyreport_2020/figures/figure18.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure18.png>
@@ -1906,7 +1906,7 @@ em-per-a-ture ($[]$C) for a given 1-
 [25
 
  <c:/github/surveyreport_2020/figures/figure18.png>]
-<c:/github/surveyreport_2020/figures/figure19.png, id=385, 602.25pt x 803.0pt>
+<c:/github/surveyreport_2020/figures/figure19.png, id=386, 602.25pt x 803.0pt>
 File: c:/github/surveyreport_2020/figures/figure19.png Graphic file (type png)
 <use c:/github/surveyreport_2020/figures/figure19.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/figure19.png  used
@@ -1991,40 +1991,40 @@ Overfull \hbox (12.05125pt too wide) in paragraph at lines 626--626
 [28
 
  <c:/github/surveyreport_2020/figures/AppendixB_BridgeLogIns3.PNG>]
-<c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png, id=405, 569.12625
-pt x 514.92375pt>
-File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png Graphic file 
-(type png)
-<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png>
+<c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png, id=405, 674.52pt
+ x 566.86781pt>
+File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png Graphic file
+ (type png)
+<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/AppendixB_SetLogIn
-s.png  used on input line 631.
-(pdftex.def)             Requested size: 501.9008pt x 453.70786pt.
-File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png Graphic file 
-(type png)
-<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png>
+s3.png  used on input line 631.
+(pdftex.def)             Requested size: 501.88504pt x 421.58614pt.
+File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png Graphic file
+ (type png)
+<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/AppendixB_SetLogIn
-s.png  used on input line 631.
-(pdftex.def)             Requested size: 501.9008pt x 453.70786pt.
-File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png Graphic file 
-(type png)
-<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png>
+s3.png  used on input line 631.
+(pdftex.def)             Requested size: 501.88504pt x 421.58614pt.
+File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png Graphic file
+ (type png)
+<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/AppendixB_SetLogIn
-s.png  used on input line 631.
-(pdftex.def)             Requested size: 501.9008pt x 453.70786pt.
-File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png Graphic file 
-(type png)
-<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.png>
+s3.png  used on input line 631.
+(pdftex.def)             Requested size: 501.88504pt x 421.58614pt.
+File: c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png Graphic file
+ (type png)
+<use c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.png>
 Package pdftex.def Info: c:/github/surveyreport_2020/figures/AppendixB_SetLogIn
-s.png  used on input line 631.
-(pdftex.def)             Requested size: 501.9008pt x 453.70786pt.
+s3.png  used on input line 631.
+(pdftex.def)             Requested size: 501.88504pt x 421.58614pt.
 
-Overfull \hbox (32.14578pt too wide) in paragraph at lines 631--631
+Overfull \hbox (32.13002pt too wide) in paragraph at lines 631--631
 | [][]  
  []
 
 [29
 
- <c:/github/surveyreport_2020/figures/AppendixB_SetLogIns.PNG>]
+ <c:/github/surveyreport_2020/figures/AppendixB_SetLogIns3.PNG>]
 <c:/github/surveyreport_2020/figures/AppendixB_CatchLogIns.png, id=413, 566.115
 pt x 539.01375pt>
 File: c:/github/surveyreport_2020/figures/AppendixB_CatchLogIns.png Graphic fil
@@ -8360,7 +8360,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1049.
  ) 
 Here is how much of TeX's memory you used:
  17851 strings out of 482938
- 320730 string characters out of 5958759
+ 320738 string characters out of 5958759
  839922 words of memory out of 5000000
  32422 multiletter control sequences out of 15000+600000
  623674 words of font info for 175 fonts, out of 8000000 for 9000
@@ -8378,7 +8378,7 @@ s/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist
 TeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/A
 ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (55 pages, 4080725 bytes).
+Output written on techreport.pdf (55 pages, 4117252 bytes).
 PDF statistics:
  563 PDF objects out of 1000 (max. 8388607)
  441 compressed objects within 5 object streams
