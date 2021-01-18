@@ -12,8 +12,8 @@ After that, all subsequent sections will be turned into appendices. -->
 ```{r appendixA, results="asis"}
 
    dtBW   <- paste('exec dbo.procRKnitr_SurveyTrips ', yr ,sep='')
-   trip   <- GetSQLData(dtBW,"Sablefish")
-   write.table(trip, file = paste(path,'appendixA.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+   #trip   <- GetSQLData(dtBW,"Sablefish")
+   #write.table(trip, file = paste(path,'appendixA.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
    trip   <-  read.csv(paste(path,'appendixA.csv',sep=''),header=T)
    
    colnames(trip) <- c("Year", "Dates",  "Vessel", "Captain", "Set Count", "GFBIO Id")
@@ -34,7 +34,8 @@ After that, all subsequent sections will be turned into appendices. -->
 ```{r appendixB,out.width = "480px", out.height = "406px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_BridgeLogIns3.png',sep="")
+         # paper bridge log
+         img <-  paste(basepath,'figures/AppendixB_BridgeLogIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -45,7 +46,8 @@ Figure C.1. Example of a completed bridge log data form with directions from the
 ```{r AppendixB2,out.width = "500px", out.height = "420px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_SetLogIns3.png',sep="")
+         # paper set log
+         img <-  paste(basepath,'figures/AppendixB_SetLogIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -56,7 +58,8 @@ Figure C.2.  Example of a completed set log data form with directions from the 2
 ```{r AppendixB3,out.width = "500px", out.height = "476px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_CatchLogIns3.png',sep='')
+         # paper catch log
+         img <-  paste(basepath,'figures/AppendixB_CatchLogIns3.png',sep='')
       knitr::include_graphics(img) 
       
 ```
@@ -66,7 +69,8 @@ Figure C.3.  Example of a completed catch log data form with directions from the
 ```{r AppendixB4,out.width = "500px", out.height = "426px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_CatchLogTabIns3.png',sep="")
+         # paper tabular catch log
+         img <-  paste(basepath,'figures/AppendixB_CatchLogTabIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -77,7 +81,8 @@ Figure C.4.  Example of a tabular catch log data entry form transposed from the 
 ```{r AppendixB5,out.width = "480px", out.height = "588px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_LSWMOIns3.png',sep="")
+         # paper LSWMO log
+         img <-  paste(basepath,'figures/AppendixB_LSWMOIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -88,7 +93,8 @@ Figure C.5.  Example of a completed Sablefish biological sampling form and direc
 ```{r AppendixB6,out.width = "500px", out.height = "501px", fig.align="left"}
 
       if(knitr:::is_latex_output())
-      img <-  paste(basepath,'figures/AppendixB_TaggingSheetIns3.png',sep="")
+         # paper tagging sheet
+         img <-  paste(basepath,'figures/AppendixB_TaggingSheetIns3.png',sep="")
       knitr::include_graphics(img) 
       
 ```
@@ -105,47 +111,47 @@ Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets
    library(kableExtra)
    yr <- 2020
    options(knitr.kable.NA = '')  # get rid of NAs
-   srvyset <-  paste('dbo.procRReport_Survey_SetDetails ',yr,',1,',setcnt, sep='')
-   ssdat   <-  GetSQLData(srvyset,"Sablefish")
-   write.table(ssdat, file = paste(path,'AppendixC.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
-   ssdat   <-  read.csv(paste(path,'AppendixC.csv',sep=''),header=T)
+   srvyset  <-  paste('dbo.procRReport_Survey_SetDetails ',yr,',1,',setcnt, sep='')
+   #srvy.set   <-  GetSQLData(srvyset,"Sablefish")
+   #write.table(srvy.set, file = paste(path,'AppendixC.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+   srvy.set <-  read.csv(paste(path,'AppendixC.csv',sep=''),header=T)
    
-   latcnt  <-  length(ssdat[, 9])
+   latcnt  <-  length(srvy.set[, 9])  # add degree symbol in lat and long values
                for (i in 1:latcnt)
-                      { ssdat[i,9]= paste(ssdat[i,9],'° ', ssdat[i,10],"'N",sep="")  }
-   latcnt  <-  length(ssdat[,11])
+                      { srvy.set[i,9]= paste(srvy.set[i,9],'° ', srvy.set[i,10],"'N",sep="")  }
+   latcnt  <-  length(srvy.set[,11])
                for (i in 1:latcnt)
-                      { ssdat[i,11]=paste(ssdat[i,11],'° ', ssdat[i,12],"'W",sep="") }
-   latcnt  <-  length(ssdat[,13])
+                      { srvy.set[i,11]=paste(srvy.set[i,11],'° ', srvy.set[i,12],"'W",sep="") }
+   latcnt  <-  length(srvy.set[,13])
                for (i in 1:latcnt)
-                      { ssdat[i,13]=paste(ssdat[i,13],'° ', ssdat[i,14],"'N",sep="") }
-   latcnt<-length(ssdat[,15])
+                      { srvy.set[i,13]=paste(srvy.set[i,13],'° ', srvy.set[i,14],"'N",sep="") }
+   latcnt<-length(srvy.set[,15])
                for (i in 1:latcnt)
-                      { ssdat[i,15]=paste(ssdat[i,15],'° ', ssdat[i,16],"'W",sep="") }
+                      { srvy.set[i,15]=paste(srvy.set[i,15],'° ', srvy.set[i,16],"'W",sep="") }
    
-   ssdat  <-  ssdat[,c(-22,-23,-24)]  #no hobo, ctd or camera columns needed 2020
-   ssdat  <-  ssdat[,c(-10,-12,-14,-16)]  
+   srvy.set  <-  srvy.set[,c(-22,-23,-24)]  # no hobo, ctd or camera columns needed 2020
+   srvy.set  <-  srvy.set[,c(-10,-12,-14,-16)]  
    
-   colnames(ssdat) <- c( "Spatial Stratum", "Set",       "Type",      
-                         "Depth Stratum",   "Date",      "Time", 
-                         "Duration (minutes)",        "Area", 
-                         "Start Latitude",        "Start Longitude", 
-                         "End Latitude",        "End Longitude", 
-                         "Start Depth (m)",           "End Depth (m)",       "Mean Depth (m)", 
-                         "Traps Fished", 
-                         "SBE 39")
+   colnames(srvy.set) <- c("Spatial Stratum", "Set", "Type",      
+                           "Depth Stratum",   "Date", "Time", 
+                           "Duration (minutes)",  "Area", 
+                           "Start Latitude",  "Start Longitude", 
+                           "End Latitude",    "End Longitude", 
+                           "Start Depth (m)", "End Depth (m)", "Mean Depth (m)", 
+                           "Traps Fished",    "SBE 39")
  
-   kableExtra::kable(ssdat,
+   kableExtra::kable(srvy.set,
                     booktabs  = TRUE, 
                     longtable = T,
                     linesep   = "",
                     format    = "latex") %>%
    kableExtra::kable_styling(font_size = 8, latex_options = "repeat_header",
-               repeat_header_text = "continued.", repeat_header_method = "replace") %>%
+               repeat_header_text = "continued.", 
+               repeat_header_method = "replace") %>%
    kableExtra::landscape() %>%
     
    row_spec(0, bold = T)  %>%     
-   column_spec(1,width    = "1.1cm") %>%
+   column_spec(1,width    = "1.1cm") %>%  # stratum
    column_spec(2,width    = "0.5cm") %>%  # set
    column_spec(3,width    = "0.4cm") %>%  # type 
    column_spec(4,width    = "1.0cm") %>%  # depth stratum
@@ -153,17 +159,15 @@ Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets
    column_spec(6,width    = "0.7cm") %>%  # time      
    column_spec(7,width    = "0.9cm") %>%  # dur
    column_spec(8,width    = "0.5cm") %>%  # area   
-   column_spec(9,width    = "1.5cm") %>%  # lat
-   column_spec(10,width   = "1.6cm") %>%
-   column_spec(11,width   = "1.5cm") %>%
-   column_spec(12,width   = "1.6cm") %>% 
-   column_spec(13,width   = "0.7cm") %>%  # start
-   column_spec(14,width   = "0.7cm") %>%      
-   column_spec(15,width   = "0.5cm") %>%  # mean
+   column_spec(9,width    = "1.5cm") %>%  # start lat
+   column_spec(10,width   = "1.6cm") %>%  # start long
+   column_spec(11,width   = "1.5cm") %>%  # end lat
+   column_spec(12,width   = "1.6cm") %>%  # end long
+   column_spec(13,width   = "0.7cm") %>%  # start dep
+   column_spec(14,width   = "0.7cm") %>%  # end dep    
+   column_spec(15,width   = "0.5cm") %>%  # mean dep
    column_spec(16,width   = "0.6cm") %>%  # tf
-   column_spec(17,width   = "0.4cm") %>% 
-   column_spec(18,width   = "0.4cm") %>% 
-   column_spec(19,width   = "0.4cm") %>%  # ctd 
+   column_spec(17,width   = "0.4cm") %>%  # sbe
    sub("\\caption\\[\\]\\{\\}", "\\caption*{}", .)
 ``` 
 
@@ -172,20 +176,20 @@ Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets
 
 # SUMMARY OF BASKET USE BY TRAP `r yr`.{#app:fourth-appendix} 
 
-Summary of the basket use by trap number for StRS sets during the `r yr` sablefish survey. The fate of the sablefish catch for each set and trap is indicated using the following abbreviations:
-D = Discarded after weighing (processed as commercial catch), A = Sampled for LSMWO, T = Tagged and released, SD = Sublegal discarded, F= Frames, NULL = No sablefish catch/Trap missing. 
+Summary of the basket use by trap number for StRS sets during the `r yr` sablefish survey. The fate of the sablefish catch for each set and trap is indicated using the following abbreviations: D = Discarded after weighing (processed as commercial catch), A = Sampled for LSMWO, T = Tagged and released, SD = Sublegal discarded, F= Frames, NULL = No sablefish catch/Trap missing. 
 
 ```{r appendixD, echo=FALSE}
-   # Sablefish.dbo.procRReport_Survey_TrapUse procedure pulls data from table dbo.GFBIO_TRAPS_USE created by procedure 
-   # Sablefish.dbo.Build_BIO_Sablefish_Tables
+
+   # Sablefish.dbo.procRReport_Survey_TrapUse procedure pulls 
+   # data from table dbo.GFBIO_TRAPS_USE  
+   # created by procedure Sablefish.dbo.Build_BIO_Sablefish_Tables
    options(knitr.kable.NA = '')
    trap       <- paste("dbo.procRReport_Survey_TrapUse ",yr,",1,",setcnt, sep="")
-   trapdat    <- GetSQLData(trap,"Sablefish")
-   write.table(trapdat, file = paste(path,'appendixD.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
+   #trapdat    <- GetSQLData(trap,"Sablefish")
+   #write.table(trapdat, file = paste(path,'appendixD.csv',sep=''),row.names=FALSE,na="",col.names=TRUE,sep=",")    
    trapdat    <- read.csv(paste(path,'appendixD.csv',sep=''),header=T)
    trapuse    <- trapdat[,c(-1)] 
    trapuse2   <- trapuse[,c(-27,-28)]
-
    
    kableExtra::kable(trapuse2,
                      booktabs = TRUE, 
@@ -199,7 +203,7 @@ D = Discarded after weighing (processed as commercial catch), A = Sampled for LS
                      repeat_header_method = "replace") %>%  
       
    kableExtra::landscape()  %>%
-       #row_spec(38:52, color="blue"  )   %>%  no visits to inlets in 2020 = no blue font
+       #row_spec(38:52, color="blue"  ) %>%  no visits to inlets in 2020 
        row_spec(0, bold=T) %>%
        column_spec(1,width      = "0.3cm") %>%
        column_spec(2,width      = "0.3cm") %>%
@@ -238,21 +242,23 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
 
 
 ```{r appendixE, echo=FALSE}
-   #  sql query for inline text
-   #  Sablefish.dbo.procReport_Survey_SampleDetails pulls data from table GFBIO_RESEARCH_SAMPLE_DETAILS built by     
+
+   #  Sablefish.dbo.procReport_Survey_SampleDetails pulls data 
+   #  from table GFBIO_RESEARCH_SAMPLE_DETAILS, built by     
    #  procedure Sablefish.dbo.Build_BIO_Sablefish_Tables 
-   samples               <-  paste("dbo.procReport_Survey_SampleDetails ",yr,",1,",setcnt, sep="")
-   surveyspec            <-  GetSQLData(samples,"Sablefish")
-   write.table(surveyspec, file = paste(path,'appendixE.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
-   surveyspec            <-  read.csv(paste(path,'appendixE.csv',sep=''),header=T)
-   count.row.total       <-  length(surveyspec$SET)
-   count.row             <-  length(surveyspec$SET) - 1
-   surveyspec$SET[count.row.total]<- "Total"
+
+   samples           <-  paste("dbo.procReport_Survey_SampleDetails ",yr,",1,",setcnt, sep="")
+   #surveyspec        <-  GetSQLData(samples,"Sablefish")
+   #write.table(surveyspec, file = paste(path,'appendixE.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")  
+   surveyspec        <-  read.csv(paste(path,'appendixE.csv',sep=''),header=T)
+   count.row.total   <-  length(surveyspec$SET)
+   count.row         <-  length(surveyspec$SET) - 1
+   surveyspec$SET[count.row.total] <- "Total"
 
    
-   colnames(surveyspec)  <-  c("", "kg", "Count", "Recover-Rerelease", "Deceased", "Released", 
-                              "Count",  "Mean", "Fork Length", "Sex", "Maturity", "Otoliths",
-                              "Weight", "Count", "Proportion Males", "Males", "Females")
+   colnames(surveyspec) <- c("", "kg","Count","Recover-Rerelease", "Deceased", "Released", 
+                             "Count", "Mean", "Fork Length", "Sex","Maturity", "Otoliths",
+                             "Weight","Count","Proportion Males", "Males", "Females")
 
    kableExtra::kable(surveyspec,
                      booktabs = TRUE, 
@@ -267,8 +273,11 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
                       "Tagged Fork Lengths(mm)" = 2,
                       "Specimen Count"= 6, 
                       "Mean Fork Length(mm)" = 3), bold = TRUE) %>%
-   kableExtra::kable_styling(font_size = 8, latex_options = "repeat_header",
-                    repeat_header_text = "continued.", repeat_header_method = "replace") %>%     
+      
+   kableExtra::kable_styling(font_size = 8, 
+                     latex_options = "repeat_header",
+                     repeat_header_text = "continued.", 
+                     repeat_header_method = "replace") %>%     
    
    kableExtra::landscape()  %>%
    row_spec(0, bold = T)  %>%   
@@ -299,14 +308,17 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
 Biological data collected for rougheye/blackspotted rockfish complex.  Each set is listed with counts of specimens sampled, calculations of mean fork lengths and number of species visually identified as either a RE = rougheye rockfish, BS = blackspotted rockfish or a hybrid.
 
 ```{r appendixF, echo=FALSE}
-   yr=2020
-   othersamples <-  paste( "select species_name, [SET], [Len Sample Count], [weight_count], [Sex Sample Count], ",
+ 
+   othersamples <-  paste( "select species_name, [SET], [Len Sample Count], ",
+                           "[weight_count], [Sex Sample Count], ",
                            "[Maturity Sample Count], [Otolith Sample Count], [DNA Sample Count], ",
-                           "Sample_count, [Proportion Males],  ",
+                           "Sample_count, [Proportion Males],  ",   
                            "round([Male Mean Fork Len(mm)],0) as malelen, ",
                            "round([Female Mean Fork Len(mm)],0) as femlen,  ", 
-                           "round([NoSexMeanLen(mm)],0) as nosexlen, bsre.Rougheye, bsre.Blackspotted, bsre.Hybrid ",
-                           "from  (select year, TRIP_ID, FE_MAJOR_LEVEL_ID, SPECIES_CODE, ",
+                           "round([NoSexMeanLen(mm)],0) as nosexlen, ", 
+                           "bsre.Rougheye, bsre.Blackspotted, bsre.Hybrid ",
+                           "from  ",
+                           "(select year, TRIP_ID, FE_MAJOR_LEVEL_ID, SPECIES_CODE, ",
                            "SUM(re) AS Rougheye, SUM(bs) AS Blackspotted, SUM(hyb) AS Hybrid ",
                            "from  (select year, TRIP_ID, FE_MAJOR_LEVEL_ID, SPECIES_CODE, ",
                            "CASE WHEN EXISTENCE_ATTRIBUTE_CODE = 16 THEN 1 ELSE 0 END AS re, ",
@@ -314,11 +326,12 @@ Biological data collected for rougheye/blackspotted rockfish complex.  Each set 
                            "CASE WHEN EXISTENCE_ATTRIBUTE_CODE = 31 THEN 1 ELSE 0 END AS hyb, ",
                            "SPECIMEN_ID ",
                            "from dbo.gfbio_species_guess) AS bs ",
-                           "group by year, TRIP_ID, FE_MAJOR_LEVEL_ID, SPECIES_CODE) AS bsre RIGHT OUTER JOIN ",
+                           "group by year, TRIP_ID, FE_MAJOR_LEVEL_ID, SPECIES_CODE) AS bsre ", 
+                           "RIGHT OUTER JOIN ",
                            "dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH ON bsre.TRIP_ID = ",              
-                           "dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.TRIP_ID ",
-                           "and bsre.FE_MAJOR_LEVEL_ID = dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.[SET] ",
-                           "AND bsre.SPECIES_CODE = ",                       
+                           "dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.TRIP_ID and ",
+                           "bsre.FE_MAJOR_LEVEL_ID = dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.[SET] ",
+                           "and bsre.SPECIES_CODE = ",                       
                            "dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.species ",            
                            "where (dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH.Year = ",yr, 
                            ") order by species,[SET]", sep="")
@@ -326,15 +339,18 @@ Biological data collected for rougheye/blackspotted rockfish complex.  Each set 
    write.table(otherspec2, file = paste(path,'appendixF.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    otherspec2            <-  read.csv(paste(path,'appendixF.csv',sep=''),header=T) # read from csv
    otherspec2$species_name<-as.character(otherspec2$species_name)
-   addition              <-  c('Total','', sum(otherspec2$Len.Sample.Count),sum(otherspec2$weight_count), sum(otherspec2$Sex.Sample.Count),
-                               sum(otherspec2$Maturity.Sample.Count), sum(otherspec2$Otolith.Sample.Count),sum(otherspec2$DNA.Sample.Count),
-                               sum(otherspec2$Sample_count),'','','','','','','')
-   otherspec             <-   rbind(otherspec2,addition)
-   row.count             <-   length(otherspec$species_name)
+   addition              <-  c('Total','', sum(otherspec2$Len.Sample.Count),    sum(otherspec2$weight_count), 
+                                           sum(otherspec2$Sex.Sample.Count),    sum(otherspec2$Maturity.Sample.Count),   
+                                           sum(otherspec2$Otolith.Sample.Count),sum(otherspec2$DNA.Sample.Count),
+                                           sum(otherspec2$Sample_count),'','','','','','','')
+   otherspec             <-  rbind(otherspec2,addition)
+   row.count             <-  length(otherspec$species_name)
   
-   otherspec$species_name<-  cleanf(otherspec$species_name) 
-   colnames(otherspec)   <-  c("Species Name", "Set", "Fork Length","Weight", "Sex", "Maturity", "Otolith", 
-                               "DNA",  "Total Count", "Proportion Males",  "Males", "Females",  
+   otherspec$species_name<-  cleanf(otherspec$species_name)    # only rougheye/blackspotted sampled in 2020
+   colnames(otherspec)   <-  c("Species Name", "Set", "Fork Length",
+                               "Weight", "Sex","Maturity", "Otolith", 
+                               "DNA", "Total Count", 
+                               "Proportion Males", "Males", "Females",  
                                "No sex", "RE", "BS","Hybrid" )
    
       kableExtra::kable(otherspec,
@@ -350,9 +366,9 @@ Biological data collected for rougheye/blackspotted rockfish complex.  Each set 
                       "Sampler Visual id Count" = 3), bold=TRUE) %>%
    
       kableExtra::kable_styling(font_size = 8, 
-                      latex_options = "repeat_header",
-                      repeat_header_text = "continued.", 
-                      repeat_header_method = "replace") %>%
+                        latex_options = "repeat_header",
+                        repeat_header_text = "continued.", 
+                        repeat_header_method = "replace") %>%
       
       kableExtra::landscape()  %>% 
          
@@ -371,7 +387,7 @@ Biological data collected for rougheye/blackspotted rockfish complex.  Each set 
       column_spec(13,width    = "0.7cm") %>% #  no sex  
       column_spec(14,width    = "1.0cm") %>% # re
       column_spec(15,width    = "1.2cm") %>% # bc
-      column_spec(16,width    = "0.8cm") %>% #  hybrid 
+      column_spec(16,width    = "0.8cm") %>% # hybrid 
       row_spec(0, bold = T) %>%
       row_spec(20,  hline_after = T) %>%
       row_spec(row.count, bold = T)

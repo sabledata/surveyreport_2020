@@ -148,8 +148,8 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
                          "sd.TRIP_ID = rt.TRIP_ID AND  sd.[SET] = rt.SET_NUMBER " ,
                          "where (sd.Year =", yr,") group by rt.SABLE_SET_TYPE",sep="")
 
-    #countStRS   <- GetSQLData(catchStRS,"Sablefish")
-    #write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    countStRS   <- GetSQLData(catchStRS,"Sablefish")
+    write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     countStRS   <-  read.csv(paste(path,'results04.csv',sep=''),header=T) 
     
     # -- Sablefish.dbo.procReport_Survey_LenMF pulls length data from table GFBIO_SABLEBIO_VW 
@@ -378,11 +378,12 @@ On average, female sablefish grow faster and reach far greater size (Figure \@re
    oldMaleYr   <-  oldageMale[1,3]               # -- year captured
 ```
 
-There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following the highly anomalous warm ocean conditions of the “The Blob” [@Bond2015].   More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the.....  (Figure \@ref(fig:figure14)). 
+There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following the highly anomalous warm ocean conditions of the “The Blob” [@Bond2015].   
+More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the.....   \@ref(fig:figure15)). 
 
 ## OTHER FISH SAMPLING
 
-Length, sex, maturity, otoliths and DNA samples were collected for the rougheye/blackspotted rockfish complex.  (Appendix \@ref(app:sixth-appendix)).
+Length, sex, maturity, otoliths and DNA samples were collected for the rougheye/blackspotted rockfish complex.  (Appendix \@ref(app:seventh-appendix)).
 
 ## RECOVERED TAGGED SABLEFISH
 
@@ -391,63 +392,59 @@ During the `r yr` sablefish survey, `r countStRS[2,3] + countStRS[1,3]` previous
 
 ## SABLEFISH AGES
 
-The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by x year olds (Figure \@ref(fig:figure17)a).  
+The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by ? year olds (Figure \@ref(fig:figure17)a).  
 
-The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and x. (Figure \@ref(fig:figure17)b).
+The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and ?. (Figure \@ref(fig:figure17)b).
 
 Historic data from all samples lists the oldest female sablefish at `r oldFem` years of age collected in `r oldFemYr` where as the oldest male sablefish with the age of `r oldMale` years old was documented for the year `r oldMaleYr`.
 
 ```{r SablefishOceanText, echo=FALSE}
      # table SEABIRD_ReportLinePlot created in the Sablefish.dbo.Build_Seabird_tables procedure
      # provide the number values for the inline text
-     whatTrap  <-  paste("select * from SEABIRD_ACCEL_byTrap where year =",yr," order by [set]",sep="")
-     whatTraps <-  GetSQLData(whatTrap ,"Sablefish")  # in order to be able to comment on which traps the sensors were placed
-     write.table(whatTraps, file = paste(path,"results11.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")       
-     whatTraps <-  read.csv(paste(path,'results11.csv',sep=''),header=T) 
-     
+
      seabrd    <-  "select * from SEABIRD_ReportLinePlot"
      seabird   <-  GetSQLData(seabrd ,"Sablefish")
      write.table(seabird, file = paste(path,"results12.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")       
      seabird   <-  read.csv(paste(path,'results12.csv',sep=''),header=T) 
      
      yrs         <-  unique(seabird$Year)
-     lavtmin     <-  min(seabird$avgtemp[seabird$depth=="Shallow"])
-     lavtyr      <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==lavtmin])
-     lavtband1   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==lavtyr & seabird$avgtemp==lavtmin]) - 0.5
-     lavtband2   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==lavtyr & seabird$avgtemp==lavtmin]) + 0.5
+     shallmin    <-  min(seabird$avgtemp[seabird$depth=="Shallow"])
+     shallyrmin  <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==shallmin])
+     shallband1min   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmin & seabird$avgtemp==shallmin]) - 0.5
+     shallband2min   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmin & seabird$avgtemp==shallmin]) + 0.5
      
-     lavtmax     <- max(seabird$avgtemp[seabird$depth=="Shallow"])
-     lavtyrmx    <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==lavtmax])
-     lavtband1mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==lavtyrmx & seabird$avgtemp==lavtmax]) - 0.5
-     lavtband2mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==lavtyrmx & seabird$avgtemp==lavtmax]) + 0.5
+     shallmax     <- max(seabird$avgtemp[seabird$depth=="Shallow"])
+     shallyrmx    <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==shallmax])
+     shallband1mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmx & seabird$avgtemp==shallmax]) - 0.5
+     shallband2mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmx & seabird$avgtemp==shallmax]) + 0.5
      
-     mavt        <- min(seabird$avgtemp[seabird$depth  == "Mid"])
-     mavtyr      <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == mavt])
-     mavtband1   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==mavtyr & seabird$avgtemp  == mavt]) - 0.5
-     mavtband2   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==mavtyr & seabird$avgtemp  == mavt]) + 0.5
+     midmin        <- min(seabird$avgtemp[seabird$depth  == "Mid"])
+     midyrmin      <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == midmin])
+     midband1min   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmin & seabird$avgtemp  == midmin]) - 0.5
+     midband2min   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmin & seabird$avgtemp  == midmin]) + 0.5
      
-     mavtmx      <-  max(seabird$avgtemp[seabird$depth  == "Mid"])
-     mavtyrmx    <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == mavtmx])
-     mavtband1mx <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==mavtyrmx & seabird$avgtemp  == mavtmx]) - 0.5
-     mavtband2mx <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==mavtyrmx & seabird$avgtemp  == mavtmx]) + 0.5
+     midmx       <-  max(seabird$avgtemp[seabird$depth  == "Mid"])
+     midyrmx     <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == midmx])
+     midband1mx  <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmx & seabird$avgtemp  == midmx]) - 0.5
+     midband2mx  <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmx & seabird$avgtemp  == midmx]) + 0.5
      
-     davt        <-  min(seabird$avgtemp[seabird$depth  == "Deep"])
-     davtyr      <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == davt])
-     davtband1   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==davtyr & seabird$avgtemp  == davt]) - 0.5
-     davtband2   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==davtyr & seabird$avgtemp  == davt]) + 0.5  
+     deepmin        <-  min(seabird$avgtemp[seabird$depth  == "Deep"])
+     deepyr.min      <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == deepmin])
+     deepband1min   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.min & seabird$avgtemp  == deepmin]) - 0.5
+     deepband2min   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.min & seabird$avgtemp  == deepmin]) + 0.5  
      
-     davtmx      <-  max(seabird$avgtemp[seabird$depth  == "Deep"])
-     davtyrmx    <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == davtmx])
-     davtband1mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==davtyrmx & seabird$avgtemp  == davtmx]) - 0.5
-     davtband2mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==davtyrmx & seabird$avgtemp  == davtmx]) + 0.5
+     deepmx      <-  max(seabird$avgtemp[seabird$depth  == "Deep"])
+     deepyr.max    <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == deepmx])
+     deepband1mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.max & seabird$avgtemp  == deepmx]) - 0.5
+     deepband2mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.max & seabird$avgtemp  == deepmx]) + 0.5
      
 ```
 
 
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
-Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure19).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth. 
+Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure18).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth. 
 
-SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(lavtmin,1)` $^\circ$C (`r lavtyr`) within the `r lavtband1`$^\circ$- `r lavtband2`$^\circ$ latitude band.  The highest average temperature was `r round(lavtmax,1)` $^\circ$C (`r lavtyrmx`) in the southern `r lavtband1mx`$^\circ$ - `r lavtband2mx`$^\circ$ latitude band. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(mavt,1)` $^\circ$C (`r mavtyr`) within the `r mavtband1`$^\circ$-`r mavtband2` $^\circ$ latitude band.  The highest average temperature was `r round(mavtmx,1)` $^\circ$C (`r mavtyrmx`) in the southern `r mavtband1mx`$^\circ$- `r mavtband2mx`$^\circ$ latitude band.  In the deepest waters, the lowest average temperature of `r round(davt,1)` $^\circ$C  (`r davtyr`) was found in the `r davtband1`$^\circ$- `r davtband2`$^\circ$ latitude band and the highest average temperature was `r round(davtmx,1)`$^\circ$C (`r davtyrmx`) in the southern `r davtband1mx`$^\circ$-`r davtband2mx`$^\circ$ latitude band (Figure \@ref(fig:figure18)).
+SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(shallmin,1)` $^\circ$C (`r shallyrmin`) within the `r shallband1min`$^\circ$- `r shallband2min`$^\circ$ latitude band.  The highest average temperature was `r round(shallmax,1)` $^\circ$C (`r shallyrmx`) in the southern `r shallband1mx`$^\circ$ - `r shallband2mx`$^\circ$ latitude band. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(midmin,1)` $^\circ$C (`r midyrmin`) within the `r midband1min`$^\circ$-`r midband2min` $^\circ$ latitude band.  The highest average temperature was `r round(midmx,1)` $^\circ$C (`r midyrmx`) in the southern `r midband1mx`$^\circ$- `r midband2mx`$^\circ$ latitude band.  In the deepest waters, the lowest average temperature of `r round(deepmin,1)` $^\circ$C  (`r deepyr.min`) was found in the `r deepband1min`$^\circ$- `r deepband2min`$^\circ$ latitude band and the highest average temperature was `r round(deepmx,1)`$^\circ$C (`r deepyr.max`) in the southern `r deepband1mx`$^\circ$-`r deepband2mx`$^\circ$ latitude band (Figure \@ref(fig:figure19)).
 
 
 ```{r acknowledge, echo=FALSE}
