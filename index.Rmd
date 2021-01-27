@@ -249,8 +249,8 @@ library(Rmisc)
    # -- INTRODUCTION DETAILS --
 
    report      <-  'exec Report_CreateTables'
-   rep.data    <-  GetSQLData(report,"Sablefish")
-
+   #rep.data    <-  GetSQLData(report,"Sablefish")
+   details <- "select * from GFSH_"
    details     <- paste("select VESSEL_NAME as Vessel, CAPTAIN, ",
                         "left(CONVERT(varchar, START_DATE, 100), 7) + ' - ' ",
                         "+ left(CONVERT(varchar, END_DATE, 100), 7) AS [Trip Dates], ",

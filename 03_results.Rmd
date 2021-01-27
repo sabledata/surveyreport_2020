@@ -9,7 +9,7 @@
 ```
 The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
 
-Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected with no valid substitutes, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a GHNMCA protected area and one generated an error.
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a GHNMCA protected area and one generated an error.
 
 ```{r CatchRateText, echo=FALSE}
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
@@ -64,7 +64,7 @@ The sablefish survey of `r yr` have documented recent changes in the sablefish p
 
 ### Stratified Random Set CPUE
 
-Across all years, the highest annual CPUE (kg/trap) typically occured in the middle depths (450-850 m). In recent years, an increase in CPUE started in 2015 and a consistent rise in CPUE began in 2017 (Figure \@ref(fig:figure4)).  This increase was observed in nearly all depth strata (RD~1~ to RD~2~) and area strata (SD~1~ to SD~5~) (Figure \@ref(fig:figure5)).  The observed catch by weight pattern was accompanied by an increase in the number of fish per trap.  However, the large estimated numbers of fish were highly variable (+-95% CI) (Figure \@ref(fig:figure6)).  The observed mean weights indicated a three year declining trend beginning in 2017 in half of the area-depth strata. Little or no trend was seen in the remaining strata (Figure \@ref(fig:figure7)).
+Across all years, the highest annual CPUE (kg/trap) typically occured in the middle depths (450-850 m). In recent years, an increase in CPUE started in 2015 and a consistent rise in CPUE began in 2017 (Figure \@ref(fig:figure4)).  This increase was observed in nearly all depth strata (RD~1~ to RD~2~) and area strata (SD~1~ to SD~5~) (Figure \@ref(fig:figure5)). The observed catch by weight pattern was accompanied by an increase in the number of fish per trap.  However, the large estimated numbers of fish were highly variable (+-95% CI) (Figure \@ref(fig:figure6)).  The observed mean weights indicated a three year declining trend beginning in 2017 in half of the area-depth strata. Little or no trend was seen in the remaining strata (Figure \@ref(fig:figure7)).
 
 ```{r SpeciesCompositionText, echo=FALSE}
   # -- taxonomic top 5 group count StRS
@@ -97,13 +97,13 @@ Across all years, the highest annual CPUE (kg/trap) typically occured in the mid
 
  
  # -- species composition counts for StRS sets 
-   spc          <- paste("select dbo.fnIntegerToWords(SUM(CAST(Roundfish as int))) as tRound,  ",
-                                "dbo.fnIntegerToWords(SUM(Rockfish))     as tRock,   ",
-                                "dbo.fnIntegerToWords(SUM(Flatfish))     as tFlat,   ",
-                                "dbo.fnIntegerToWords(SUM(Invertebrate)) as tInvert, ",
-                                "dbo.fnIntegerToWords(SUM(Mammal))       as tMammal, ",
-                                "dbo.fnIntegerToWords(SUM(Bird))         as tBird,   ",
-                                "dbo.fnIntegerToWords(SUM(counter))      as total    ",
+   spc          <- paste("select dbo.fnIntegerToWords(sum(CAST(Roundfish as int))) as tRound,  ",
+                                "dbo.fnIntegerToWords(sum(Rockfish))     as tRock,   ",
+                                "dbo.fnIntegerToWords(sum(Flatfish))     as tFlat,   ",
+                                "dbo.fnIntegerToWords(sum(Invertebrate)) as tInvert, ",
+                                "dbo.fnIntegerToWords(sum(Mammal))       as tMammal, ",
+                                "dbo.fnIntegerToWords(sum(Bird))         as tBird,   ",
+                                "dbo.fnIntegerToWords(sum(counter))      as total    ",
                                 "from (select case when Fish = Rockfish or Fish = Flatfish ", 
                                 "then 0 ELSE Fish end AS Roundfish, ",
                                 "Fish, Rockfish, Flatfish, Invertebrate, Mammal, Bird, ",
@@ -137,19 +137,19 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
 ```{r SamplingWords, echo=FALSE}
     # inline text query Sablefish.dbo.GFBIO_RESEARCH_SAMPLE_DETAILS for the counts of Sablefish from StRS sets
     catchStRS   <- paste("select rt.SABLE_SET_TYPE, ",
-                         "SUM(sd.[Total Count])                           AS count, ",
-                         "SUM(sd.[Recovered Number])                      AS tagagainlive, ",
-                         "SUM(sd.[Recovered Dead Number])                 AS tagdead, ",
-                         "SUM(sd.[Tagged Number] + sd.[Recovered Number]) AS tagrelease, " ,
-                         "SUM(sd.[Fork Len Tag Sample Count])             AS taglengthsample,  " ,
-                         "SUM(sd.Sample_count)                            AS samplecount " ,
+                         "sum(sd.[Total Count])                           AS count, ",
+                         "sum(sd.[Recovered Number])                      AS tagagainlive, ",
+                         "sum(sd.[Recovered Dead Number])                 AS tagdead, ",
+                         "sum(sd.[Tagged Number] + sd.[Recovered Number]) AS tagrelease, " ,
+                         "sum(sd.[Fork Len Tag Sample Count])             AS taglengthsample,  " ,
+                         "sum(sd.Sample_count)                            AS samplecount " ,
                          "from dbo.GFBIO_RESEARCH_SAMPLE_DETAILS AS sd INNER JOIN " ,         
                          "dbo.GFBIO_SABLEBIO_TRIP_SET2 AS rt ON " ,
                          "sd.TRIP_ID = rt.TRIP_ID AND  sd.[SET] = rt.SET_NUMBER " ,
                          "where (sd.Year =", yr,") group by rt.SABLE_SET_TYPE",sep="")
 
-    countStRS   <- GetSQLData(catchStRS,"Sablefish")
-    write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    #countStRS   <- GetSQLData(catchStRS,"Sablefish")
+    #write.table(countStRS, file = paste(path,"results04.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     countStRS   <-  read.csv(paste(path,'results04.csv',sep=''),header=T) 
     
     # -- Sablefish.dbo.procReport_Survey_LenMF pulls length data from table GFBIO_SABLEBIO_VW 
@@ -159,12 +159,13 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
     #lendata    <-   GetSQLData(lendat,"Sablefish")
     #write.table(lendata, file = paste(path,"results05.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     lendata   <-    read.csv(paste(path,'results05.csv',sep=''),header=T) 
-    
+
     # late addition for the average lengths per year in text
     lenstats  <- "exec procRReport_Survey_LenAvg"
-    dat       <- GetSQLData(lenstats,"Sablefish")
-    write.table(dat, file = paste(path,'results05b.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    #dat       <- GetSQLData(lenstats,"Sablefish")
+    #write.table(dat, file = paste(path,'results05b.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     dat       <- read.csv(paste(path,'results05b.csv',sep=''), header=T)
+    
     mavgyr1   <- dat[dat$sex==1 & dat$YEAR==yr,]   # round(mavgyr1$AvL,1)
     favgyr1   <- dat[dat$sex==2 & dat$YEAR==yr,]   # round(favgyr1$AvL,1)
   
@@ -173,10 +174,12 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
     
     firstyrfem <-   lendata[lendata$year == yr & lendata$sex == 2,] 
     firstyrmal <-   lendata[lendata$year == yr & lendata$sex == 1,] 
+    
+
       
     lenMF      <-   lendata[lendata$year <= yr,] 
     brk        <-   seq(min(lenMF$length)-1,max(lenMF$length)+1)
-    osex      <-   length(lenMF$length[lenMF$sex==3])
+    osex       <-   length(lenMF$length[lenMF$sex==3])
     	
     # -- set up the female data
     females  <-   lenMF$length[lenMF$sex==2]
@@ -197,8 +200,8 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
                          "from gfbio_sable_bio_summary ",
                          "where depth is not null and year = ",yr,
                          "order by Locality,Depth", sep="")
-     biosumm  <-   GetSQLData(bio,"Sablefish")
-     write.table(biosumm, file = paste(path,"results06.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+     #biosumm  <-   GetSQLData(bio,"Sablefish")
+     #write.table(biosumm, file = paste(path,"results06.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
      biosumm   <-    read.csv(paste(path,'results06.csv',sep=''),header=T) 
 
      colnames(biosumm) <-  c("Spatial","Depth","Males","Females","Males","Females","Tagged")
@@ -264,7 +267,7 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
      stratafem    <- paste(wS1,wS2,wS3,wS4,wS5,sep="")         # -- list of S areas where more females
      stratafema   <- substr(stratafem, 1, nchar(stratafem)-2)  # -- trim trailing comma
      stratafemale <- sub(",([^,]*)$", " and\\1", stratafema)   # -- replace last comma with and
-    
+     
      #  More females than males were seen in the shallow depth stratum as per yearly trend...
      shallS1 <- sum((biosumm[1,3] - biosumm[1,4])<0.00)
      
@@ -323,12 +326,12 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
       deepsfemale <- sub(",([^,]*)$", " and\\1", deepsfema)   # replace last comma with and
  
    # -- other fish counts
-     othfish      <-   paste(" select species_name, SUM(Sample_count) as count   ",
+     othfish      <-   paste(" select species_name, sum(Sample_count) as count   ",
                              " from dbo.GFBIO_RESEARCH_SAMPLE_DETAILS_OTHER_FISH ",
                              " where (Year = ", yr, ") group by species_name, species ",
                              " order by species", sep="")
-     otherfish    <-   GetSQLData(othfish,"Sablefish")
-     write.table(otherfish, file = paste(path,"results07.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
+     #otherfish    <-   GetSQLData(othfish,"Sablefish")
+     #write.table(otherfish, file = paste(path,"results07.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")      
      otherfish    <-   read.csv(paste(path,'results07.csv',sep=''),header=T)
     
 
@@ -337,17 +340,13 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
 
 A detailed breakdown of the fate of the catch in each trap for the `r yr` survey is listed in Appendix \@ref(app:fourth-appendix). 
 
-During the `r yr` StRS, a total of `r format(countStRS[2,2], big.mark=",")` sablefish were caught.   Of that total, `r format(countStRS[2,5], big.mark=",")` were tagged and released and `r format(countStRS[2,7], big.mark=",")` were retained for biological sampling. Of the tagged fish, `r countStRS[2,3]` were previously tagged fish that were re-released with a new tag.  Another `r countStRS[2,4]` previously tagged fish were retained for sampling (Appendix \@ref(app:seventh-appendix)).
+During the `r yr` StRS, a total of `r format(countStRS[1,2], big.mark=",")` sablefish were caught.   Of that total, `r format(countStRS[1,5], big.mark=",")` were tagged and released and `r format(countStRS[1,7], big.mark=",")` were retained for biological sampling. Of the tagged fish, `r countStRS[1,3]` were previously tagged fish that were re-released with a new tag.  One previously tagged fish was retained for sampling (Appendix \@ref(app:fifth-appendix)).
 
-Out of the `r format(countStRS[1,2], big.mark=",")` sablefish captured during the `r yr` traditional survey (inlet standardized sets), `r format(countStRS[1,5], big.mark=",")` were tagged and released, `r format(countStRS[1,7], big.mark=",")` were used for biological sampling and `r format(countStRS[1,3], big.mark=",")` were previously tagged fish re-released with a new tag (Appendix \@ref(app:seventh-appendix)). 
+Overall, the StRS sets had a higher proportion of females than males over the spatial strata `r stratafemale` (Table \@ref(tab:table3)).  More females than males were seen in the shallow depth stratum within the spatial strata `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
 
-Overall, the StRS sets had a higher proportion of females than males over the spatial strata `r stratafemale` with the exception of S~5 where the sex ratio was equal (Table \@ref(tab:table5)).  More females than males were seen in the shallow depth stratum within the spatial strata `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
+In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r mean(females)` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r round(mavgyr1$AvL,1) ` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure10)b). 
 
-Significant differences in length distributions between female and male sablefish are exhibited in the data collected from the StRS portion of the 2003 - 2020 surveys. The mean fork length ($\bar{x}$) for females was x cm and the mean fork length ($\bar{x}$) for males was x cm (Figure \@ref(fig:figure10)a). 
-
-In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r round(favgyr1$AvL,1)` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r round(mavgyr1$AvL,1) ` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure10)b). 
-
-On average, female sablefish grow faster and reach far greater size (Figure \@ref(fig:figure13)a,b) compared to males (Figure \@ref(fig:figure13)c,d).
+On average, female sablefish grow faster and reach a far greater size (Figure \@ref(fig:figure13)a,b) compared to males (Figure \@ref(fig:figure13)c,d).
 
 
 ## SABLEFISH SUB-LEGAL ENCOUNTERS
@@ -358,18 +357,18 @@ On average, female sablefish grow faster and reach far greater size (Figure \@re
    # -- GFBIOSQL.dbo.b21_samples and b22_specimens
    age         <-  paste("select Female_Yr_Total,Age from Report_Survey_GFBIO_Age_MF_Prop where ", 
                          "SetType='StRS' and f=1 and Year=",yr,sep="")
-   agedat      <-  GetSQLData(age,"Sablefish")    # --  female age total and count of most aged text captions
-   write.table(agedat, file = paste(path,"results08.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #agedat      <-  GetSQLData(age,"Sablefish")    # --  female age total and count of most aged text captions
+   #write.table(agedat, file = paste(path,"results08.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    agedat      <-    read.csv(paste(path,'results08.csv',sep=''),header=T)
    
    oldageF     <-  "exec procRReport_Survey_oldAgeFish 2"  # -- oldest female text caption
-   oldageFem   <-  GetSQLData(oldageF,"Sablefish")
-   write.table(oldageFem, file = paste(path,"results09.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
+   #oldageFem   <-  GetSQLData(oldageF,"Sablefish")
+   #write.table(oldageFem, file = paste(path,"results09.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")    
    oldageFem   <-    read.csv(paste(path,'results09.csv',sep=''),header=T)
    
    oldageM     <-  "exec procRReport_Survey_oldAgeFish 1"  # -- oldest male text caption
-   oldageMale  <-  GetSQLData(oldageM,"sablefish") 
-   write.table(oldageMale, file = paste(path,"results10.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
+   #oldageMale  <-  GetSQLData(oldageM,"sablefish") 
+   #write.table(oldageMale, file = paste(path,"results10.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
    oldageMale  <-    read.csv(paste(path,'results10.csv',sep=''),header=T) 
    
    oldFem      <-  oldageFem[1,2]                # -- oldest female age
@@ -378,73 +377,62 @@ On average, female sablefish grow faster and reach far greater size (Figure \@re
    oldMaleYr   <-  oldageMale[1,3]               # -- year captured
 ```
 
-There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following the highly anomalous warm ocean conditions of the “The Blob” [@Bond2015].   
-More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the.....   \@ref(fig:figure15)). 
+There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following highly anomalous warm ocean conditions known as the “Blob”
+and the “Blob 2.0”.  The first marine heat wave (Blob) began in the NE Pacific in late 2013 [@Bond2015] and persisted until 2016 [@DORANTESGILARD2020].   The second marine heat wave (Blob 2.0) appeared again in the summer of 2019 [@Amaya2020].   
+
+More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the sub-legal specimen count was over 50% in S~1~, S~4~ and S~5~ in the mid-depth waters (RD~2~) (Figure \@ref(fig:figure16)). 
+ 
+## RECOVERED TAGGED SABLEFISH
+
+During the `r yr` sablefish surveys, `r countStRS[1,3]` previously tagged fish were recovered and re-released live with a new tag.  The majority (79%) were recovered within 50 kilometers of the release site.  Most of these tagged fish (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
 
 ## OTHER FISH SAMPLING
 
-Length, sex, maturity, otoliths and DNA samples were collected for the rougheye/blackspotted rockfish complex.  (Appendix \@ref(app:seventh-appendix)).
-
-## RECOVERED TAGGED SABLEFISH
-
-During the `r yr` sablefish survey, `r countStRS[2,3] + countStRS[1,3]` previously tagged fish were re-released live with a new tag.  DFO has been tagging, releasing and recovering sablefish since 1991.  The highest recovery rate is within the first year of release (Figure \@ref(fig:figure15). Recent release-recovery data (1991-2018) are consistent with Beamish and McFarlane (1988) where about 40-50% of Sablefish are still recovered within 50 km of the release site (Table x).
-
+Length, sex, maturity, otoliths and DNA samples were collected for the rougheye/blackspotted rockfish complex.  (Appendix \@ref(app:sixth-appendix)).
 
 ## SABLEFISH AGES
 
-The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds and in 2019 by ? year olds (Figure \@ref(fig:figure17)a).  
+At the time of this report, sablefish ages were available until 2018.  The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds (Figure \@ref(fig:figure17)a).  
 
-The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, 2018 and 2019 the highest proportion of female sablefish were ages 3, 4, 5 and ?. (Figure \@ref(fig:figure17)b).
+The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, and 2018 the highest proportion of female sablefish were ages 3, 4, and 5 (Figure \@ref(fig:figure17)b).
 
 Historic data from all samples lists the oldest female sablefish at `r oldFem` years of age collected in `r oldFemYr` where as the oldest male sablefish with the age of `r oldMale` years old was documented for the year `r oldMaleYr`.
 
 ```{r SablefishOceanText, echo=FALSE}
-     # table SEABIRD_ReportLinePlot created in the Sablefish.dbo.Build_Seabird_tables procedure
-     # provide the number values for the inline text
+     # back track, data from figure 19   
+     weather  <-  read.csv(paste(path,'figure19.csv',sep=''),header=T) 
 
-     seabrd    <-  "select * from SEABIRD_ReportLinePlot"
-     seabird   <-  GetSQLData(seabrd ,"Sablefish")
-     write.table(seabird, file = paste(path,"results12.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")       
-     seabird   <-  read.csv(paste(path,'results12.csv',sep=''),header=T) 
+     weather$depth_stratum  <-     trimws(weather$depth_stratum)   # trim whitespace
+
+     shallow.temp <- weather[weather$depth_stratum=="RD1",]
+     mid.temp     <- weather[weather$depth_stratum=="RD2",]        
+     deep.temp    <- weather[weather$depth_stratum=="RD3",]        
+       
+     weather.max <-  max(shallow.temp$Avgtemp)
+     weather.max.shallow <-shallow.temp[shallow.temp$Avgtemp==weather.max,]
      
-     yrs         <-  unique(seabird$Year)
-     shallmin    <-  min(seabird$avgtemp[seabird$depth=="Shallow"])
-     shallyrmin  <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==shallmin])
-     shallband1min   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmin & seabird$avgtemp==shallmin]) - 0.5
-     shallband2min   <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmin & seabird$avgtemp==shallmin]) + 0.5
+     weather.max <-  max(mid.temp$Avgtemp)
+     weather.max.mid <-mid.temp[mid.temp$Avgtemp==weather.max,]
      
-     shallmax     <- max(seabird$avgtemp[seabird$depth=="Shallow"])
-     shallyrmx    <- (seabird$Year[seabird$depth=="Shallow" & seabird$avgtemp==shallmax])
-     shallband1mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmx & seabird$avgtemp==shallmax]) - 0.5
-     shallband2mx <- (seabird$latitude[seabird$depth=="Shallow" & seabird$Year==shallyrmx & seabird$avgtemp==shallmax]) + 0.5
+     weather.max <-  max(deep.temp$Avgtemp)
+     weather.max.deep <-deep.temp[deep.temp$Avgtemp==weather.max,]  
      
-     midmin        <- min(seabird$avgtemp[seabird$depth  == "Mid"])
-     midyrmin      <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == midmin])
-     midband1min   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmin & seabird$avgtemp  == midmin]) - 0.5
-     midband2min   <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmin & seabird$avgtemp  == midmin]) + 0.5
+     weather.min <-  min(shallow.temp$Avgtemp)
+     weather.min.shallow <-shallow.temp[shallow.temp$Avgtemp==weather.min,]
      
-     midmx       <-  max(seabird$avgtemp[seabird$depth  == "Mid"])
-     midyrmx     <- (seabird$Year[seabird$depth  == "Mid" & seabird$avgtemp  == midmx])
-     midband1mx  <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmx & seabird$avgtemp  == midmx]) - 0.5
-     midband2mx  <- (seabird$latitude[seabird$depth == "Mid" & seabird$Year==midyrmx & seabird$avgtemp  == midmx]) + 0.5
+     weather.min <-  min(mid.temp$Avgtemp)
+     weather.min.mid <-mid.temp[mid.temp$Avgtemp==weather.min,]
      
-     deepmin        <-  min(seabird$avgtemp[seabird$depth  == "Deep"])
-     deepyr.min      <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == deepmin])
-     deepband1min   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.min & seabird$avgtemp  == deepmin]) - 0.5
-     deepband2min   <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.min & seabird$avgtemp  == deepmin]) + 0.5  
-     
-     deepmx      <-  max(seabird$avgtemp[seabird$depth  == "Deep"])
-     deepyr.max    <- (seabird$Year[seabird$depth  == "Deep" & seabird$avgtemp  == deepmx])
-     deepband1mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.max & seabird$avgtemp  == deepmx]) - 0.5
-     deepband2mx <- (seabird$latitude[seabird$depth == "Deep" & seabird$Year==deepyr.max & seabird$avgtemp  == deepmx]) + 0.5
+     weather.min <-  min(deep.temp$Avgtemp)
+     weather.min.deep <-deep.temp[deep.temp$Avgtemp==weather.min,]
      
 ```
 
 
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
-Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure18).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth. 
+Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure18).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth over latitude.
 
-SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(shallmin,1)` $^\circ$C (`r shallyrmin`) within the `r shallband1min`$^\circ$- `r shallband2min`$^\circ$ latitude band.  The highest average temperature was `r round(shallmax,1)` $^\circ$C (`r shallyrmx`) in the southern `r shallband1mx`$^\circ$ - `r shallband2mx`$^\circ$ latitude band. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(midmin,1)` $^\circ$C (`r midyrmin`) within the `r midband1min`$^\circ$-`r midband2min` $^\circ$ latitude band.  The highest average temperature was `r round(midmx,1)` $^\circ$C (`r midyrmx`) in the southern `r midband1mx`$^\circ$- `r midband2mx`$^\circ$ latitude band.  In the deepest waters, the lowest average temperature of `r round(deepmin,1)` $^\circ$C  (`r deepyr.min`) was found in the `r deepband1min`$^\circ$- `r deepband2min`$^\circ$ latitude band and the highest average temperature was `r round(deepmx,1)`$^\circ$C (`r deepyr.max`) in the southern `r deepband1mx`$^\circ$-`r deepband2mx`$^\circ$ latitude band (Figure \@ref(fig:figure19)).
+SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r weather.min.shallow[1,5]` $^\circ$C  in `r weather.min.shallow[1,1]`; the highest average temperature was `r weather.max.shallow[1,5]` $^\circ$C in `r weather.min.shallow[1,1]`. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r weather.min.mid[1,5]` $^\circ$C in `r weather.min.mid[1,1]`; the highest average temperature was `r weather.max.mid[1,5]` $^\circ$C in `r weather.max.mid[1,1]`. In the deepest waters, the lowest average temperature of `r weather.min.deep[1,5]` $^\circ$C in `r weather.min.deep[1,1]` and the highest average temperature was `r weather.max.deep[1,5]`$^\circ$C  in `r weather.min.deep[1,1]` (Figure \@ref(fig:figure19)).
 
 
 ```{r acknowledge, echo=FALSE}

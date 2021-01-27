@@ -18,7 +18,7 @@ Standardized fishing sets under the traditional component of the survey were not
 
 ## VESSELS
 
-The `r yr` survey of `r setcnt` sets was chartered aboard the xx meter F/V `r boat`, skippered by `r captain`  between `r dates`, `r yr`.  Images and information about the vessel can be found at [\underline{http://marinetraffic.com}](http://marinetraffic.com). 
+The `r yr` survey of `r setcnt` sets was chartered aboard the 25.34 meter F/V `r boat` (Figure \@ref(fig:figure3)), skippered by `r captain`  between `r dates`, `r yr` . Information about the vessel can be found at [\underline{http://marinetraffic.com}](http://marinetraffic.com). 
 
 ## FISHING GEAR
 
