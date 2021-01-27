@@ -124,8 +124,6 @@
 
 ```{r table4, echo=FALSE}
 
-
-
        # in('A00545713','A00984002','A00254854') 3 tags re-released twice
        # in('A00733036','A00315966','A00550705')
       # in('A00545713','A00984002','A00254854','A00733036','A00315966','A00550705') 
@@ -163,6 +161,7 @@
                 column_spec(2, width  = "1.1cm") 
 
 ```
+\clearpage
 (ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey.
 
 ```{r table5, echo=FALSE}

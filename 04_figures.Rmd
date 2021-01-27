@@ -853,8 +853,8 @@
     
       png(paste(basepath,'figures/figure19.png',sep=''), width=600, height=770) # write png to file
       sea.bird     <-  "select * from SEABIRD_AverageTempPerSet where depth_stratum in('RD1','RD2','RD3')"
-      #sea.bird.ridge    <-  GetSQLData(sea.bird,"Sablefish")   # read from SQL Server
-      #write.table(sea.bird.ridge, file = paste(path,"figure19.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+      sea.bird.ridge    <-  GetSQLData(sea.bird,"Sablefish")   # read from SQL Server
+      write.table(sea.bird.ridge, file = paste(path,"figure19.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
       sea.bird.ridge    <-  read.csv(paste(path,'figure19.csv',sep=''),header=T)  # read from csv
       weather.raw2 <-    sea.bird.ridge[order(- sea.bird.ridge$Year,  sea.bird.ridge$Sets),]
       weather.raw2$years<-factor(weather.raw2$Year,levels=rev(unique(weather.raw2$Year)))
@@ -869,7 +869,7 @@
              #stat_density_ridges(quantile_lines = TRUE, quantiles = c(0.025, 0.975), alpha = 0.9) +
            geom_density_ridges(
                 aes(point_shape = `Depth Stratum`, alpha = .7), 
-                alpha = .9, point_alpha = .2, jittered_points = TRUE
+                alpha = .9, point_alpha = .3, jittered_points = TRUE
                 ) +
 
             xlab("Mean Temperature °C") +

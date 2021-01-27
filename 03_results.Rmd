@@ -9,7 +9,7 @@
 ```
 The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
 
-Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a GHNMCA protected area and one generated an error.
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one generated an error.
 
 ```{r CatchRateText, echo=FALSE}
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
@@ -64,7 +64,9 @@ The sablefish survey of `r yr` have documented recent changes in the sablefish p
 
 ### Stratified Random Set CPUE
 
-Across all years, the highest annual CPUE (kg/trap) typically occured in the middle depths (450-850 m). In recent years, an increase in CPUE started in 2015 and a consistent rise in CPUE began in 2017 (Figure \@ref(fig:figure4)).  This increase was observed in nearly all depth strata (RD~1~ to RD~2~) and area strata (SD~1~ to SD~5~) (Figure \@ref(fig:figure5)). The observed catch by weight pattern was accompanied by an increase in the number of fish per trap.  However, the large estimated numbers of fish were highly variable (+-95% CI) (Figure \@ref(fig:figure6)).  The observed mean weights indicated a three year declining trend beginning in 2017 in half of the area-depth strata. Little or no trend was seen in the remaining strata (Figure \@ref(fig:figure7)).
+Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, increased across most offshore survey strata in 2018, and again in 2019 (Figure \@ref(fig:figure5)). The most pronounced increases occured in the middle depth strata which recorded the largest CPUEs in 2018 and 2019 since the StRS began (Figure \@ref(fig:figure6)). These increases in CPUE were the result of a relatively large increase in the number of small sablefish encountered on the survey (Figure \@ref(fig:figure7) and Figure \@ref(fig:figure8), likely due to a large recent recruitment event that has occurred coastwide [@DFO2020]. The stratified mean survey abundance in `r yr` was 35 kg/trap, which is down -17% from `r yr-1` and -13%
+from the 2018-2019 average [@DFO2021] (Figure \@ref(fig:figure9)).
+
 
 ```{r SpeciesCompositionText, echo=FALSE}
   # -- taxonomic top 5 group count StRS
@@ -243,6 +245,7 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
                                  biosumm[13:15,], biosumm[20,])   # r bind the average column results
      newdata$Spatial   <-  cleanf(newdata$Spatial)
      colnames(newdata) <-  c("Spatial","Depth","Males","Females","Males","Females","Tagged")
+     a <-"the spatial strata S~1~, S~2~, S~3~, S~4~ and S~5~"
      
      pdiffS1 <- biosumm[16,3] - biosumm[16,4]  # --  S1 check male - female prop
      pS1     <- sum(pdiffS1 < 0.00)
@@ -267,7 +270,9 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
      stratafem    <- paste(wS1,wS2,wS3,wS4,wS5,sep="")         # -- list of S areas where more females
      stratafema   <- substr(stratafem, 1, nchar(stratafem)-2)  # -- trim trailing comma
      stratafemale <- sub(",([^,]*)$", " and\\1", stratafema)   # -- replace last comma with and
-     
+     stratafemale <- paste('the spatial strata ',stratafemale, sep="")
+     if(stratafemale==a){stratafemale="all spatial strata"}
+
      #  More females than males were seen in the shallow depth stratum as per yearly trend...
      shallS1 <- sum((biosumm[1,3] - biosumm[1,4])<0.00)
      
@@ -288,6 +293,8 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
      shallsfem    <- paste(shallwS1,shallwS2,shallwS3,shallwS4,shallwS5,sep="")
      shallsfema   <- substr(shallsfem, 1, nchar(shallsfem)-2)  # -- trim trailing comma
      shallsfemale <- sub(",([^,]*)$", " and\\1", shallsfema)   # replace last comma with and
+     shallsfemale <- paste('the spatial strata ',shallsfemale, sep="") 
+     if(shallsfemale==a){shallsfemale="all spatial strata"}
      
      # -- Assumption that more males than females were seen in the mid depth stratum
      midS1 <- sum((biosumm[2,3] - biosumm[2,4])>0.00)
@@ -342,11 +349,11 @@ A detailed breakdown of the fate of the catch in each trap for the `r yr` survey
 
 During the `r yr` StRS, a total of `r format(countStRS[1,2], big.mark=",")` sablefish were caught.   Of that total, `r format(countStRS[1,5], big.mark=",")` were tagged and released and `r format(countStRS[1,7], big.mark=",")` were retained for biological sampling. Of the tagged fish, `r countStRS[1,3]` were previously tagged fish that were re-released with a new tag.  One previously tagged fish was retained for sampling (Appendix \@ref(app:fifth-appendix)).
 
-Overall, the StRS sets had a higher proportion of females than males over the spatial strata `r stratafemale` (Table \@ref(tab:table3)).  More females than males were seen in the shallow depth stratum within the spatial strata `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
+Overall, the StRS sets had a higher proportion of females than males over `r stratafemale` (Table \@ref(tab:table3)).  More females than males were seen in the shallow depth stratum within `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
 
-In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r mean(females)` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r round(mavgyr1$AvL,1) ` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure10)b). 
+In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r mean(females)` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r round(mavgyr1$AvL,1) ` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure14)). 
 
-On average, female sablefish grow faster and reach a far greater size (Figure \@ref(fig:figure13)a,b) compared to males (Figure \@ref(fig:figure13)c,d).
+On average, female sablefish grow faster and reach a far greater size (Figure \@ref(fig:figure15)a) compared to males (Figure \@ref(fig:figure15)b).
 
 
 ## SABLEFISH SUB-LEGAL ENCOUNTERS
@@ -384,7 +391,7 @@ More than half of the sub-legal specimens were captured in the southern strata (
  
 ## RECOVERED TAGGED SABLEFISH
 
-During the `r yr` sablefish surveys, `r countStRS[1,3]` previously tagged fish were recovered and re-released live with a new tag.  The majority (79%) were recovered within 50 kilometers of the release site.  Most of these tagged fish (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
+Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey, the majority (79%) had travelled within 50 kilometers of the release site.  Most of these tagged fish (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
 
 ## OTHER FISH SAMPLING
 
@@ -400,31 +407,31 @@ Historic data from all samples lists the oldest female sablefish at `r oldFem` y
 
 ```{r SablefishOceanText, echo=FALSE}
      # back track, data from figure 19   
-     weather  <-  read.csv(paste(path,'figure19.csv',sep=''),header=T) 
+     celcius  <-  read.csv(paste(path,'figure19.csv',sep=''),header=T) 
 
-     weather$depth_stratum  <-     trimws(weather$depth_stratum)   # trim whitespace
+     celcius$depth_stratum  <-     trimws(celcius$depth_stratum)   # trim whitespace
 
-     shallow.temp <- weather[weather$depth_stratum=="RD1",]
-     mid.temp     <- weather[weather$depth_stratum=="RD2",]        
-     deep.temp    <- weather[weather$depth_stratum=="RD3",]        
+     shallow.temp <- celcius[celcius$depth_stratum=="RD1",]
+     mid.temp     <- celcius[celcius$depth_stratum=="RD2",]        
+     deep.temp    <- celcius[celcius$depth_stratum=="RD3",]        
        
-     weather.max <-  max(shallow.temp$Avgtemp)
-     weather.max.shallow <-shallow.temp[shallow.temp$Avgtemp==weather.max,]
+     celcius.max <-  max(shallow.temp$Avgtemp)
+     celcius.max.shallow <- shallow.temp[shallow.temp$Avgtemp==celcius.max,]
      
-     weather.max <-  max(mid.temp$Avgtemp)
-     weather.max.mid <-mid.temp[mid.temp$Avgtemp==weather.max,]
+     celcius.max <-  max(mid.temp$Avgtemp)
+     celcius.max.mid <-mid.temp[mid.temp$Avgtemp==celcius.max,]
      
-     weather.max <-  max(deep.temp$Avgtemp)
-     weather.max.deep <-deep.temp[deep.temp$Avgtemp==weather.max,]  
+     celcius.max <-  max(deep.temp$Avgtemp)
+     celcius.max.deep <-deep.temp[deep.temp$Avgtemp==celcius.max,]  
      
-     weather.min <-  min(shallow.temp$Avgtemp)
-     weather.min.shallow <-shallow.temp[shallow.temp$Avgtemp==weather.min,]
+     celcius.min <-  min(shallow.temp$Avgtemp)
+     celcius.min.shallow <-shallow.temp[shallow.temp$Avgtemp==celcius.min,]
      
-     weather.min <-  min(mid.temp$Avgtemp)
-     weather.min.mid <-mid.temp[mid.temp$Avgtemp==weather.min,]
+     celcius.min <-  min(mid.temp$Avgtemp)
+     celcius.min.mid <-mid.temp[mid.temp$Avgtemp==celcius.min,]
      
-     weather.min <-  min(deep.temp$Avgtemp)
-     weather.min.deep <-deep.temp[deep.temp$Avgtemp==weather.min,]
+     celcius.min <-  min(deep.temp$Avgtemp)
+     celcius.min.deep <-deep.temp[deep.temp$Avgtemp==celcius.min,]
      
 ```
 
@@ -432,7 +439,7 @@ Historic data from all samples lists the oldest female sablefish at `r oldFem` y
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
 Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure18).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth over latitude.
 
-SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r weather.min.shallow[1,5]` $^\circ$C  in `r weather.min.shallow[1,1]`; the highest average temperature was `r weather.max.shallow[1,5]` $^\circ$C in `r weather.min.shallow[1,1]`. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r weather.min.mid[1,5]` $^\circ$C in `r weather.min.mid[1,1]`; the highest average temperature was `r weather.max.mid[1,5]` $^\circ$C in `r weather.max.mid[1,1]`. In the deepest waters, the lowest average temperature of `r weather.min.deep[1,5]` $^\circ$C in `r weather.min.deep[1,1]` and the highest average temperature was `r weather.max.deep[1,5]`$^\circ$C  in `r weather.min.deep[1,1]` (Figure \@ref(fig:figure19)).
+SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(celcius.min.shallow[1,5],2)` $^\circ$C  in `r celcius.min.shallow[1,1]`; the highest average temperature was `r round(celcius.max.shallow[1,5],2)` $^\circ$C in `r celcius.min.shallow[1,1]`. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(celcius.min.mid[1,5],2)` $^\circ$C in `r celcius.min.mid[1,1]`; the highest average temperature was `r round(celcius.max.mid[1,5],2)` $^\circ$C in `r celcius.max.mid[1,1]`. In the deepest waters, the lowest average temperature of `r round(celcius.min.deep[1,5],2)` $^\circ$C in `r celcius.min.deep[1,1]` and the highest average temperature was `r round(celcius.max.deep[1,5],2)`$^\circ$C  in `r celcius.min.deep[1,1]` (Figure \@ref(fig:figure19)).
 
 
 ```{r acknowledge, echo=FALSE}
