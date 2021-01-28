@@ -39,7 +39,7 @@ After that, all subsequent sections will be turned into appendices. -->
       knitr::include_graphics(img) 
       
 ```
-Figure C.1. Example of a completed bridge log data form with directions from the 2020 survey instruction manual.
+Figure B.1. Example of a completed bridge log data form with directions from the 2020 survey instruction manual.
 
 \clearpage
 
@@ -51,7 +51,7 @@ Figure C.1. Example of a completed bridge log data form with directions from the
       knitr::include_graphics(img) 
       
 ```
-Figure C.2.  Example of a completed set log data form with directions from the 2020 survey instruction manual.
+Figure B.2.  Example of a completed set log data form with directions from the 2020 survey instruction manual.
 
 \clearpage
 
@@ -63,7 +63,7 @@ Figure C.2.  Example of a completed set log data form with directions from the 2
       knitr::include_graphics(img) 
       
 ```
-Figure C.3.  Example of a completed catch log data form with directions from the 2020 survey instruction manual.
+Figure B.3.  Example of a completed catch log data form with directions from the 2020 survey instruction manual.
 \clearpage
 
 ```{r AppendixB4,out.width = "500px", out.height = "426px", fig.align="left"}
@@ -74,7 +74,7 @@ Figure C.3.  Example of a completed catch log data form with directions from the
       knitr::include_graphics(img) 
       
 ```
-Figure C.4.  Example of a tabular catch log data entry form transposed from the catch log in Figure C.3. Directions from the 2020 survey instruction manual. 
+Figure B.4.  Example of a tabular catch log data entry form transposed from the catch log in Figure C.3. Directions from the 2020 survey instruction manual. 
 
 \clearpage
 
@@ -86,7 +86,7 @@ Figure C.4.  Example of a tabular catch log data entry form transposed from the 
       knitr::include_graphics(img) 
       
 ```
-Figure C.5.  Example of a completed Sablefish biological sampling form and directions from the 2020 survey instruction manual. 
+Figure B.5.  Example of a completed Sablefish biological sampling form and directions from the 2020 survey instruction manual. 
 
 \clearpage
 
@@ -100,7 +100,7 @@ Figure C.5.  Example of a completed Sablefish biological sampling form and direc
 ```
 
 
-Figure C.6.  Example of a completed tagging form with directions from the 2020 survey instruction manual.
+Figure B.6.  Example of a completed tagging form with directions from the 2020 survey instruction manual.
 
 \clearpage
 
