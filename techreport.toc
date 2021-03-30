@@ -28,3 +28,4 @@
 \contentsline {subsection}{\numberline {3.8}SABLEFISH AGES}{8}{subsection.3.8}%
 \contentsline {subsection}{\numberline {3.9}OCEANOGRAPHIC TEMPERATURES AND DEPTHS}{8}{subsection.3.9}%
 \contentsline {subsection}{\numberline {3.10}ACKNOWLEDGEMENTS}{8}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Tables}{10}{section.4}%
