@@ -2,7 +2,7 @@
 
 ## SURVEY DESIGN
 
-Methodology for the `r yr` sablefish  research and  assessment surveys employed a stratified random sampling (StRS) design.  The survey protocol required the StRS component to be completed from the southern end of Vancouver Island to the north coast of Haida Gwaii. If weather impacts the survey plan, the inlet sites are fished before completing the northern StRS sites in order to reduce the total number of fishing days.
+Methodology for the `r yr` sablefish  research and assessment surveys employed a stratified random sampling (StRS) design.  The survey protocol required the StRS component to be completed from the southern end of Vancouver Island to the north coast of Haida Gwaii. The survey design was modified in 2020 in response to the COVID-19 pandemic.  The length of the trip was reduced by removing the traditional inlet component of the survey.
 
 ### STRATIFIED RANDOM SAMPLING SURVEY DESIGN COMPONENT
 
@@ -11,10 +11,6 @@ Since 2011, the StRS design has been conducted in all offshore survey areas. The
 Under the StRS design the offshore survey area is partitioned into five spatial strata (S~1~ to S~5~) and three depth strata (RD~1~ to RD~3~) for a total of 15 (Figure \@ref(fig:figure1)). The five spatial strata are S~1~ (South West Coast Vancouver Island or SWCVI), S~2~ (North West Coast Vancouver Island or NWCVI), S~3~ (Queen Charlotte Sound or QCS), S~4~ (South West Coast of Haida Gwaii or SWCHG), and S~5~ (North West Coast of Haida Gwaii or NWCHG).  The three targeted depth ranges are 100-250 fathoms (RD~1~), 250-450 fathoms (RD~2~), and 450-750 fathoms(RD~3~). The area within each of the 15 strata are sectioned into 2 km x  2 km grid cells or ‘fishing blocks’ from which set locations are randomly chosen. 
 
 From 2003 through 2005, five grid cells were randomly selected in each spatial-depth stratum. From 2006 through 2010, the number was increased to six. An analysis was completed for the 2011 survey to optimize the allocation of the blocks to strata for the 2011 and 2012 survey. However, in order to lower survey costs, the number of blocks were further reduced for the 2013 survey, from a total of 110 to 91 offshore blocks while maintaining the same relative allocation of blocks to strata. This total number of blocks has been in place on all subsequent surveys (Table \@ref(tab:table1)), including `r yr` (Figure \@ref(fig:figure2)).
-
-### TRADITIONAL STANDARD SURVEY COMPONENTS
-
-Standardized fishing sets under the traditional component of the survey were not surveyed in 2020.
 
 ## VESSELS
 
@@ -28,7 +24,7 @@ Standard bait bags (6 by 12 inches) made of 1/8 inch web with a nylon drawstring
 
 ## FISHING OPERATIONS
 
-During normal survey fishing operations gear was deployed on alternate days. Prior to deployment, the Fishing Master inspected the block to determine fishability and if it was within the targeted depth range.  The goal was to have as much gear as possible within the block boundaries.  If unfishable, the survey protocol requires that an alternate block is to be chosen to the east, west, north, and south, respectively. If none of those blocks meet the criteria, an alternate block of the same area and depth strata was randomly chosen.  In 2020, the choice of alternate blocks were limited to a pre-selected list prepared by DFO in advance of the survey. 
+During normal survey fishing operations gear was deployed on alternate days. Prior to deployment, the Fishing Master inspected the block to determine fishability and if it was within the targeted depth range.  The goal was to have as much gear as possible within the block boundaries.  If unfishable, the survey protocol requires that an alternate block is to be chosen to the east, west, north, and south, respectively. If none of those blocks meet the criteria, an alternate block of the same area and depth strata was randomly chosen.  In 2020, the choice of alternate blocks were limited to a pre-selected list prepared by DFO in advance of the survey.  Additionally, the crew size was reduced to three and all data collected during fishing operations were recorded on paper forms, rather than electronically.
 
 Two science staff recorded information associated with the deployment of the gear. One science member was positioned in the wheelhouse and recorded set details on the bridge log data form. The start and end geo-referenced positions of each set were entered at the time when the first and last traps were set over the stern. Depths were recorded at one-minute intervals between the first and last anchors being set. Later, the duration of the set was calculated as the time elapsed between the first anchor being set over the stern and the first anchor hauled aboard (Appendix \@ref(app:second-appendix), Figure B.1).
 
@@ -40,7 +36,7 @@ Sets in StRS blocks had a targeted soak time of 24 hours.  Fishing sets were des
 
 ## CATCH PROCESSING
 
-Haulback speed allowed the science crew to accurately record catch. Two science staff were positioned on deck at the haul card station; one recorded the catch  and the other managed the movement of baskets. As the groundline was hauled, each becket and trap were entered in the charter catch log form (Appendix \@ref(app:second-appendix), Figure B.3). Crew members alerted the recorder about any damage to a trap (i.e. holes) which was then recorded.
+Haulback speed allowed the science crew to accurately record catch. One science and one crew member were positioned on deck at the haul card station; the science staff recorded the catch and the crew member managed the movement of baskets. As the groundline was hauled, each becket and trap were entered in the charter catch log form (Appendix \@ref(app:second-appendix), Figure B.3). Crew members alerted the recorder about any damage to a trap (i.e. holes) which was then recorded.
 
 Catch by species from each trap was sorted into baskets by the crew. Baskets were then weighed to the nearest 0.2 kg on a motion compensating scale and given a basket use code of D, A, T, L, SD or F.  Code D designated fish species as discards or commercial catch; code A allocated sablefish for age samples; code T allocated sablefish to be tagged and released; code L allocated fish for length samples; code SD identified sublegal sablefish discards; code F represented fish frames with amphipod or hagfish damage (Appendix \@ref(app:second-appendix), Figure B.3).   The next day, the entries on charter catch log form were transposed to tabular format on the charter catch log entry form (Appendix \@ref(app:second-appendix), Figure B.4).
 
@@ -54,11 +50,9 @@ The remaining traps were allocated to the discard category and sorted by size in
 
 Biological samples were collected from sablefish and rougheye/blackspotted rockfish (*Sebastes aleutianus/Sebastes melanostictus*) specimens. Measurements were recorded for fork length (L), body weight (W), sex (S) and maturity level (M) (Appendix \@ref(app:second-appendix), Figure B.5). Sagittal otoliths (O) were collected and stored for potential ageing by the sclerochronology laboratory.  In addition, tissue for DNA was collected from the rougheye/blackspotted rockfish complex for later species determination.  Since this complex of two distinct species [@Orr2008] have similar appearances with slight variations in colour markings and dorsal fin lengths, the sampler visually identifed each specimen as either a rougheye, a blackspotted or a hybrid species.  All rockfish and legal-sized sablefish (fork length > 55 cm) that were sacrificed for biological samples were dressed, frozen, and landed as commercial catch.
 
-Length (L) and weight (W) measurements were collected from all Pacific halibut (*Hippoglossus stenolepis*) before they were released at sea. Only the length (L) was recorded for Pacific sleeper sharks (*Somniosus pacificus*) before release.  No biological samples were collected from other species.
-
 ## SABLEFISH TAGGING
 
-Fish destined to be tagged were transferred from the sorting area to a tagging tank.  A vessel crew member was positioned to retrieve sablefish from the tank and provide assistance with fish handling.  A scientist stood at the sample station and tagged fish with a Mark II Long Tagging gun loaded with Floy FD-94 T-bar anchor tags.  The tag was inserted on the left side of the fish, 1 cm below and 2-3 cm behind the anterior insertion of the first dorsal fin.  Fork length (mm to the nearest ½ cm) measurements were taken. Before release, any sampling errors, injuries or damage to the fish were recorded on the tagging form by a second scientist. Tag checks were performed systematically to ensure tag numbers on the data form matched those on the fish specimen (Appendix \@ref(app:third-appendix), Figure B.6).
+Fish destined to be tagged were transferred from the sorting area to a tagging tank.  A vessel crew member was positioned to retrieve sablefish from the tank and provide assistance with fish handling.  A scientist stood at the sample station and tagged fish with a Mark II Long Tagging gun loaded with Floy FD-94 T-bar anchor tags.  The tag was inserted on the left side of the fish, 1 cm below and 2-3 cm behind the anterior insertion of the first dorsal fin.  Fork length (mm) measurements were taken. Before release, any sampling errors, injuries or damage to the fish were recorded on the tagging form by a second scientist. Tag checks were performed systematically to ensure tag numbers on the data form matched those on the fish specimen (Appendix \@ref(app:third-appendix), Figure B.6).
 
 ## SABLEFISH TAG RECOVERY
 
@@ -82,7 +76,7 @@ During survey years 1992 through 1997 and 2004, previously tagged sablefish were
 
 ## OCEANOGRAPHIC SENSOR DATA COLLECTION
 
-A Sea-bird Bird SBE 39 temperature and pressure logger was placed in a protective plastic pipe and attached to the inside of the middle or end traps. Data was successfully collected from `r sensor[1,2]` sets in `r yr` (Appendix \@ref(app:third-appendix)).  A SBE 39 was also placed in the tagging tank on hauling days to record water temperature.   Data from the SBE temperature and pressure loggers were processed at sea after the set was complete. 
+A Sea-bird Bird SBE 39 temperature and pressure logger was placed in a protective plastic pipe and attached to the middle trap on the string of gear. Data was successfully collected from `r sensor[1,2]` sets in `r yr` (Appendix \@ref(app:third-appendix)).  A SBE 39 was also placed in the tagging tank on hauling days to record water temperature.   Data from the SBE temperature and pressure loggers were processed at sea after the set was complete. 
 
 ## ELECTRONIC MONITORING VIDEO DATA COLLECTION  
 

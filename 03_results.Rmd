@@ -453,7 +453,7 @@ SBE 39 recorders have been placed on survey fishing sets since 2006. In the shal
                                                                                                         
 ## ACKNOWLEDGEMENTS
 
-The stock assessment survey and data report is the result of the collaborative efforts of many individuals.  Wild Canadian Sablefish has provided coordination and support of the annual Sablefish survey since 1994.  The scientific staff that conducted the `r yr` sablefish research charter included `r credits[1,4]` of Archipelago Marine Research Ltd (AMR).  A special thanks to the skipper and crew of the F/V `r boat`, whose efforts made the survey successful.  In `r yr`, the crew consisted of `r credits[2,4]`.
+The stock assessment survey and data report is the result of the collaborative efforts of many individuals.  Wild Canadian Sablefish has provided coordination and support of the annual Sablefish survey since 1994.  The scientific staff that conducted the `r yr` sablefish research charter included `r credits[1,4]` of Archipelago Marine Research Ltd (AMR).  A special thanks to the skipper and crew of the F/V `r boat`, whose efforts made the survey successful and safe during the COVID-19 pandemic.  In `r yr`, the crew consisted of `r credits[2,4]`.
 
 
 \clearpage

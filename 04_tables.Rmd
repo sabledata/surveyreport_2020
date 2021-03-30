@@ -14,7 +14,7 @@
                            "group by Year, DEPTH_STRATUM, SPATIAL_STRATUM ",
                            "having (Year = ", yr, " )", sep="")
        #surv.strata <- GetSQLData(act.strata,"Sablefish")
-       #write.table(surv.strata, file = paste(path,"Table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+       #write.table(surv.strata, file = paste(path,"table1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
        surv.strata <-  read.csv(paste(path,'table1.csv',sep=''), header=T)
 
        RD1      <- c(6,6,8,6,6,32)
@@ -104,7 +104,7 @@
                         "Proportion" = 2, 
                         "Mean Fork Length (mm)" = 3),bold=T) %>%
       
-    kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
+    kableExtra::kable_styling(font_size = 8, position = "left", latex_options = "hold_position") %>%
                 row_spec(0,    bold = T) %>%
                 row_spec(3,    hline_after = T) %>%
                 row_spec(4,    bold = T, hline_after = T) %>%
@@ -155,8 +155,8 @@
                         "Distance (km) from Release Location" = 7, 
                         " " = 1),bold=T) %>% 
       
-       kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
-                row_spec(0,    bold = T) %>%
+       kableExtra::kable_styling(font_size = 8, position = "left", latex_options = "hold_position") %>%
+                row_spec(0, bold = T) %>%
                 row_spec(4, hline_after = T) %>%
                 column_spec(2, width  = "1.1cm") 
 
@@ -207,7 +207,22 @@ GIS3 <- paste("SELECT  get_tags3.TAG_ID, CONVERT(varchar, FISH_TAG_EVENTS_4.EVEN
                 column_spec(9, width  = "3.2cm")  %>%  
                 column_spec(10, width  = "0.7cm")          
 ```
+```{r table5, echo=FALSE}
 
+
+
+
+query  <- "SELECT        YEAR, BEST_YEAR, FISHERY_SECTOR, GEAR, SUM(C1_RETAINED_ROUND_KG) AS Expr1, SUM(C2_SUBLEGAL_BAIT_KG) AS Expr2, SUM(C3_LEGAL_BAIT_KG) AS Expr3, SUM(C4_RETAINED_OTHER_KG) AS Expr4, 
+                         SUM(R1_SUBLEGAL_RELEASED_KG) AS Expr5, SUM(R2_LEGAL_RELEASED_KG) AS Expr6, SUM(R2_LEGAL_RELEASED_MORT_KG) AS Expr7, SUM(R3_SUBLEGAL_LICED_KG) AS Expr8, SUM(R4_LEGAL_LICED_KG) AS Expr9, 
+                         SUM(C_TOTAL_RETAINED_KG) AS Expr10, SUM(R_TOTAL_RELEASED_KG) AS Expr11
+FROM            dbo.gfsh_sablefish_official_catch_report
+GROUP BY YEAR, BEST_YEAR, FISHERY_SECTOR, GEAR
+HAVING        (BEST_YEAR = 2015)"
+
+query <- GetSQLData(query1,"FishTag")
+write.table(query, file = paste(path,"table4b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+
+```
 
 \clearpage
 
