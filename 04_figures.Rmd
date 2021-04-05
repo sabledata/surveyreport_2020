@@ -874,7 +874,7 @@
       ggplot(weather.raw2, aes(x = Avgtemp, y = years, fill=`Depth Stratum`, alpha = 0.4)) +
              scale_x_continuous(limits = c(1.5,8.5)) +
              #facet_wrap(~depth_stratum) +
-             #stat_density_ridges(quantile_lines = TRUE, quantiles = c(0.025, 0.975), alpha = 0.9) +
+             stat_density_ridges(quantile_lines = TRUE, quantiles = c(0.025, 0.975), alpha = 0.9) +
            geom_density_ridges(
                 aes(point_shape = `Depth Stratum`, alpha = .7), 
                 alpha = .9, point_alpha = .3, jittered_points = TRUE
