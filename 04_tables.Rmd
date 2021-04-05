@@ -1,5 +1,7 @@
 # Tables
 (ref:Table1Caption) Spatial strata allocation and completed strata counts (blue) for the `r yr` sablefish research and assessment survey.
+\ \
+\ \
 
 ```{r table1, echo=FALSE}
 
@@ -58,8 +60,11 @@
   
   
 ```
+\clearpage
 
-(ref:Table2Caption) Summary of species captured during the `r yr` survey StRS sets conducted by the `r boat`. No value in the weight column indicates that the catch was not weighed. No value in both weight and count indicates trace weights of less than 1 kg recorded.
+(ref:Table2Caption) Summary of species captured during the `r yr` survey StRS sets conducted by the `r boat`. No value in the weight column indicates that the catch was not weighed. No value in weight and count of 1 indicates trace weights of less than 1 kg recorded.
+\ \
+\ \
 
 
 ```{r table2,  echo=FALSE}
@@ -88,10 +93,11 @@
                       kableExtra::kable_styling(font_size = 8, position = "left",
                                                 latex_options = "hold_position")
 ```
+\clearpage
 
-
-(ref:Table3Caption) Summary of sablefish fork length measurements collected during the `r yr` stratified random sets by spatial and depth stratum.
-
+(ref:Table3Caption) Summary of sablefish sex ratios and fork length measurements collected during the `r yr` stratified random sets by spatial and depth stratum.
+\ \
+\ \
 ```{r table3, echo=FALSE}
 
     #newdata2   <-   rbind(newdata,biosumm)
@@ -104,7 +110,7 @@
                         "Proportion" = 2, 
                         "Mean Fork Length (mm)" = 3),bold=T) %>%
       
-    kableExtra::kable_styling(font_size = 8, position = "left", latex_options = "hold_position") %>%
+    kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
                 row_spec(0,    bold = T) %>%
                 row_spec(3,    hline_after = T) %>%
                 row_spec(4,    bold = T, hline_after = T) %>%
@@ -118,9 +124,11 @@
                 row_spec(20,   bold = T)
       
 ```
-
-(ref:Table4Caption) Sablefish tag recovery counts by distance from release site and years at liberty before re-release for the 2020 survey. Distances were determined using the great circle distance between the survey release location and survey recovery location.
-
+\ \
+\ \
+(ref:Table4Caption) Sablefish tag recovery counts in 2020, by distance from release site and years at liberty. Distances were determined using the great circle distance between the release location and recovery location.
+\ \
+\ \
 
 ```{r table4, echo=FALSE}
 
@@ -155,7 +163,7 @@
                         "Distance (km) from Release Location" = 7, 
                         " " = 1),bold=T) %>% 
       
-       kableExtra::kable_styling(font_size = 8, position = "left", latex_options = "hold_position") %>%
+       kableExtra::kable_styling(font_size = 9, position = "left", latex_options = "hold_position") %>%
                 row_spec(0, bold = T) %>%
                 row_spec(4, hline_after = T) %>%
                 column_spec(2, width  = "1.1cm") 
@@ -163,6 +171,9 @@
 ```
 \clearpage
 (ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey.
+\ \
+\ \
+
 
 ```{r table5, echo=FALSE}
 

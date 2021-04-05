@@ -9,7 +9,7 @@
 ```
 The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
 
-Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one generated an error.
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one was for an unknown reason (the track-line was in the neighboring block).
 
 ```{r CatchRateText, echo=FALSE}
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
@@ -64,8 +64,7 @@ The sablefish survey of `r yr` have documented recent changes in the sablefish p
 
 ### Stratified Random Set CPUE
 
-Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, increased across most offshore survey strata in 2018, and again in 2019 (Figure \@ref(fig:figure5)). The most pronounced increases occured in the middle depth strata which recorded the largest CPUEs in 2018 and 2019 since the StRS began (Figure \@ref(fig:figure6)). These increases in CPUE were the result of a relatively large increase in the number of small sablefish encountered on the survey (Figure \@ref(fig:figure7) and Figure \@ref(fig:figure8), likely due to a large recent recruitment event that has occurred coastwide [@DFO2020]. The stratified mean survey abundance in `r yr` was 35 kg/trap, which is down -17% from `r yr-1` and -13%
-from the 2018-2019 average [@DFO2021] (Figure \@ref(fig:figure9)).
+Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, decreased in 2020 across the mid depth strata (RD~2~); and remained steady in the shallow (RD~1~) and deep (RD~3~)  depth strata (Figure \@ref(fig:figure5)). Comparison across spatial and depth strata show declining CPUE (kg/trap) in areas S~2~ to S~5~, but increasing in the most southern area S~1~ (Figure \@ref(fig:figure6)).  The CPUE (#fish/trap) across all strata declined remarkably with the exception of the northern strata S~5~ (Figure \@ref(fig:figure7)). The mean weight is similar or slightly decreasing compared to 2019 (Figure \@ref(fig:figure8)).  The stratified mean survey abundance in `r yr` was 35 kg/trap, down -17% from 2019 and -13% from the 2018-2019 average (Figure \@ref(fig:figure9)).
 
 
 ```{r SpeciesCompositionText, echo=FALSE}
@@ -177,9 +176,7 @@ A total of `r totalS[1]` taxonomic groups were represented in the catches in StR
     firstyrfem <-   lendata[lendata$year == yr & lendata$sex == 2,] 
     firstyrmal <-   lendata[lendata$year == yr & lendata$sex == 1,] 
     
-
-      
-    lenMF      <-   lendata[lendata$year <= yr,] 
+    lenMF      <-   lendata[lendata$year == yr,] 
     brk        <-   seq(min(lenMF$length)-1,max(lenMF$length)+1)
     osex       <-   length(lenMF$length[lenMF$sex==3])
     	
@@ -351,7 +348,7 @@ During the `r yr` StRS, a total of `r format(countStRS[1,2], big.mark=",")` sabl
 
 Overall, the StRS sets had a higher proportion of females than males over `r stratafemale` (Table \@ref(tab:table3)).  More females than males were seen in the shallow depth stratum within `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
 
-In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r mean(females)` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r round(mavgyr1$AvL,1) ` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure14)). 
+In `r yr`, the average mean fork length for the `r format(length(firstyrfem$sex), big.mark=",")` females was `r as.character(round(mean(firstyrfem$length),1))` cm  and the average mean fork length for the `r format(length(firstyrmal$sex), big.mark=",")` males was `r as.character(round(mean(firstyrmal$length),1))` cm.  The mean length of both females and males reached their lowest mean size since 2003 (Figure \@ref(fig:figure14)). 
 
 On average, female sablefish grow faster and reach a far greater size (Figure \@ref(fig:figure15)a) compared to males (Figure \@ref(fig:figure15)b).
 
@@ -385,7 +382,7 @@ On average, female sablefish grow faster and reach a far greater size (Figure \@
 ```
 
 There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following highly anomalous warm ocean conditions known as the “Blob”
-and the “Blob 2.0”.  The first marine heat wave (Blob) began in the NE Pacific in late 2013 [@Bond2015] and persisted until 2016 [@DORANTESGILARD2020].   The second marine heat wave (Blob 2.0) appeared again in the summer of 2019 [@Amaya2020].   
+and the “Blob 2.0”.  The first marine heat wave (Blob) began in the NE Pacific in late 2013 [@Bond2015] and persisted until 2016 [@DORANTESGILARD2020].   A similar marine heat wave (Blob 2.0) with warm sea surface temperatures appeared again in the summer of 2019 [@Amaya2020].   
 
 More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the sub-legal specimen count was over 50% in S~1~, S~4~ and S~5~ in the mid-depth waters (RD~2~) (Figure \@ref(fig:figure16)). 
  
@@ -439,7 +436,7 @@ Historic data from all samples lists the oldest female sablefish at `r oldFem` y
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
 Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii can be found in Figure \@ref(fig:figure18).  The `r yr` survey data exhibit a general trend of decreasing temperature with depth over latitude.
 
-SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(celcius.min.shallow[1,5],2)` $^\circ$C  in `r celcius.min.shallow[1,1]`; the highest average temperature was `r round(celcius.max.shallow[1,5],2)` $^\circ$C in `r celcius.min.shallow[1,1]`. Moving into the mid-depth waters, from 458-823 meters, the lowest average temperature was `r round(celcius.min.mid[1,5],2)` $^\circ$C in `r celcius.min.mid[1,1]`; the highest average temperature was `r round(celcius.max.mid[1,5],2)` $^\circ$C in `r celcius.max.mid[1,1]`. In the deepest waters, the lowest average temperature of `r round(celcius.min.deep[1,5],2)` $^\circ$C in `r celcius.min.deep[1,1]` and the highest average temperature was `r round(celcius.max.deep[1,5],2)`$^\circ$C  in `r celcius.min.deep[1,1]` (Figure \@ref(fig:figure19)).
+SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature was `r round(celcius.min.shallow[1,5],2)` $^\circ$C  in `r celcius.min.shallow[1,1]`; the highest average temperature was `r round(celcius.max.shallow[1,5],2)` $^\circ$C (`r celcius.min.shallow[1,1]`). In the mid-depth waters(458-823 meters), the lowest average temperature was `r round(celcius.min.mid[1,5],2)` $^\circ$C (`r celcius.min.mid[1,1]`); the highest average temperature was `r round(celcius.max.mid[1,5],2)` $^\circ$C (`r celcius.max.mid[1,1]`). In the deepest waters, the lowest average temperature was `r round(celcius.min.deep[1,5],2)` $^\circ$C in `r celcius.min.deep[1,1]` and the highest average temperature was `r round(celcius.max.deep[1,5],2)`$^\circ$C  in `r celcius.min.deep[1,1]` (Figure \@ref(fig:figure19)).
 
 
 ```{r acknowledge, echo=FALSE}

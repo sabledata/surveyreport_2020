@@ -29,7 +29,7 @@ After that, all subsequent sections will be turned into appendices. -->
 
 \clearpage
 
-# DATA FORMS 2020 SABLEFISH SURVEY. {#app:second-appendix}
+# DATA FORMS OF THE 2020 SABLEFISH SURVEY. {#app:second-appendix}
 
 ```{r appendixB,out.width = "480px", out.height = "406px", fig.align="left"}
 
@@ -74,7 +74,7 @@ Figure B.3.  Example of a completed catch log data form with directions from the
       knitr::include_graphics(img) 
       
 ```
-Figure B.4.  Example of a tabular catch log data entry form transposed from the catch log in Figure C.3. Directions from the 2020 survey instruction manual. 
+Figure B.4.  Example of a tabular catch log data entry form transposed from the catch log in Figure B.3. Directions from the 2020 survey instruction manual. 
 
 \clearpage
 
@@ -104,7 +104,7 @@ Figure B.6.  Example of a completed tagging form with directions from the 2020 s
 
 \clearpage
 
-# SET DETAILS `r yr`. {#app:third-appendix}
+# SURVEY SET DETAILS `r yr`. {#app:third-appendix}
 Details of sets completed during the `r yr` survey program (F/V `r boat`).  Sets are listed by stratum/inlet name, set type, depth stratum, start date, end of gear deployment time and duration in minutes. The depth strata for type 3 tagging sets include RD~1~ (100-250 fathoms), RD~2~ (250-450 fathoms) and RD~3~ (450-750 fathoms). The position data includes the major area and start and end latitude and longitude in degrees decimal minutes. The bottom depths (in meters) of the fishing set are shown with the mean bottom depth calculated from recordings at one minute intervals between the start and end of the set. The number of traps fished for each set excludes open traps, while holed or fouled traps have been included.  Sets that successfully deployed a Seabird SBE temperature and pressure recorder are indicated with an 'x'. 
 
 
@@ -286,7 +286,7 @@ library(ggplot2)
 
    #  trap.sableTest  <-  trap.sable[trap.sable$SurveySet == 40,] 
    big.value <- max(trap.sable$Value)
-
+S
    w<-trap.sable %>%
      group_by(SurveySet) %>%
      do({
@@ -307,7 +307,7 @@ library(ggplot2)
 ```
 
 # SUMMARY OF SABLEFISH BIOLOGICAL DATA `r yr`. {#app:fifth-appendix} 
-Biological data collected for sablefish by set, catch weight in kilograms and numbers of fish.  Sablefish counts by trap are represented by sparklines. Details include a tally of specimens recovered, tagged and sampled.  Mean fork lengths for tagged sablefish and sampled male and female sablefish are listed.  
+Biological data collected for sablefish by set, catch weight in kilograms and numbers of fish.  Sablefish counts by trap are represented by sparklines. Tagged fish counts by number for recovered, re-released, deceased and those released for the first time. Tagged fish fork lengths are presented by count and mean (millimeters). Specimen counts are listed by sample type; mean fork lengths are tabulated.  
 
 
 ```{r appendixE, echo=FALSE}
