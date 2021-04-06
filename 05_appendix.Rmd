@@ -286,7 +286,7 @@ library(ggplot2)
 
    #  trap.sableTest  <-  trap.sable[trap.sable$SurveySet == 40,] 
    big.value <- max(trap.sable$Value)
-S
+
    w<-trap.sable %>%
      group_by(SurveySet) %>%
      do({
@@ -386,6 +386,8 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
 
 # SUMMARY OF BIOLOGICAL DATA FOR ROUGHEYE/BLACKSPOTTED ROCKFISH COMPLEX. {#app:sixth-appendix} 
 Biological data collected for rougheye/blackspotted rockfish complex.  Each set is listed with counts of specimens sampled, calculations of mean fork lengths and number of species visually identified as either a RE = rougheye rockfish, BS = blackspotted rockfish or a hybrid.
+\ \
+\ \
 
 ```{r appendixF, echo=FALSE}
  
@@ -417,12 +419,13 @@ Biological data collected for rougheye/blackspotted rockfish complex.  Each set 
                            ") order by species,[SET]", sep="")
    #otherspec2            <-  GetSQLData(othersamples,"Sablefish")   # read from SQL Server
    #write.table(otherspec2, file = paste(path,'appendixF.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")   
-   otherspec2            <-  read.csv(paste(path,'appendixF.csv',sep=''),header=T) # read from csv
-   otherspec2$species_name<-as.character(otherspec2$species_name)
-   addition              <-  c('Total','', sum(otherspec2$Len.Sample.Count),    sum(otherspec2$weight_count), 
+   otherspec2              <-  read.csv(paste(path,'appendixF.csv',sep=''),header=T) # read from csv
+   otherspec2$species_name <-  as.character(otherspec2$species_name)
+   otherspec2$species_name <-  gsub('ROUGHEYE/BLACKSPOTTED ROCKFISH COMPLEX', 'ROUGHEYE/ BLACKSPOTTED ROCKFISH COMPLEX', otherspec2$species_name)
+   addition                <-  c('Total','', sum(otherspec2$Len.Sample.Count),    sum(otherspec2$weight_count), 
                                            sum(otherspec2$Sex.Sample.Count),    sum(otherspec2$Maturity.Sample.Count),   
                                            sum(otherspec2$Otolith.Sample.Count),sum(otherspec2$DNA.Sample.Count),
-                                           sum(otherspec2$Sample_count),'','','','','','','')
+                                           sum(otherspec2$Sample_count),'','','','',sum(otherspec2$'Rougheye'),sum(otherspec2$'Blackspotted'),sum(otherspec2$'Hybrid'))
    otherspec             <-  rbind(otherspec2,addition)
    row.count             <-  length(otherspec$species_name)
   

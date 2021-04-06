@@ -170,7 +170,7 @@
 
 ```
 \clearpage
-(ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey.
+(ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey. Measurement errors (instrumental, environmental or observational) may have caused the shortened lengths.
 \ \
 \ \
 
