@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.25)  6 APR 2021 07:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.25)  6 APR 2021 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9567,162 +9567,26 @@ Overfull \hbox (1.87813pt too wide) in paragraph at lines 1078--1078
  []|\T1/phv/b/n/8 (-20) 48092|
  []
 
-<figTotal.png, id=757, 35.38219pt x 7.52812pt>
-File: figTotal.png Graphic file (type png)
-<use figTotal.png>
-Package pdftex.def Info: figTotal.png  used on input line 1078.
-(pdftex.def)             Requested size: 56.9055pt x 12.1085pt.
 
-Overfull \hbox (17.07182pt too wide) in paragraph at lines 1078--1078
- []|[]|
- []
+LaTeX Warning: File `figTotal.png' not found on input line 1078.
 
 
-Overfull \hbox (4.78064pt too wide) in alignment at lines 1070--1079
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-[47 <./fig45.png> <./fig46.png> <./fig47.png> <./fig48.png> <./fig49.png> <./fi
-g50.png> <./fig51.png> <./fig52.png> <./fig53.png> <./fig54.png> <./fig55.png> 
-<./fig56.png> <./fig57.png> <./fig58.png> <./fig59.png> <./fig60.png> <./fig61.
-png> <./fig62.png> <./fig63.png> <./fig64.png> <./fig65.png> <./fig66.png>] [48
- <./fig67.png> <./fig68.png> <./fig69.png> <./fig70.png> <./fig71.png> <./fig72
-.png> <./fig73.png> <./fig74.png> <./fig75.png> <./fig76.png> <./fig77.png> <./
-fig78.png> <./fig79.png> <./fig80.png> <./fig81.png> <./fig82.png> <./fig83.png
-> <./fig84.png> <./fig85.png> <./fig86.png> <./fig87.png>] [49 <./figTotal.png>
-] [50
+! Package pdftex.def Error: File `figTotal.png' not found: using draft setting.
 
 
-]
-Overfull \hbox (6.21373pt too wide) in paragraph at lines 1094--1094
- \T1/phv/b/n/8 (-20) Length| 
- []
-
-
-Overfull \hbox (5.93367pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Weight| 
- []
-
-
-Overfull \hbox (10.57256pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Maturity| 
- []
-
-
-Overfull \hbox (5.3433pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Otolith| 
- []
-
-
-Overfull \hbox (2.72496pt too wide) in paragraph at lines 1094--1094
- \T1/phv/b/n/8 (-20) Count| 
- []
-
-
-Overfull \hbox (8.77162pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Proportion 
- []
-
-
-Overfull \hbox (1.87027pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Males| 
- []
-
-
-Overfull \hbox (11.45848pt too wide) in paragraph at lines 1094--1094
- []|\T1/phv/b/n/8 (-20) Females| 
- []
-
-
-Overfull \hbox (2.06673pt too wide) in paragraph at lines 1094--1095
- []|\T1/phv/b/n/8 (-20) Hybrid| 
- []
-
-
-Overfull \hbox (6.21373pt too wide) in paragraph at lines 1101--1101
- \T1/phv/b/n/8 (-20) Length| 
- []
-
-
-Overfull \hbox (5.93367pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Weight| 
- []
-
-
-Overfull \hbox (10.57256pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Maturity| 
- []
-
-
-Overfull \hbox (5.3433pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Otolith| 
- []
-
-
-Overfull \hbox (2.72496pt too wide) in paragraph at lines 1101--1101
- \T1/phv/b/n/8 (-20) Count| 
- []
-
-
-Overfull \hbox (8.77162pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Proportion 
- []
-
-
-Overfull \hbox (1.87027pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Males| 
- []
-
-
-Overfull \hbox (11.45848pt too wide) in paragraph at lines 1101--1101
- []|\T1/phv/b/n/8 (-20) Females| 
- []
-
-
-Overfull \hbox (2.06673pt too wide) in paragraph at lines 1101--1102
- []|\T1/phv/b/n/8 (-20) Hybrid| 
- []
-
-[51
-
-] 
-AED: lastpage setting LastPage
-[52
-
-
-
-] (./techreport.aux)
-Package rerunfilecheck Info: File `techreport.out' has not changed.
-(rerunfilecheck)             Checksum: ED39716087A512E9D052B8C190A76C81;7002.
- ) 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1078 ...cludegraphics[width=2cm]{figTotal.png}}}
+                                                   & \textbf{77} & \textbf{1...
+ 
 Here is how much of TeX's memory you used:
- 21638 strings out of 480942
- 373756 string characters out of 5904936
- 1068401 words of memory out of 5000000
- 37868 multiletter control sequences out of 15000+600000
- 500882 words of font info for 278 fonts, out of 8000000 for 9000
+ 21641 strings out of 480942
+ 373958 string characters out of 5904936
+ 1068416 words of memory out of 5000000
+ 37878 multiletter control sequences out of 15000+600000
+ 500129 words of font info for 272 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,11n,91p,1524b,616s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.
-enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
-athit.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
-m/lm-mathsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
-vips/base/8r.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/
-dvips/lm/lm-ec.enc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
-pe1/public/lm/lmmi10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fo
-nts/type1/public/lm/lmmi12.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/te
-xmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/lackol/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/lackol/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData
-/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lack
-ol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/U
-sers/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a
-.pfb>
-Output written on techreport.pdf (60 pages, 5009614 bytes).
-PDF statistics:
- 905 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 164 named destinations out of 1000 (max. 500000)
- 107367 words of extra memory for PDF output out of 128383 (max. 10000000)
-
+ 86i,11n,91p,1513b,616s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
