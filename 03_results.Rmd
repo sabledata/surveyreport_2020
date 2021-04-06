@@ -7,7 +7,7 @@
 # not able to query in detail the fishing days and block rejections/replacements, taken from notes
 
 ```
-The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
+The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a single day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
 
 Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one was for an unknown reason (the track-line was in the neighboring block).
 
@@ -64,7 +64,7 @@ The sablefish survey of `r yr` have documented recent changes in the sablefish p
 
 ### Stratified Random Set CPUE
 
-Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, decreased in 2020 across the mid depth strata (RD~2~); and remained steady in the shallow (RD~1~) and deep (RD~3~)  depth strata (Figure \@ref(fig:figure5)). Comparison across spatial and depth strata show declining CPUE (kg/trap) in areas S~2~ to S~5~, but increasing in the most southern area S~1~ (Figure \@ref(fig:figure6)).  The CPUE (#fish/trap) across all strata declined remarkably with the exception of the northern strata S~5~ (Figure \@ref(fig:figure7)). The mean weight is similar or slightly decreasing compared to 2019 (Figure \@ref(fig:figure8)).  The stratified mean survey abundance in `r yr` was 35 kg/trap, down -17% from 2019 and -13% from the 2018-2019 average (Figure \@ref(fig:figure9)).
+Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, decreased in 2020 across the mid depth strata (RD~2~); and remained steady in the shallow (RD~1~) and deep (RD~3~)  depth strata (Figure \@ref(fig:figure5)). Comparison across spatial and depth strata indicate declining CPUE (kg/trap) in areas S~2~ to S~5~, but increasing in the most southern area S~1~ (Figure \@ref(fig:figure6)).  The CPUE (#fish/trap) across all strata declined remarkably with the exception of the northern strata S~5~ (Figure \@ref(fig:figure7)). The mean weight is similar or slightly decreasing compared to 2019 (Figure \@ref(fig:figure8)).  The stratified mean survey abundance in `r yr` was 35 kg/trap, down -17% from 2019 and -13% from the 2018-2019 average (Figure \@ref(fig:figure9)).
 
 
 ```{r SpeciesCompositionText, echo=FALSE}
@@ -346,7 +346,7 @@ A detailed breakdown of the fate of the catch in each trap for the `r yr` survey
 
 During the `r yr` StRS, a total of `r format(countStRS[1,2], big.mark=",")` sablefish were caught.   Of that total, `r format(countStRS[1,5], big.mark=",")` were tagged and released and `r format(countStRS[1,7], big.mark=",")` were retained for biological sampling. Of the tagged fish, `r countStRS[1,3]` were previously tagged fish that were re-released with a new tag.  One previously tagged fish was retained for sampling (Appendix \@ref(app:fifth-appendix)).
 
-Overall, the StRS sets had a higher proportion of females than males over `r stratafemale` (Table \@ref(tab:table3)).  More females than males were seen in the shallow depth stratum within `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
+Overall, the StRS sets had a higher proportion of females than males over `r stratafemale` (Table \@ref(tab:table3)).  More females than males were caught in the shallow depth stratum within `r shallsfemale`.  In the mid depth stratum, there were more males than females in `r midsmale`.  The deepest depth stratum saw more females in spatial strata `r deepsfemale`.  
 
 Significant differences in length distributions between female and male sablefish are exhibited in the data collected from the StRS portion of the 2003 - `r yr` surveys. The mean fork length ($\bar{x}$) for females was `r mLf` cm and the mean fork length ($\bar{x}$) for males was `r mLm` cm (Figure \@ref(fig:figure10)).
 
@@ -383,14 +383,14 @@ On average, female sablefish grow faster and reach a far greater size (Figure \@
    oldMaleYr   <-  oldageMale[1,3]               # -- year captured
 ```
 
-There have been distinct distribution patterns across strata of sub-legal sablefish (<55 cm fork length), following highly anomalous warm ocean conditions known as the “Blob”
+Distinct distribution patterns became apparent across strata of increasing sub-legal sablefish (<55 cm fork length), following highly anomalous warm ocean conditions known as the “Blob”
 and the “Blob 2.0”.  The first marine heat wave (Blob) began in the NE Pacific in late 2013 [@Bond2015] and persisted until 2016 [@DORANTESGILARD2020].   A similar marine heat wave (Blob 2.0) with warm sea surface temperatures appeared again in the summer of 2019 [@Amaya2020].   
 
 More than half of the sub-legal specimens were captured in the southern strata (S~1~) mid-depth waters (RD~2~) in 2014 and shallow waters (RD~1~) in 2015. The sub-legal specimen count was above 50% in both 2017 and 2018 in the northern strata of S~4~ and S~5~  mid-depth waters (RD~2~). In 2019, the sub-legal specimens dominated in all StRS survey strata (S~1~ to S~5~) mid-depth waters (RD~2~). In `r yr`, the sub-legal specimen count was over 50% in S~1~, S~4~ and S~5~ in the mid-depth waters (RD~2~) (Figure \@ref(fig:figure13)). 
  
 ## RECOVERED TAGGED SABLEFISH
 
-Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey, the majority (79%) had travelled within 50 kilometers of the release site.  Most of these tagged fish (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
+Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey, the majority (79%) had travelled no more than 50 kilometers of the release site.  Most recoveries (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
 
 ```{r OtherFishText, echo=FALSE}
    # data from APPENDIX F
@@ -406,11 +406,11 @@ Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey
 ## OTHER FISH SAMPLING
 
 Length, sex, maturity, otoliths and DNA samples were collected for `r rebs.count` rougheye/blackspotted rockfish samples.  The science samplers visually
-identifed `r re.count` as rougheye, `r bs.count` as blackspotted and `r hy.count` as hybrid species (Appendix \@ref(app:sixth-appendix)).
+identified `r re.count` as rougheye, `r bs.count` as blackspotted and `r hy.count` as hybrid species (Appendix \@ref(app:sixth-appendix)).
 
 ## SABLEFISH AGES
 
-At the time of this report, sablefish ages were available until 2018.  The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort appeared to arrive in 2017 which was dominated by 3 year olds, in 2018 by 5 year olds (Figure \@ref(fig:figure14)a).  
+At the time of this report, sablefish ages were only available prior to 2019.  The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort also appeared to arrive in 2017 which was dominated by 3 year olds and in 2018 by 5 year olds (Figure \@ref(fig:figure14)a).  
 
 The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, and 2018 the highest proportion of female sablefish were ages 3, 4, and 5 (Figure \@ref(fig:figure14)b).
 
@@ -455,7 +455,7 @@ Historic data from all samples lists the oldest female sablefish at `r oldFem` y
 
 
 ## OCEANOGRAPHIC TEMPERATURES AND DEPTHS
-Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii indicate that the `r yr` survey data exhibited a general trend of decreasing temperature with depth over latitude.  The coldest average temperature per set recorded was `r coldest` $^\circ$C with an average depth of `r deepcold$depth` m in the latitude zone of  `r deepcold$lat`$^\circ$ - `r deepcold$lat +1`$^\circ$ (Figure \@ref(fig:figure15)).
+Co-plots of average temperatures and average depths by 1-degree latitude intervals from south-west Vancouver Island to northwest Haida Gwaii indicate that `r yr` survey data exhibited a general trend of decreasing temperature with depth over latitude.  The coldest average temperature per set recorded was `r coldest` $^\circ$C with an average depth of `r deepcold$depth` m in the latitude zone of  `r deepcold$lat`$^\circ$ - `r deepcold$lat +1`$^\circ$ (Figure \@ref(fig:figure15)).
 
 SBE 39 recorders have been placed on survey fishing sets since 2006. In the shallow waters, the lowest average temperature of `r round(celcius.min.shallow[1,5],2)` $^\circ$C  was recorded in `r celcius.min.shallow[1,1]` (latitude zone `r celcius.min.shallow$lat`$^\circ$ - `r celcius.min.shallow$lat+1`$^\circ$); the highest average temperature was `r round(celcius.max.shallow[1,5],2)` $^\circ$C in `r celcius.min.shallow[1,1]` (`r celcius.max.shallow$lat`$^\circ$ - `r celcius.max.shallow$lat+1`$^\circ$) . In the mid-depth waters, the lowest average temperature was `r round(celcius.min.mid[1,5],2)` $^\circ$C in `r celcius.min.mid[1,1]` (`r celcius.min.mid$lat`$^\circ$ - `r celcius.min.mid$lat+1`$^\circ$); the highest average temperature was `r round(celcius.max.mid[1,5],2)` $^\circ$C in `r celcius.max.mid[1,1]` (`r celcius.max.mid$lat`$^\circ$ - `r celcius.max.mid$lat+1`$^\circ$). In the deepest waters, the lowest average temperature was `r round(celcius.min.deep[1,5],2)` $^\circ$C in `r celcius.min.deep[1,1]` (`r celcius.min.deep$lat`$^\circ$ - `r celcius.min.deep$lat+1`$^\circ$) and the highest average temperature was `r round(celcius.max.deep[1,5],2)`$^\circ$C  in `r celcius.min.deep[1,1]` (`r celcius.max.deep$lat`$^\circ$ - `r celcius.max.deep$lat+1`$^\circ$) (Figure \@ref(fig:figure16)).
 
