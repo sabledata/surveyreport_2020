@@ -14,7 +14,7 @@ From 2003 through 2005, five grid cells were randomly selected in each spatial-d
 
 ## VESSELS
 
-The `r yr` survey of `r setcnt` sets was chartered aboard the 25.34 meter F/V `r boat` (Figure \@ref(fig:figure3)), skippered by `r captain`  between `r dates`, `r yr` (Appendix \@ref(app:first-appendix). Information about the vessel can be found at [\underline{http://marinetraffic.com}](http://marinetraffic.com). 
+The `r yr` survey of `r setcnt` sets was chartered aboard the 25.34 meter F/V `r boat` (Figure \@ref(fig:figure3)), skippered by `r captain`  between `r dates`, `r yr` (Appendix \@ref(app:first-appendix)). Information about the vessel can be found at [\underline{http://marinetraffic.com}](http://marinetraffic.com). 
 
 ## FISHING GEAR
 
