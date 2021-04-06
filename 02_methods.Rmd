@@ -52,7 +52,7 @@ Biological samples were collected from sablefish and rougheye/blackspotted rockf
 
 ## SABLEFISH TAGGING
 
-Fish destined to be tagged were transferred from the sorting area to a tagging tank.  A vessel crew member was positioned to retrieve sablefish from the tank and provide assistance with fish handling.  A scientist stood at the sample station and tagged fish with a Mark II Long Tagging gun loaded with Floy FD-94 T-bar anchor tags.  The tag was inserted on the left side of the fish, 1 cm below and 2-3 cm behind the anterior insertion of the first dorsal fin.  Fork length (mm) measurements were taken. Before release, any sampling errors, injuries or damage to the fish were recorded on the tagging form by a second scientist. Tag checks were performed systematically to ensure tag numbers on the data form matched those on the fish specimen (Appendix \@ref(app:third-appendix), Figure B.6).
+Fish destined to be tagged were transferred from the sorting area to a tagging tank.  A vessel crew member was positioned to retrieve sablefish from the tank and provide assistance with fish handling.  A scientist stood at the sample station and tagged fish with a Mark II Long Tagging gun loaded with Floy FD-94 T-bar anchor tags.  The tag was inserted on the left side of the fish, 1 cm below and 2-3 cm behind the anterior insertion of the first dorsal fin.  Fork length (mm) measurements were taken. Before release, any sampling errors, injuries or damage to the fish were recorded on the tagging form by a second scientist. Tag checks were performed systematically to ensure tag numbers on the data form matched those on the fish specimen (Appendix \@ref(app:second-appendix), Figure B.6).
 
 ## SABLEFISH TAG RECOVERY
 
