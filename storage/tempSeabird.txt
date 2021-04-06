@@ -1,0 +1,66 @@
+library(ggjoy)
+library(hrbrthemes)
+library(ggplot2)
+path     <- 'c:/github/surveyreport_2020/standaloneData/'
+basepath <- 'c:/github/surveyreport_2020/'
+
+       #sea.bird     <-  "select * from SEABIRD_AverageTempPerSet where depth_stratum in('RD1','RD2','RD3')"
+       #sea.bird.ridge    <-  GetSQLData(sea.bird,"Sablefish")   # read from SQL Server
+       #write.table(sea.bird.ridge, file = paste(path,"seabirdridge.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+
+rd <- 'RD2'
+
+png(paste(basepath,'figures/seabirdridge',rd,'.png',sep=''), width = 800, height = 924) 
+
+ 
+sea.bird.ridge    <-  read.csv(paste(path,'seabirdridge',rd,'.csv',sep=''),header=T)  # read from csv
+
+weather.raw2 <-    sea.bird.ridge[order( sea.bird.ridge$Year,  sea.bird.ridge$Sets),]
+weather.raw2$years<-factor(weather.raw2$Year,levels=rev(unique(weather.raw2$Year)))
+
+library(viridis) 
+ggplot(weather.raw2, aes(x = `Avgtemp`, y = `years`, fill = ..x..)) +
+geom_density_ridges_gradient(scale = 3, rel_min_height = 0.05, gradient_lwd = 1.) +
+ scale_x_continuous(expand = c(0.01, 0)) +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  scale_fill_viridis(name = "Temp. [ºC]", option = "C") +
+  labs(title = paste('Temperatures in', rd,sep=''),
+       subtitle = 'Median temperatures by year for RD', 
+       x = "Mean Temperature") +
+  theme_ridges(font_size = 13, grid = TRUE) + theme(axis.title.y = element_blank())
+
+   while (!is.null(dev.list()))  dev.off()
+
+
+
+
+sea.bird     <-  "select * from SEABIRD_AverageTempPerSet where depth_stratum in('RD1','RD2','RD3')"
+#sea.bird.ridge    <-  GetSQLData(sea.bird,"Sablefish")   # read from SQL Server
+#write.table(sea.bird.ridge, file = paste(path,"seabirdridge.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+sea.bird.ridge    <-  read.csv(paste(path,'seabirdridge.csv',sep=''),header=T)  # read from csv
+weather.raw2 <-    sea.bird.ridge[order(- sea.bird.ridge$Year,  sea.bird.ridge$Sets),]
+weather.raw2$years<-factor(weather.raw2$Year,levels=rev(unique(weather.raw2$Year)))
+names(weather.raw2) <- c("Year", "trip", "Sets", "Avgtemp", "Mintemp","Maxtemp", "Depth Stratum",  "lat", "years") 
+
+#Median temperatures by year
+ggplot(weather.raw2, aes(x = Avgtemp, y = years, fill=`Depth Stratum`, alpha = 0.4)) +
+     scale_x_continuous(limits = c(1.5,8.5)) +
+     #facet_wrap(~depth_stratum) +
+     stat_density_ridges(quantile_lines = TRUE, quantiles = c(0.025, 0.975), alpha = 0.9,
+     aes(point_color = `Avgtemp`, point_fill = `Depth Stratum`, point_shape = `Depth Stratum`),
+    alpha = .2, point_alpha = 1, jittered_points = TRUE) +
+     xlab("Mean Temperature") +
+     ylab("Year") +
+     theme_bw()
+
+
+ggplot(weather.raw2, aes(x = Avgtemp, y = years, fill = `Depth Stratum`)) +
+  geom_density_ridges(
+    aes(point_color = `Depth Stratum`, point_fill = `Depth Stratum`, point_shape = `Depth Stratum`),
+    alpha = .2, point_alpha = 1, jittered_points = TRUE
+  ) +
+  scale_point_color_hue(l = 40) +
+  scale_discrete_manual(aesthetics = "point_shape", values = c(21, 21, 21))
+
+
+

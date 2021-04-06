@@ -1,0 +1,61 @@
+library(kableExtra) 
+library(knitr)
+library(dplyr)
+library(pander)
+library(ggplot2)
+yr       <-  2020
+basepath <- 'c:/github/surveyreport_2020/'
+path     <- 'c:/github/surveyreport_2020/standaloneData/'
+trap.sable           <-   read.csv(paste(path,'tableTrap.csv',sep=''), header=T)
+mpg_list              <- split(trap.sable$total_count, trap.sable$SET_ID)
+trap.sets   <-  as.data.frame(unique(trap.sable$SET_ID))
+
+inline_plot <- data.frame(set = unique(trap.sable$SET_ID), TrapCount = "", TrapCounts = "")
+
+inline_plot %>%
+  kbl(booktabs = TRUE) %>%
+  kable_paper(full_width = FALSE) %>%
+   column_spec(2, image = spec_plot(mpg_list, same_lim = TRUE)) %>%
+    column_spec(3, image = spec_plot(mpg_list,  col = "lightblue", polymin = 0,lwd = 2,height = 100))
+
+
+
+a<- c(3.56,  -0.87 ,  7.00,  -1.40  ,-1.29,  -1.62 ,  7.63 ,-11.72,  -2.42,  -4.66,  0.41 , -2.00,  -6.04 , -5.32,   4.55,  -1.06 ,  3.23 , -0.25)
+library(sparklines)
+sparkline(mpg_list$'4', "line")
+
+
+spk_dt <- data.frame(
+  var = c("mpg", "wt"),
+  sparkline = c(spk_chr(mtcars$mpg), spk_chr(mtcars$wt))
+)
+kbl(spk_dt, escape = F) %>%
+  kable_paper(full_width = F)
+
+install.packages('sparktable',repos='http://cran.us.r-project.org')
+
+library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(scales)
+
+df <- data.frame(Country = rep(c("A", "B", "C"), 5), 
+                 Year = c(rep(2000, 3), rep(2001, 3), rep(2002, 3), rep(2003, 3), rep(2004, 3)),
+                 Value = sample(1000:2000, size = 15))
+
+df %>%
+  group_by(Country) %>%
+  do({
+    p <- ggplot(., aes(x = Year, y = Value)) + 
+      geom_line(size = 5, color = ifelse(tail(.$Value, n = 1) < head(.$Value, n = 1), "gray", "springgreen")) + 
+      geom_line(size = 2.5, color = ifelse(tail(.$Value, n = 1) < head(.$Value, n = 1), "gray", "springgreen3")) + 
+      geom_area( fill="#69b3a2", alpha=0.4) +
+      theme_void()
+    ggsave(p, filename = paste0("fig", unique(.$Country), ".pdf"), width = 4, height = 1.25)
+    invisible(.)
+  })
+
+df <- df %>%
+  pivot_wider(names_from = Year, values_from = Value) %>%
+  mutate(Sparkline = paste0("\\raisebox{-.5\\height}{\\includegraphics[width=2cm]{fig", Country, ".pdf}}"))
+
