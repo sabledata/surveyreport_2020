@@ -186,15 +186,15 @@ GIS3 <- paste("SELECT  get_tags3.TAG_ID, CONVERT(varchar, FISH_TAG_EVENTS_4.EVEN
       #GIS2.tag.rec <- GetSQLData(GIS2,"FishTag")
       #GIS3.tag.rec <- GetSQLData(GIS3,"FishTag")
       #GIS.tag.rec  <- rbind(GIS2.tag.rec, GIS1.tag.rec, GIS3.tag.rec)
-      #write.table(GIS.tag.rec, file = paste(path,"table4b.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
-      GIS.tag.rec <-  read.csv(paste(path,'table4b.csv',sep=''), header=T)
+      #write.table(GIS.tag.rec, file = paste(path,"table5.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+      GIS.tag.rec <-  read.csv(paste(path,'table5.csv',sep=''), header=T)
       GIS.tag.rec <-  GIS.tag.rec[,c(-1,-11,-13)]
-      GIS.tag.rec$RECOVERY_STATE_DESC <- " LIVE, RE-RELEASED"
+      #GIS.tag.rec$RECOVERY_STATE_DESC <- " LIVE, RE-RELEASED"
       GIS.tag.rec2 <-  GIS.tag.rec[ , c("TAG_NUMBER", "PREVIOUS_TAG_NUMBER", "EVENT_DESCRIPTION","EVENT_NUMBER", "EVENT_TRIP","EVENT_SET","EVENT_YEAR",
-                                        "date1","RECOVERY_STATE_DESC", "Length")]
+                                        "date1", "Distance","days")]
       
       names(GIS.tag.rec2) <-   c("Release Tag number", "Previous Tag number", "Event","Event no.","Event Trip","Event Set","Event year",
-                                 "Date","Fish State", "Length (mm)")
+                                 "Date", "Distance travelled","Days at Liberty")
       GIS.tag.rec2 <- GIS.tag.rec2[GIS.tag.rec2$Event=='RELEASE',]
       
  
