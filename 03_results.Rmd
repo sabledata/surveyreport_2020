@@ -64,7 +64,7 @@ The sablefish survey of `r yr` have documented recent changes in the sablefish p
 
 ### Stratified Random Set CPUE
 
-Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, decreased in 2020 across the mid depth strata (RD~2~); and remained steady in the shallow (RD~1~) and deep (RD~3~)  depth strata (Figure \@ref(fig:figure5)). Comparison across spatial and depth strata indicate declining CPUE (kg/trap) in areas S~2~ to S~5~, but increasing in the most southern area S~1~ (Figure \@ref(fig:figure6)).  The CPUE (#fish/trap) across all strata declined remarkably with the exception of the northern strata S~5~ (Figure \@ref(fig:figure7)). The mean weight is similar or slightly decreasing compared to 2019 (Figure \@ref(fig:figure8)).  The stratified mean survey abundance in `r yr` was 35 kg/trap, down -17% from 2019 and -13% from the 2018-2019 average (Figure \@ref(fig:figure9)).
+Catch per unit effort (CPUE), as indexed by kilograms of sablefish per trap, decreased in 2020 across the mid depth strata (RD~2~); and remained steady in the shallow (RD~1~) and deep (RD~3~)  depth strata (Figure \@ref(fig:figure5)). Comparison across spatial and depth strata indicate declining CPUE (kg/trap) in areas S~2~ to S~5~, but increasing in the most southern area S~1~ (Figure \@ref(fig:figure6)).  The CPUE (#fish/trap) across all strata declined remarkably with the exception of the northern strata S~5~ (Figure \@ref(fig:figure7)). The mean weight was similar or slightly lower compared to 2019 (Figure \@ref(fig:figure8)).  The stratified mean survey abundance in `r yr` was 35 kg/trap, down -17% from 2019 and -13% from the 2018-2019 average (Figure \@ref(fig:figure9)).
 
 
 ```{r SpeciesCompositionText, echo=FALSE}
