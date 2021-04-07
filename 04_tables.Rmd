@@ -170,7 +170,7 @@
 
 ```
 \clearpage
-(ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey. Measurement errors (instrumental, environmental or observational) may have caused the shortened lengths.
+(ref:Table5Caption) Tag history of the events of three previously tagged sablefish recovered on the 2020 survey. 
 \ \
 \ \
 
@@ -194,7 +194,7 @@ GIS3 <- paste("SELECT  get_tags3.TAG_ID, CONVERT(varchar, FISH_TAG_EVENTS_4.EVEN
                                         "date1", "Distance","days")]
       
       names(GIS.tag.rec2) <-   c("Release Tag number", "Previous Tag number", "Event","Event no.","Event Trip","Event Set","Event year",
-                                 "Date", "Distance travelled","Days at Liberty")
+                                 "Date", "Distance travelled (km)","Days at Liberty")
       GIS.tag.rec2 <- GIS.tag.rec2[GIS.tag.rec2$Event=='RELEASE',]
       
  
@@ -215,8 +215,8 @@ GIS3 <- paste("SELECT  get_tags3.TAG_ID, CONVERT(varchar, FISH_TAG_EVENTS_4.EVEN
                 column_spec(7, width  = "0.7cm")  %>% 
                 column_spec(8, width  = "0.7cm")  %>%   
                 column_spec(8, width  = "1.3cm")  %>%  
-                column_spec(9, width  = "3.2cm")  %>%  
-                column_spec(10, width  = "0.7cm")          
+                column_spec(9, width  = "1.5cm")  %>%  
+                column_spec(10, width  = "1.2cm")          
 ```
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.6)  6 APR 2021 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.4.6)  6 APR 2021 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1233,12 +1233,6 @@ usly tagged sable-fish re-cov-ered on the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--453
-\T1/phv/m/n/12 (+20) 2020 sur-vey. Mea-sure-ment er-rors (in-stru-men-tal, en-v
-i-ron-men-tal or ob-ser-va-tional) may
- []
-
-
 Overfull \hbox (4.09976pt too wide) in paragraph at lines 457--457
  []|\T1/phv/b/n/9 (-20) Event
  []
@@ -1256,16 +1250,6 @@ Overfull \hbox (4.09976pt too wide) in paragraph at lines 457--457
 
 Overfull \hbox (4.09976pt too wide) in paragraph at lines 457--457
  []|\T1/phv/b/n/9 (-20) Event
- []
-
-
-Overfull \hbox (9.48001pt too wide) in paragraph at lines 457--458
- []|\T1/phv/b/n/9 (-20) Length
- []
-
-
-Overfull \hbox (1.34198pt too wide) in paragraph at lines 457--458
- \T1/phv/b/n/9 (-20) (mm)|
  []
 
 
@@ -1401,11 +1385,6 @@ Overfull \hbox (4.60243pt too wide) in paragraph at lines 469--469
 
 Overfull \hbox (7.14592pt too wide) in paragraph at lines 469--469
 []|\T1/phv/m/n/9 (-20) 10/25/2020|  
- []
-
-
-Overfull \hbox (5.90393pt too wide) in paragraph at lines 455--472
-[][] 
  []
 
 [14
@@ -9698,7 +9677,7 @@ Package rerunfilecheck Info: File `techreport.out' has not changed.
 Here is how much of TeX's memory you used:
  21647 strings out of 480934
  373949 string characters out of 5904787
- 1049178 words of memory out of 5000000
+ 1049073 words of memory out of 5000000
  37880 multiletter control sequences out of 15000+600000
  500882 words of font info for 278 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -9719,7 +9698,7 @@ TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData
 ol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/U
 sers/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a
 .pfb>
-Output written on techreport.pdf (60 pages, 5009473 bytes).
+Output written on techreport.pdf (60 pages, 5009426 bytes).
 PDF statistics:
  906 PDF objects out of 1000 (max. 8388607)
  610 compressed objects within 7 object streams
