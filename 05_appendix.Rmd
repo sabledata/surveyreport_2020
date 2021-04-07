@@ -298,7 +298,7 @@ library(ggplot2)
          xlim(0,25) +
          theme_void() 
          #stat_summary(fun.y = max, colour = "red", geom = "point", size = 5)
-       ggsave(p, filename = paste0("fig", unique(.$SurveySet), ".png"), width = 8, height = 2)  # save time comment out
+       ggsave(p, filename = paste0("fig", unique(.$SurveySet), ".png"), width = 8, height = 1.9)  # save time comment out
        invisible(.) 
        
      })
@@ -378,9 +378,9 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
    column_spec(16,width   = "1.1cm") %>%  # prop m
    column_spec(17,width   = "0.7cm") %>%  # male         
    column_spec(18,width   = "0.7cm") %>%  # fem
-   row_spec(count.row.total, bold = T)  %>%    
-   row_spec(count.row,  hline_after = T)
-
+   row_spec(count.row.total, bold = T) %>%      
+   row_spec(count.row,  hline_after = T) 
+   
 ```
 \clearpage
 
