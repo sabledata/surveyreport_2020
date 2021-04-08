@@ -326,7 +326,7 @@ Biological data collected for sablefish by set, catch weight in kilograms and nu
    surveyspec$SET[count.row.total] <- "Total"
    
    surveyspec <-  surveyspec %>%
-                  mutate(Sparkline = paste0("\\raisebox{.10\\height} {\\includegraphics[width=2cm]{fig",SET,".png}}") ) 
+                  mutate(Sparkline = paste0("\\raisebox{.12\\height} {\\includegraphics[width=2cm]{fig",SET,".png}}") ) 
    
    colnames(surveyspec) <- c("", "kg","Count","Recover-Rerelease", "Deceased", "Released", 
                              "Count", "Mean", "Fork Length", "Sex","Maturity", "Otoliths",

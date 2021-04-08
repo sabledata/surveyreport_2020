@@ -417,22 +417,22 @@
      	a2    <-   hist(females, breaks = brk, plot=F)
     	b2    <-   hist(males,   breaks = brk, plot=F)  # draw the histogram with the specified number of bins
     	
-    	plot(b2, col=rgb(0.1,0.1,0.1,0.5), border="white", main="", xlab="Length (cm)", xlim=c(30,100))
-    	plot(a2, col=rgb(0.27,.51,.71,0.5), border="white", add = TRUE)
+    	plot(b2, col=rgb(0.27,.51,.71,0.5), border="white", main="", xlab="Length (cm)", xlim=c(30,100))
+    	plot(a2, col=rgb(0.1,0.1,0.1,0.5), border="white", add = TRUE)
     	box()
     	
       panLab(0.79,0.4,paste("StRS 2003-2020",  sep=""), cex=1.4)  # -- Labels
-    	panLab(0.79,0.97,"Sablefish males")
-    	panLab(0.19,0.97,"Sablefish females")
+    	panLab(0.19,0.97,"Sablefish males")
+    	panLab(0.79,0.97,"Sablefish females")
     	
-    	panLab(0.79,0.9,bquote(bold(n)==.(tm)))
-    	panLab(0.19,0.9,bquote(bold(n)==.(tf)))
+    	panLab(0.19,0.9,bquote(bold(n)==.(tm)))
+    	panLab(0.79,0.9,bquote(bold(n)==.(tf)))
     	
-    	panLab(0.79,0.8,bquote(bolditalic(bar(x))==.(mLm)))
-    	panLab(0.19,0.8,bquote(bolditalic(bar(x))==.(mLf)))
+    	panLab(0.19,0.8,bquote(bolditalic(bar(x))==.(mLm)))
+    	panLab(0.79,0.8,bquote(bolditalic(bar(x))==.(mLf)))
     	
-    	panLab(0.79,0.7,bquote(bold(sigma)==.(stdm)) )
-    	panLab(0.19,0.7,bquote(bold(sigma)==.(stdf)) )
+    	panLab(0.19,0.7,bquote(bold(sigma)==.(stdm)) )
+    	panLab(0.79,0.7,bquote(bold(sigma)==.(stdf)) )
     	
     	 di <- dev.size("in")
        x  <- grconvertX(c(0, di[1]), from="in", to="user")
