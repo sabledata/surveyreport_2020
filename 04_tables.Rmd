@@ -74,14 +74,16 @@
     #datSP  <- GetSQLData(dtSP,"Sablefish")
     #write.table(datSP, file = paste(path,"Table2.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
     datSP  <-  read.csv(paste(path,'table2.csv',sep=''), header=T)
+    datSP$Total_weight     <- formatC(datSP$Total_weight, format="d", big.mark=",") 
        
     dat1SP <- datSP[,c(-1)] 
     dat1SP <- dat1SP[,c(-3)]
     dat1SP <- dat1SP[,c(-2)]
     dat1SP <- dat1SP[,c(-6)]  # trim columns
     cleandataSP<-dat1SP
-    cleandataSP$Summary_sp <- cleanf(cleandataSP$Summary_sp)  #  remove duplicates function
-    colnames(cleandataSP)  <- c( "Category", "Common Name", "Scientific Name" , "Count", "Weight(kg)")
+    cleandataSP$Summary_sp        <- cleanf(cleandataSP$Summary_sp)  #  remove duplicates function
+    cleandataSP$Total_weight      <- gsub("NA", "", cleandataSP$Total_weight)
+    colnames(cleandataSP)         <- c( "Category", "Common Name", "Scientific Name" , "Count", "Weight(kg)")
     
     kableExtra::kable(cleandataSP,
                       booktabs = TRUE,linesep = "",

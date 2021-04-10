@@ -7,9 +7,9 @@
 # not able to query in detail the fishing days and block rejections/replacements, taken from notes
 
 ```
-The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days, with a single day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg.  In total, 27 fishing days were recorded.
+The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days.
 
-Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table \@ref(tab:table1)). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one was for an unknown reason (the track-line was in the neighboring block).
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 110 blocks successfully fished (Table \@ref(tab:table1)). 
 
 ```{r CatchRateText, echo=FALSE}
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
