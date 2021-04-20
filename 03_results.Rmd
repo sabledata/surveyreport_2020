@@ -7,9 +7,9 @@
 # not able to query in detail the fishing days and block rejections/replacements, taken from notes
 
 ```
-The `r yr` survey was `r days` days long and divided into two legs of `r legone` and `r legtwo` days.
+The 2020 survey was 46 days long and divided into two legs of 16 and 29 days, with a single day between in Port Hardy. Several weeks of inclement weather contributed to a longer second leg. In total, 27 fishing days were recorded.
 
-Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 110 blocks successfully fished (Table \@ref(tab:table1)). 
+Of the 91 original blocks for the StRS portion of the survey, ten were replaced at-sea and four blocks were rejected, for a total of 87 blocks successfully fished (Table 1). Of the ten replacements, one was revoked after on-ground inspection, three were located within unfishable habitat, four had failed to meet depth strata requirements, one was located in a conservation area and one had a track-line in the neighboring block (Table \@ref(tab:table1)). 
 
 ```{r CatchRateText, echo=FALSE}
   # -- generate the lowest uncertainity and corresponding year for catch rate paragraph
@@ -390,7 +390,7 @@ More than half of the sub-legal specimens were captured in the southern strata (
  
 ## RECOVERED TAGGED SABLEFISH
 
-Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey, the majority (79%) had travelled no more than 50 kilometers of the release site.  Most recoveries (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
+Of the `r countStRS[1,3]` Canadian tagged fish that were recovered on the survey, the majority (79%) had travelled no more than 50 kilometers from the release site.  Most recoveries (70%) were recaptured within 5 years at liberty (Table \@ref(tab:table4)).  Three fish were recovered a second time and released a third time (Table \@ref(tab:table5)).
 
 ```{r OtherFishText, echo=FALSE}
    # data from APPENDIX F
@@ -410,9 +410,9 @@ identified `r re.count` as rougheye, `r bs.count` as blackspotted and `r hy.coun
 
 ## SABLEFISH AGES
 
-At the time of this report, sablefish ages were only available prior to 2019.  The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort also appeared to arrive in 2017 which was dominated by 3 year olds and in 2018 by 5 year olds (Figure \@ref(fig:figure14)b).  
+At the time of this report, sablefish ages were only available prior to 2019. The highest proportion of female ages in StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, and 2018 the highest proportion of female sablefish were ages 3, 4, and 5 (Figure \@ref(fig:figure14)a). 
 
-The highest proportion of female ages in the StRS sets for 2003 through to 2010 were 3, 4, 5, 6, 7, 8, 9 and 10 years of age, respectively. Then, another cohort appeared in 2011 through to 2015, showing up as 3, 4, 5, 6 and 7 year olds.  In 2016, 2017, and 2018 the highest proportion of female sablefish were ages 3, 4, and 5 (Figure \@ref(fig:figure14)a).
+The highest proportion of male ages in StRS sets for 2003 through to 2011 were 3, 5, 5, 6, 8, 8, 8, 10 and 12 years of age, respectively.  Another cohort appeared in 2012 through to 2016 as 4, 5, 7, 7 and 8 year olds.  A cohort also appeared to arrive in 2017 which was dominated by 3 year olds and in 2018 by 5 year olds (Figure \@ref(fig:figure14)b).  
 
 Historic data from all samples lists the oldest female sablefish at `r oldFem` years of age, collected in `r oldFemYr` where as the oldest male sablefish with the age of `r oldMale` years old was documented for the year `r oldMaleYr`.
 

@@ -71,8 +71,8 @@
 
     options(knitr.kable.NA = '')
     dtSP   <- paste("exec procRReport_SpeciesSummary ",yr," ,'StRS'",sep="")
-    #datSP  <- GetSQLData(dtSP,"Sablefish")
-    #write.table(datSP, file = paste(path,"Table2.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    datSP  <- GetSQLData(dtSP,"Sablefish")
+    write.table(datSP, file = paste(path,"Table2.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
     datSP  <-  read.csv(paste(path,'table2.csv',sep=''), header=T)
     datSP$Total_weight     <- formatC(datSP$Total_weight, format="d", big.mark=",") 
        
